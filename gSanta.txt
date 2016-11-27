@@ -1,0 +1,26 @@
+
+
+.languages - sr/en/ge
+.upload article with picture or video
+  - title
+  - date
+  - author?
+  - category
+  - background picture
+  - video url
+  - text body
+  - comments
+  - price
+
+php artisan make:model Article -m
+php artisan make:controller ArticleController --resource
+
+.courses
+ - collection of video articles
+ - add video to collection
+
++login
+
+.events/workshops
+.contact
+.about
