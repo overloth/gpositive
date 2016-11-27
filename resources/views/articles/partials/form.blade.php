@@ -35,6 +35,53 @@
 	</div>
 </div>
 
+{{--Article Category--}}
+<div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
+
+	<label for="category" class="col-md-4 control-label">Category</label>
+
+	<div class="col-md-6">
+	    {!! Form::text('category', null, array('class' => 'form-control', 'placeholder'=> 'Enter category here..')) !!}
+
+	    @if ($errors->has('category'))
+	        <span class="help-block">
+	            <strong>{{ $errors->first('category') }}</strong>
+	        </span>
+	    @endif
+	</div>
+</div>
+
+{{--Article Body--}}
+<div class="form-group{{ $errors->has('body') ? ' has-error' : '' }}">
+
+	<label for="body" class="col-md-4 control-label">Body</label>
+
+	<div class="col-md-6">
+	    {!! Form::text('body', null, array('class' => 'form-control', 'placeholder'=> 'Enter body here..')) !!}
+
+	    @if ($errors->has('body'))
+	        <span class="help-block">
+	            <strong>{{ $errors->first('body') }}</strong>
+	        </span>
+	    @endif
+	</div>
+</div>
+
+{{--Article Tags--}}
+<div class="form-group{{ $errors->has('tags') ? ' has-error' : '' }}">
+
+	<label for="tags" class="col-md-4 control-label">Tags</label>
+
+	<div class="col-md-6">
+	    {!! Form::text('tags', null, array('class' => 'form-control', 'placeholder'=> 'Enter tags here..')) !!}
+
+	    @if ($errors->has('tags'))
+	        <span class="help-block">
+	            <strong>{{ $errors->first('tags') }}</strong>
+	        </span>
+	    @endif
+	</div>
+</div>
 
 {{--Item Price--}}
 <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
@@ -51,6 +98,23 @@
 	    @endif
 	</div>
 </div>
+
+{{--Article video url--}}
+<div class="form-group{{ $errors->has('video') ? ' has-error' : '' }}">
+
+	<label for="video" class="col-md-4 control-label">Video URL</label>
+
+	<div class="col-md-6">
+	    {!! Form::text('video', null, array('class' => 'form-control', 'placeholder'=> 'Enter video url here..')) !!}
+
+	    @if ($errors->has('video'))
+	        <span class="help-block">
+	            <strong>{{ $errors->first('video') }}</strong>
+	        </span>
+	    @endif
+	</div>
+</div>
+
 
 {{--Item Image--}}
 <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">

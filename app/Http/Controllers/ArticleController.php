@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Article;
 
 class ArticleController extends Controller
 {
@@ -14,9 +15,9 @@ class ArticleController extends Controller
     public function index()
     {
         //echo 'articless';
-        $articless = Article::all();
+        $articles = Article::all();
 
-        return view('articless.index', compact('articless'));
+        return view('articles.index', compact('articles'));
     }
 
     /**
@@ -38,7 +39,51 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->author = 'Gorana Rakic-Bajic';
+        //$request->input('author') = 'Gorana Rakic-Bajic';
+
+        $inss = $request->all();
+        //dd($inss);
+        $inss['author'] = 'Gorana Rakic-Bajic';
+        $inss['comments'] = '';
+        $article = Article::create($inss);
+    
+        $article->author = 'Gorana Rakic-Bajic';
+
+        if ($request->hasFile('image')) {
+
+            if ($request->file('image')->isValid()) {
+                
+                //set upload path
+                $destinationPath = 'uploads';
+                //get filename
+                $filename = $request->file('image')->getClientOriginalName();
+                //uploading file to given path
+                $request->file('image')->move($destinationPath, $filename);
+                //dd($filename);
+                //set item image
+                $article->image = $destinationPath . '/' . $filename;
+                //save
+                $article->save();
+
+            }
+            else
+            {
+                //there was problem uploading image
+                dd('there was problem uploading image');
+            }
+
+            
+
+        }
+        else
+        {
+            //image file not uploaded
+            dd('image file not uploaded');
+        }
+
+
+        return redirect('articles');
     }
 
     /**

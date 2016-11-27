@@ -2,15 +2,16 @@
 
 .languages - sr/en/ge
 .upload article with picture or video
-  - title
-  - date
-  - author?
+  + title
+  + date
+  + description
+  + author?
   - category
-  - background picture
+  + image, background picture
   - video url
   - text body
   - comments
-  - price
+  + price
 
 php artisan make:model Article -m
 php artisan make:controller ArticleController --resource

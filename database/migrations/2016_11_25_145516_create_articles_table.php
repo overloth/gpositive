@@ -19,6 +19,12 @@ class CreateArticlesTable extends Migration
             $table->string('description');
             $table->string('image');
             $table->string('price');
+            $table->string('author');
+            $table->string('category');
+            $table->string('video');
+            $table->string('body');
+            $table->string('tags');
+            $table->string('comments');
             $table->timestamps();
         });
     }
