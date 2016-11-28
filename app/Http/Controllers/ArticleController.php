@@ -94,7 +94,9 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+        //find article by id
+        $article = Article::findOrFail($id);
+        return view('articles.show', compact('article'));
     }
 
     /**
@@ -106,6 +108,8 @@ class ArticleController extends Controller
     public function edit($id)
     {
         //
+        $article = Article::findOrFail($id);
+        return view('articles.edit', compact('article'));
     }
 
     /**
@@ -117,7 +121,12 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //dd($request->all());
+        //find specified article and update it
+        $article = Article::findOrFail($id);
+        $article->update($request->all());
+        
+        return redirect('articles');
     }
 
     /**
@@ -129,5 +138,10 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         //
+        $article = Article::findOrFail($id);
+
+        $article->delete();
+        
+        return redirect('articles');
     }
 }

@@ -6,11 +6,11 @@
   + date
   + description
   + author?
-  - category
+  + category
   + image, background picture
-  - video url
-  - text body
-  - comments
+  + video url
+  + text body
+  + comments
   + price
 
 php artisan make:model Article -m
@@ -25,3 +25,14 @@ php artisan make:controller ArticleController --resource
 .events/workshops
 .contact
 .about
+
+
+
+
+
+
+
+
+
+
+
