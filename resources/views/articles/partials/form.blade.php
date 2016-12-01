@@ -51,22 +51,6 @@
 	</div>
 </div>
 
-{{--Article Body--}}
-<div class="form-group{{ $errors->has('body') ? ' has-error' : '' }}">
-
-	<label for="body" class="col-md-4 control-label">Body</label>
-
-	<div class="col-md-6">
-	    {!! Form::text('body', null, array('class' => 'form-control', 'placeholder'=> 'Enter body here..')) !!}
-
-	    @if ($errors->has('body'))
-	        <span class="help-block">
-	            <strong>{{ $errors->first('body') }}</strong>
-	        </span>
-	    @endif
-	</div>
-</div>
-
 {{--Article Tags--}}
 <div class="form-group{{ $errors->has('tags') ? ' has-error' : '' }}">
 
@@ -135,6 +119,26 @@
 	    @endif
 	</div>
 </div>
+
+<br><br>
+
+{{--Article Body--}}
+<div class="form-group{{ $errors->has('body') ? ' has-error' : '' }}">
+
+    <label for="body" class="col-md-12">Body</label>
+
+	<div class="col-md-12">
+	    {!! Form::textarea('body', null, array('class' => 'form-control', 'placeholder'=> 'Enter body here..', 'id' => 'technig')) !!}
+
+	    @if ($errors->has('body'))
+	        <span class="help-block">
+	            <strong>{{ $errors->first('body') }}</strong>
+	        </span>
+	    @endif
+	</div>
+</div>
+
+
 <br>
 
 <div class="form-group">

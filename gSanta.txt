@@ -20,6 +20,8 @@ php artisan make:controller ArticleController --resource
  - collection of video articles
  - add video to collection
 
+.add rich text editor for article body
+
 +login
 
 .events/workshops
