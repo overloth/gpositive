@@ -1,6 +1,7 @@
 
 
 .languages - sr/en/ge
+
 .upload article with picture or video
   + title
   + date
@@ -12,16 +13,32 @@
   + text body
   + comments
   + price
+  - allow default values for some fields
 
 php artisan make:model Article -m
 php artisan make:controller ArticleController --resource
 
 .courses
+ - create course
+ - view list of courses
+ - view one course
  - collection of video articles
- - add video to collection
+ - add video to course
+
+.payment
 
 .add rich text editor for article body
+ + add summernote
+ + make summernote upload picture
+ + check summernote pick url 
 
+.add tags
+
+.add sr language
+
+.statistics
+ - how many people opened that article
+ 
 +login
 
 .events/workshops

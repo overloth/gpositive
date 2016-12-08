@@ -50,6 +50,7 @@ template {
   display: none;
 }
 
+
 a {
   background-color: transparent;
 }
@@ -7689,3 +7690,9 @@ button.close {
 }
 
 /*# sourceMappingURL=app.css.map */
+
+
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav .active > li > a {
+  color:#720B87;  
+}

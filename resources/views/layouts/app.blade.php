@@ -40,15 +40,25 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" style="{{ Request::is('/') ? 'background-color: #eeeeee;' : '' }}" href="{{ url('/') }}">
                         {{ config('app.name', 'gPositive') }}
                     </a>
+
+                    <!--<a class="navbar-brand" href="{{ url('/articles') }}">
+                        articles
+                    </a>
+
+                    <a class="navbar-brand" href="{{ url('/courses') }}">
+                        courses
+                    </a>-->
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li class="{{ Request::is('articles') ? 'active' : '' }}"><a class="djek" href="{{ url('/articles') }}">Articles</a></li>
+                        <li class="{{ Request::is('courses') ? 'active' : '' }}"><a href="{{ url('/courses') }}">Courses</a></li>
+                        <li class="{{ Request::is('events') ? 'active' : '' }}"><a href="{{ url('/events') }}">Events</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -94,9 +104,43 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#technig').summernote({
-              height:300,
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
             });
+
+
+            $('#technig').summernote({
+                height:300,
+                callbacks: {
+                    onImageUpload: function(files, editor, $editable) {
+                        sendFile(files[0],editor,$editable);
+                    }
+                }
+            });
+
+            function sendFile(file,editor,welEditable) {
+                data = new FormData();
+                data.append("file", file);
+                jQuery.ajax({
+                    url: "{{ url('/upload/image') }}",
+                    data: data,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    type: 'POST',
+                    success: function(s){
+                        console.log("good summernote upload");
+                        jQuery('#technig').summernote("insertImage", s);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        alert("error with picture upload!");
+                        console.log(textStatus+" gi "+errorThrown);
+                    }
+                });
+            }
         });
     </script>
 
