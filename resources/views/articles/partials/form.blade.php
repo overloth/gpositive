@@ -19,6 +19,8 @@
 	</div>
 </div>
 
+{{$courses}}
+
 {{--Item Description--}}
 <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
 

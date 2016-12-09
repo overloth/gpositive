@@ -17,11 +17,24 @@
 
 php artisan make:model Article -m
 php artisan make:controller ArticleController --resource
+php artisan make:migration change_body_of_articles
+php artisan migrate
+
+.authors
+ - make model
+ - add relationship
+
+
+.comments
+ - make model
+ - add relationship
 
 .courses
- - create course
- - view list of courses
- - view one course
+ + make model
+ + add relationship
+ + create course
+ + view list of courses
+ + view one course
  - collection of video articles
  - add video to course
 
@@ -33,7 +46,7 @@ php artisan make:controller ArticleController --resource
  + check summernote pick url 
 
 .add tags
-
+.pagination
 .add sr language
 
 .statistics

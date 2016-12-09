@@ -11,6 +11,8 @@
 	@foreach ($articles as $article)
 
 	<p>Title: <a href="/articles/{{$article->id}}">{{$article->title}} [${{$article->price}}]</a></p>
+	<p>Author: /{{$article->author}}</p>
+	<p>Course: /{{$article->course}}</p>
 	<p>Description: {{$article->description}}</p>
 	<p>Image: /{{$article->image}}</p>
 	<p><img src="/{{$article->image}}" width="200px" alt="ASD"></p>

@@ -25,13 +25,15 @@ Auth::routes();
 
 Route::resource('articles','ArticleController');
 
-//Route::resource('courses','CourseController');
+Route::resource('courses','CourseController');
+
+Route::resource('authors','AuthorController');
 
 //Route::get('/home', 'HomeController@index');
 
-Route::get('courses', function () {
+/*Route::get('courses', function () {
     return view('courses');
-});
+});*/
 
 Route::get('events', function () {
     return view('events');

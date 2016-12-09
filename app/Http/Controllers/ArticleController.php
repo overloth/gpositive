@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Course;
 
 class ArticleController extends Controller
 {
@@ -28,7 +29,8 @@ class ArticleController extends Controller
     public function create()
     {
         // TODO: check if admin logged in
-        return view('articles.create');
+        $courses = Course::all();
+        return view('articles.create', compact('courses'));
     }
 
     /**
@@ -39,16 +41,16 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $request->author = 'Gorana Rakic-Bajic';
+        //$request->author = 'Gorana Rakic-Bajic';
         //$request->input('author') = 'Gorana Rakic-Bajic';
 
         $inss = $request->all();
         //dd($inss);
-        $inss['author'] = 'Gorana Rakic-Bajic';
-        $inss['comments'] = '';
+        $inss['author_id'] = 1;
+        $inss['course_id'] = 0;
         $article = Article::create($inss);
     
-        $article->author = 'Gorana Rakic-Bajic';
+        //$article->author = 'Gorana Rakic-Bajic';
 
         if ($request->hasFile('image')) {
 

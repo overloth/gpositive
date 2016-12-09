@@ -12,11 +12,36 @@ class Article extends Model
     	'description',
     	'price',
     	'image',
-    	'author',
     	'category',
     	'video',
     	'body',
     	'tags',
-    	'comments'
+        'author_id',
+        'course_id'
     ];
+
+    /**
+     * Get the comments for the article.
+     */
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    /**
+     * Get the author that wrote the article.
+     */
+    public function author()
+    {
+        return $this->belongsTo('App\Author');
+    }
+
+    /**
+     * Get the course that the article belongs to.
+     */
+    public function course()
+    {
+        return $this->belongsTo('App\Course');
+    }
+
 }
