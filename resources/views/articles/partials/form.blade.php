@@ -19,7 +19,16 @@
 	</div>
 </div>
 
-{{$courses}}
+
+{{--List of Courses--}}
+<div class="form-group">
+
+	<label for="course_id" class="col-md-4 control-label">Chose course</label>
+
+	<div class="col-md-6">
+		{!! Form::select('course_id', $courses, null, array('class' => 'form-control')); !!}
+	</div>
+</div>
 
 {{--Item Description--}}
 <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">

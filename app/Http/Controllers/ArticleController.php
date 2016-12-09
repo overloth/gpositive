@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Course;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -28,8 +30,22 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        // TODO: check if admin logged in
-        $courses = Course::all();
+        //not logged in, no editing articles
+        if(!Auth::user())
+        {
+            dd('there was problem saying you are not logged in');
+            return;
+        }
+
+        // check if author logged in
+        if(!Auth::user()->author)
+        {
+            dd('there was problem saying you are not author');
+            return;
+        }
+        
+        $courses = [0 => 'None'] + DB::table('courses')->pluck('title','id')->toArray();
+
         return view('articles.create', compact('courses'));
     }
 
@@ -44,10 +60,23 @@ class ArticleController extends Controller
         //$request->author = 'Gorana Rakic-Bajic';
         //$request->input('author') = 'Gorana Rakic-Bajic';
 
+        if(!Auth::user())
+        {
+            dd('there was problem saying you are not logged in');
+            return;
+        }
+
+        if(!Auth::user()->author)
+        {
+            dd('there was problem saying you are not author');
+            return;
+        }
+
         $inss = $request->all();
         //dd($inss);
-        $inss['author_id'] = 1;
-        $inss['course_id'] = 0;
+        //$user = Auth::user()->author->id;
+        $inss['author_id'] = Auth::user()->author->id;
+        //$inss['course_id'] = 0;
         $article = Article::create($inss);
     
         //$article->author = 'Gorana Rakic-Bajic';
@@ -109,9 +138,32 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        //not logged in, no editing articles
+        if(!Auth::user())
+        {
+            dd('there was problem saying you are not logged in');
+            return;
+        }
+
+        //check if user is author
+        if(!Auth::user()->author)
+        {
+            dd('there was problem saying you are not author');
+            return;
+        }
+
         $article = Article::findOrFail($id);
-        return view('articles.edit', compact('article'));
+
+        //check if author is editing his article
+        if(Auth::user()->author->id != $article->author_id)
+        {
+            dd('there was problem saying you are not author of this article');
+            return;
+        }
+
+        $courses = [0 => 'None'] + DB::table('courses')->pluck('title','id')->toArray();
+
+        return view('articles.edit', compact('article', 'courses'));
     }
 
     /**
@@ -123,9 +175,31 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //dd($request->all());
-        //find specified article and update it
+        //not logged in, no updating articles
+        if(!Auth::user())
+        {
+            dd('there was problem saying you are not logged in');
+            return;
+        }
+
+        //check if user is author
+        if(!Auth::user()->author)
+        {
+            dd('there was problem saying you are not author');
+            return;
+        }
+
+        //find specified article
         $article = Article::findOrFail($id);
+
+        //check if author is editing his article
+        if(Auth::user()->author->id != $article->author_id)
+        {
+            dd('there was problem saying you are not author of this article');
+            return;
+        }
+
+        // and update it
         $article->update($request->all());
         
         return redirect('articles');
@@ -139,8 +213,29 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //not logged in, no updating articles
+        if(!Auth::user())
+        {
+            dd('there was problem saying you are not logged in');
+            return;
+        }
+
+        //check if user is author
+        if(!Auth::user()->author)
+        {
+            dd('there was problem saying you are not author');
+            return;
+        }
+
+        //find specified article
         $article = Article::findOrFail($id);
+
+        //check if author is editing his article
+        if(Auth::user()->author->id != $article->author_id)
+        {
+            dd('there was problem saying you are not author of this article');
+            return;
+        }
 
         $article->delete();
         

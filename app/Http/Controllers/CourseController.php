@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Course;
+use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
@@ -27,7 +28,12 @@ class CourseController extends Controller
      */
     public function create()
     {
-        // TODO: check if admin logged in
+        // check if admin logged in
+        if(!Auth::user() || (Auth::user()->id != 1 && Auth::user()->id != 2))
+        {
+            dd('there was problem saying you are not admin');
+            return;
+        }
         return view('courses.create');
     }
 
@@ -39,10 +45,17 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
+        // check if admin logged in
+        if(!Auth::user() || (Auth::user()->id != 1 && Auth::user()->id != 2))
+        {
+            dd('there was problem saying you are not admin');
+            return;
+        }
+
         $inss = $request->all();
         //dd($inss);
 
-        $course = Course::create($inss);
+        Course::create($inss);
     
         return redirect('courses');
     }
@@ -68,7 +81,13 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        //
+        // check if admin logged in
+        if(!Auth::user() || (Auth::user()->id != 1 && Auth::user()->id != 2))
+        {
+            dd('there was problem saying you are not admin');
+            return;
+        }
+
         $course = Course::findOrFail($id);
         return view('courses.edit', compact('course'));
     }
@@ -82,7 +101,13 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // check if admin logged in
+        if(!Auth::user() || (Auth::user()->id != 1 && Auth::user()->id != 2))
+        {
+            dd('there was problem saying you are not admin');
+            return;
+        }
+
         //find specified course and update it
         $course = Course::findOrFail($id);
         $course->update($request->all());
@@ -98,7 +123,13 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // check if admin logged in
+        if(!Auth::user() || (Auth::user()->id != 1 && Auth::user()->id != 2))
+        {
+            dd('there was problem saying you are not admin');
+            return;
+        }
+
         $course = Course::findOrFail($id);
 
         $course->delete();
