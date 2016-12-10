@@ -16,9 +16,9 @@
 	@foreach ($articles as $article)
 
 	<p>Title: <a href="/articles/{{$article->id}}">{{$article->title}} [${{$article->price}}]</a></p>
-	<p>Author: {{$article->author->name}}</p>
+	<p>Author: <a href="/authors/{{$article->author->id}}">{{$article->author->name}}</a></p>
 	@if ($article->course)
-	<p>Course: {{$article->course->title}}</p>
+	<p>Course: <a href="/courses/{{$article->course->id}}">{{$article->course->title}}</a></p>
 	@endif
 	<p>Description: {{$article->description}}</p>
 	<p><img src="/{{$article->image}}" width="200px" alt="ASD"></p>

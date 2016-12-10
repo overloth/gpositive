@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Comment;
+use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
@@ -34,7 +36,20 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // check if user logged in
+        if(!Auth::user())
+        {
+            dd('there was problem saying you are not logged in');
+            return;
+        }
+
+        $inss = $request->all();
+        $inss['user_id'] = Auth::user()->id;
+        //dd($inss);
+        
+        Comment::create($inss);
+    
+        return redirect()->back();
     }
 
     /**

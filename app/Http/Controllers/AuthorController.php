@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Author;
 
 class AuthorController extends Controller
 {
@@ -14,6 +15,9 @@ class AuthorController extends Controller
     public function index()
     {
         //
+        $authors = Author::all();
+
+        return view('authors.index', compact('authors'));
     }
 
     /**
@@ -46,6 +50,8 @@ class AuthorController extends Controller
     public function show($id)
     {
         //
+        $author = Author::findOrFail($id);
+        return view('authors.show', compact('author'));
     }
 
     /**

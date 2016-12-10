@@ -1,6 +1,12 @@
 
 
-.languages - sr/en/ge
+
+.login
+ + login and register user
+ - user edit profile
+ - my purchased articles
+ - add user picture
+ - view user profile with comments
 
 .upload article with picture or video
   + title
@@ -17,6 +23,7 @@
   - allow default values for some fields
   + show edit article only for author
   + protect create/edit/delete route if logged in is not author
+  + link to author
 
 .courses
  + make model
@@ -27,7 +34,7 @@
  + list courses as collection of video articles
  + add video to course
  + add edit/new/delete buttons only for admin
- - link to articles
+ + link to articles and vice versa
  + protect create/edit/delete route if logged in is not author
 
 php artisan make:model Article -m
@@ -38,7 +45,8 @@ php artisan migrate
 .authors
  + make model
  + add relationship
- - list articles by author
+ + list authors
+ + list articles by author
 
  + add author manually:
     php artisan tinker
@@ -52,30 +60,30 @@ php artisan migrate
     App\Author::all();
 
 
-
-
-
-.comments
- - make model
- - add relationship
-
-.add tags
-
-.payment
-
 .add rich text editor for article body
  + add summernote
  + make summernote upload picture
  + check summernote pick url 
 
-.pagination
-.add sr language
+
+
+.comments
+ + make model
+ + add relationship
+ + submit comment when logged in
+ - admin to see list of all comments and edit/delete them
+
+.add tags
+.google/facebook authentication (OAuth?)
+.payment
+.discounts (notify me when this article is on discount)
 .social sharing buttons
+
+.pagination
+.languages - sr/en/ge
 .statistics
  - how many people opened that article
  
-+login
-
 .events/workshops
 .contact
 .about

@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    //
+    //mass assign
+    protected $fillable = [
+        'text',
+        'user_id',
+        'article_id'
+    ];
     
 
     /**

@@ -19,7 +19,8 @@
 	<p>Description: {{$course->description}}</p>
 	<p>Videos/Articles: 
 		@foreach ($course->articles as $article)
-			{{$article->title}}
+			<a href="/articles/{{$article->id}}">{{$article->title}}</a>
+			by <a href="/authors/{{$article->author->id}}">{{$article->author->name}}</a>
 			@if($loop->remaining != 0)
 			- 
 			@endif
