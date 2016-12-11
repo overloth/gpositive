@@ -13,6 +13,16 @@
 	<p><img src="/{{$article->image}}" width="600px" alt="ASD"></p>
 	{!! $article->body !!}
 
+	@if ($article->tags)
+	<p>Tags:</p>
+	<p>
+	@foreach ($article->tags as $tag)
+		<a href="/tags/{{$tag->id}}">{{$tag->name}}</a> - 
+	@endforeach
+	</p>
+	<br>
+	@endif
+
 	<p>Comments:</p>
 	@foreach ($article->comments as $comment)
 		<p>{{$comment->user->name}}: {{$comment->text}}</p>

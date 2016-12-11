@@ -15,7 +15,6 @@ class Article extends Model
     	'category',
     	'video',
     	'body',
-    	'tags',
         'author_id',
         'course_id'
     ];
@@ -42,6 +41,23 @@ class Article extends Model
     public function course()
     {
         return $this->belongsTo('App\Course');
+    }
+
+    /**
+     * Get the tags that the article has.
+     */
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag')->withTimestamps();
+    }
+
+
+    /**
+     * Get the list of tag ids that the article has.
+     */
+    public function getTagListAttribute()
+    {
+        return $this->tags->pluck('id')->all();
     }
 
 }

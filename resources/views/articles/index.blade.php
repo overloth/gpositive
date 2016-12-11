@@ -6,7 +6,7 @@
 	<h1> All articles </h1>
 
 	@if (auth()->check())
-   	@if (auth()->user()->id == 2  || auth()->user()->author)
+   	@if (auth()->user()->id == 1  || auth()->user()->author)
 	<p><a href="/articles/create"> [Add New Article] </a></p>
 	@endif
 	@endif
@@ -24,7 +24,7 @@
 	<p><img src="/{{$article->image}}" width="200px" alt="ASD"></p>
 
 	@if (auth()->check())
-   	@if (auth()->user()->id == 2  || (auth()->user()->author && auth()->user()->author->id == $article->author->id))
+   	@if (auth()->user()->id == 1  || (auth()->user()->author && auth()->user()->author->id == $article->author->id))
 	{{ Form::open(array('url' => URL::to('/articles/' . $article->id . '/edit'), 'method' => 'GET', 'style'=>'display:inline-block')) }}
     <button type="submit" >Edit</button>
 	{{ Form::close() }}

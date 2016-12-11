@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Course;
+use App\Tag;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,7 +19,7 @@ class ArticleController extends Controller
     public function index()
     {
         //echo 'articless';
-        $articles = Article::all();
+        $articles = Article::latest('updated_at')->get();
 
         return view('articles.index', compact('articles'));
     }
@@ -44,9 +45,10 @@ class ArticleController extends Controller
             return;
         }
         
+        $tags = Tag::pluck('name', 'id');
         $courses = [0 => 'None'] + DB::table('courses')->pluck('title','id')->toArray();
 
-        return view('articles.create', compact('courses'));
+        return view('articles.create', compact('courses', 'tags'));
     }
 
     /**
@@ -78,6 +80,9 @@ class ArticleController extends Controller
         $inss['author_id'] = Auth::user()->author->id;
         //$inss['course_id'] = 0;
         $article = Article::create($inss);
+
+        dd($request->input('tag_list'));
+        $article->tags()->attach($request->input('tag_list'));
     
         //$article->author = 'Gorana Rakic-Bajic';
 
@@ -161,9 +166,10 @@ class ArticleController extends Controller
             return;
         }
 
+        $tags = Tag::pluck('name', 'id')->toArray();
         $courses = [0 => 'None'] + DB::table('courses')->pluck('title','id')->toArray();
 
-        return view('articles.edit', compact('article', 'courses'));
+        return view('articles.edit', compact('article', 'courses', 'tags'));
     }
 
     /**
@@ -201,7 +207,9 @@ class ArticleController extends Controller
 
         // and update it
         $article->update($request->all());
-        
+ 
+        $article->tags()->sync($request->input('tag_list'));
+
         return redirect('articles');
     }
 

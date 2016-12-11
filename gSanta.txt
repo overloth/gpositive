@@ -1,6 +1,5 @@
 
 
-
 .login
  + login and register user
  - user edit profile
@@ -59,13 +58,10 @@ php artisan migrate
     $author->save();
     App\Author::all();
 
-
 .add rich text editor for article body
  + add summernote
  + make summernote upload picture
  + check summernote pick url 
-
-
 
 .comments
  + make model
@@ -74,6 +70,15 @@ php artisan migrate
  - admin to see list of all comments and edit/delete them
 
 .add tags
+ + create model and controller
+ + many to many relationship with article
+ - add new tags while creating article
+
+.picni sajt
+ - lista articla
+ - lista kurseva sa videjima
+ - show article
+
 .google/facebook authentication (OAuth?)
 .payment
 .discounts (notify me when this article is on discount)

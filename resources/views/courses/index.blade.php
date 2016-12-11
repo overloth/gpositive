@@ -6,7 +6,7 @@
 	<h1> All courses </h1>
 
 	@if (auth()->check())
-   	@if (auth()->user()->id == 2)
+   	@if (auth()->user()->id == 1)
 	<p><a href="/courses/create"> [Add New Course] </a></p>
 	@endif
 	@endif
@@ -28,7 +28,7 @@
 	</p>
 
 	@if (auth()->check())
-   	@if (auth()->user()->id == 2)
+   	@if (auth()->user()->id == 1)
 	{{ Form::open(array('url' => URL::to('/courses/' . $course->id . '/edit'), 'method' => 'GET', 'style'=>'display:inline-block')) }}
     <button type="submit" >Edit</button>
 	{{ Form::close() }}

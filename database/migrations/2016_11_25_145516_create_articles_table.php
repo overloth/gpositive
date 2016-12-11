@@ -24,7 +24,6 @@ class CreateArticlesTable extends Migration
             $table->string('category');
             $table->string('video');
             $table->longtext('body');
-            $table->string('tags');
             $table->timestamps();
         });
     }

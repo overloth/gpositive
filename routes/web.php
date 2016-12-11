@@ -31,6 +31,8 @@ Route::resource('authors','AuthorController');
 
 Route::resource('comments','CommentController');
 
+Route::resource('tags','TagController');
+
 //Route::get('/home', 'HomeController@index');
 
 /*Route::get('courses', function () {

@@ -63,18 +63,12 @@
 </div>
 
 {{--Article Tags--}}
-<div class="form-group{{ $errors->has('tags') ? ' has-error' : '' }}">
+<div class="form-group">
 
-	<label for="tags" class="col-md-4 control-label">Tags</label>
+	<label for="tag_list" class="col-md-4 control-label">Tags</label>
 
 	<div class="col-md-6">
-	    {!! Form::text('tags', null, array('class' => 'form-control', 'placeholder'=> 'Enter tags here..')) !!}
-
-	    @if ($errors->has('tags'))
-	        <span class="help-block">
-	            <strong>{{ $errors->first('tags') }}</strong>
-	        </span>
-	    @endif
+	    {!! Form::select('tag_list[]', $tags, null, array('class' => 'form-control', 'multiple')) !!}
 	</div>
 </div>
 
