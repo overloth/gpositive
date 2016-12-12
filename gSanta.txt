@@ -78,8 +78,16 @@ php artisan migrate
  - lista articla
  - lista kurseva sa videjima
  - show article
+ - picni komente
+ - picni tagove
 
 .google/facebook authentication (OAuth?)
+ - google
+   - go here and follow instr to create google oauth client account: https://developers.google.com/identity/sign-in/web/devconsole-project
+   - ends up here: https://console.developers.google.com/apis/credentials?project=gpositive-152217
+   - go here and follow instr to instal socialite to laravel project: https://github.com/laravel/socialite
+   - client id: 57182562399-4up23bv4k5bdtv5ld6g1hol6pam0cb3b.apps.googleusercontent.com
+   - client secret: yB6W0cYr0QUsYK_DcGWSQ8h7
 .payment
 .discounts (notify me when this article is on discount)
 .social sharing buttons

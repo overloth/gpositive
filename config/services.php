@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'google' => [
+        'client_id' => '57182562399-4up23bv4k5bdtv5ld6g1hol6pam0cb3b.apps.googleusercontent.com',
+        'client_secret' => 'yB6W0cYr0QUsYK_DcGWSQ8h7',
+        'redirect' => 'http://gpositive.app/auth/google/callback',
+    ],
+
 ];

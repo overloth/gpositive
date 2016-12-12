@@ -67,7 +67,15 @@
                                 </button>
                             </div>
                         </div>
+
                     </form>
+                    
+                    <div class="form-group">
+                        <div class="col-md-6 col-md-offset-4">
+                            <a href="auth/google">Google Login</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

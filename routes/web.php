@@ -51,3 +51,7 @@ Route::post('upload/image', function(Request $request) {
     $file->move('uploads/', $filename);
     return '/uploads/' . $filename;
 });
+
+
+Route::get('auth/google', 'Auth\RegisterController@redirectToProvider');
+Route::get('auth/google/callback', 'Auth\RegisterController@handleProviderCallback');
