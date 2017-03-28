@@ -90,9 +90,26 @@ class RegisterController extends Controller
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('google')->user();
+        $providerUser = Socialite::driver('google')->user();
 
-        dd($user);
+        $user = User::whereEmail($providerUser->getEmail())->first();
+
+        if (!$user) {
+
+            $user = User::create([
+                'email' => $providerUser->getEmail(),
+                'name' => $providerUser->getName(),
+                'password' => 'nigfig',
+                'picture' => $providerUser->getAvatar(),
+                'description' => 'default value',
+            ]);
+        }
+
+        auth()->login($user);
+
+        return redirect()->to('/');
+
+        //dd($user);
         // $user->token;
     }
 

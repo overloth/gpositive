@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Article;
 use App\Course;
 use App\Tag;
+use App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,7 +19,6 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //echo 'articless';
         $articles = Article::latest('updated_at')->get();
 
         return view('articles.index', compact('articles'));

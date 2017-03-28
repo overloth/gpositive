@@ -10,6 +10,37 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
 
+
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <a href="auth/google" class="btn btn-block btn-social btn-google">
+                                    <i class="fa fa-google"></i> Login with Google
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <a href="auth/facebook" class="btn btn-block btn-social btn-facebook">
+                                    <span class="fa fa-facebook"></span> Login with Facebook
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <a href="auth/twitter" class="btn btn-block btn-social btn-twitter">
+                                    <span class="fa fa-twitter"></span> Login with Twitter
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4" style="text-align: center; font-size: large;">
+                                - OR -
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 

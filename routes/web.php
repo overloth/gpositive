@@ -14,12 +14,19 @@
 use Illuminate\Http\Request;
 use Illuminate\Http\Input;
 use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Support\Facades\Log;
 
 /*Route::get('/', function () {
     return view('welcome');
 });*/
 
+//dd($_COOKIE['lang']);
+//Log::info('Showing web: ' . session('lang'));
+
+//if($_COOKIE['lang']) App::setLocale($_COOKIE['lang']);
+
 Route::get('/', 'HomeController@index');
+Route::get('/language/{locale}', 'HomeController@setLanguage');
 
 Auth::routes();
 

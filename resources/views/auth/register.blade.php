@@ -1,14 +1,49 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
+
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
+
+
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <a href="auth/google" class="btn btn-block btn-social btn-google">
+                                    <i class="fa fa-google"></i> Register with Google
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <a href="auth/facebook" class="btn btn-block btn-social btn-facebook">
+                                    <span class="fa fa-facebook"></span> Register with Facebook
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <a href="auth/twitter" class="btn btn-block btn-social btn-twitter">
+                                    <span class="fa fa-twitter"></span> Register with Twitter
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4" style="text-align: center; font-size: large;">
+                                - OR -
+                            </div>
+                        </div>
+
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
@@ -70,12 +105,6 @@
 
                     </form>
                     
-                    <div class="form-group">
-                        <div class="col-md-6 col-md-offset-4">
-                            <a href="auth/google">Google Login</a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>

@@ -26,4 +26,7 @@ elixir(mix => {
     
     //Copy js files
     mix.copy(resourcesAssets + 'js/presentation.js', dest + 'js/');
+
+    //Copy css files
+    mix.copy(resourcesAssets + 'css/bootstrap-social.css', dest + 'css/');
 });

@@ -40,6 +40,7 @@ php artisan make:model Article -m
 php artisan make:controller ArticleController --resource
 php artisan make:migration change_body_of_articles
 php artisan migrate
+php artisan make:middleware SetLanguage
 
 .authors
  + make model
@@ -68,11 +69,49 @@ php artisan migrate
  + add relationship
  + submit comment when logged in
  - admin to see list of all comments and edit/delete them
+ - korisnici da imaju opciju da postuju anonimous
 
 .add tags
  + create model and controller
  + many to many relationship with article
  - add new tags while creating article
+
+.google/facebook authentication (OAuth?)
+ - google
+   + go here and follow instr to create google oauth client account: https://developers.google.com/identity/sign-in/web/devconsole-project
+   + ends up here: https://console.developers.google.com/apis/credentials?project=gpositive-152217
+    + make sure to set redirect and js links
+   + go here and follow instr to instal socialite to laravel project: https://github.com/laravel/socialite
+   + client id: 57182562399-4up23bv4k5bdtv5ld6g1hol6pam0cb3b.apps.googleusercontent.com
+   + client secret: yB6W0cYr0QUsYK_DcGWSQ8h7
+   + some error "reason":"accessNotConfigured" go to console and on dashboard click google+ api then click enable in top row
+   + sve radi ali nije ulogovan, sta sad? trebalo je dodati usera u nas sistem prema: https://blog.damirmiladinov.com/laravel/laravel-5.2-socialite-facebook-login.html#.WE2CaswrJhE
+   + stavi lepe dugmice za login
+   - dodaj facebook
+   - dodaj tweeter
+   - remember me for long
+
+User {#260 ▼
+  +token: "ya29.CjCyA0JdUu2j0zdu5DebJGvWnFkOinDir-KFjBnYEOrHT3z_ie8B3xQzUGeO4Vj63tg"
+  +refreshToken: null
+  +expiresIn: 3599
+  +id: "109861338444164519175"
+  +nickname: null
+  +name: "Petar Bajic"
+  +email: "extra.pedestrian@gmail.com"
+  +avatar: "https://lh3.googleusercontent.com/-Tv1t0jG6U1w/AAAAAAAAAAI/AAAAAAAABCE/hux46Wv9uIg/photo.jpg?sz=50"
+  +user: array:21 [▶]
+  +"avatar_original": "https://lh3.googleusercontent.com/-Tv1t0jG6U1w/AAAAAAAAAAI/AAAAAAAABCE/hux46Wv9uIg/photo.jpg"
+}
+
+
+
+.languages - sr/en/ge
+ + add sr lang
+ + postavi sr lang u cookie
+ + pozovi sr lang translate u bladeu
+ - namesti zastavice sa linkovima koje setuju jezike
+ + namesti da na jednom mestu se postavlja lang za sve strane
 
 .picni sajt
  - lista articla
@@ -81,24 +120,27 @@ php artisan migrate
  - picni komente
  - picni tagove
 
-.google/facebook authentication (OAuth?)
- - google
-   - go here and follow instr to create google oauth client account: https://developers.google.com/identity/sign-in/web/devconsole-project
-   - ends up here: https://console.developers.google.com/apis/credentials?project=gpositive-152217
-   - go here and follow instr to instal socialite to laravel project: https://github.com/laravel/socialite
-   - client id: 57182562399-4up23bv4k5bdtv5ld6g1hol6pam0cb3b.apps.googleusercontent.com
-   - client secret: yB6W0cYr0QUsYK_DcGWSQ8h7
+eyJpdiI6IjA5SXFxbEpTQVNrbGNWMExqS3RpUGc9PSIsInZhbHVlIjoiN3hvbmZ5QmhCU1FLdHptM3R2OENNZz09IiwibWFjIjoiZTNjZmM5NjczMDZmZjc4MDk0NGQ5YTU2NDE1MjhjZGM1YjFmMGEzYjdlNTA2MGRiZWU0YmM2OTk1YmIyOTIwMiJ9
+eyJpdiI6IjA5SXFxbEpTQVNrbGNWMExqS3RpUGc9PSIsInZhbHVlIjoiN3hvbmZ5QmhCU1FLdHptM3R2OENNZz09IiwibWFjIjoiZTNjZmM5NjczMDZmZjc4MDk0NGQ5YTU2NDE1MjhjZGM1YjFmMGEzYjdlNTA2MGRiZWU0YmM2OTk1YmIyOTIwMiJ9
+eyJpdiI6Ilhnd2xOb3hVckhcL0h4c1BzWXR6RXZnPT0iLCJ2YWx1ZSI6InowTTIwNWdmZjRFeHBSZWk1Nko1c3c9PSIsIm1hYyI6IjYxNmZjOGExNjU4MmNmYjQ1MWQwNjFjZmQ0ZTczMTA2NDU3ZDMyZTk3ZjAwYzZmN2RmYmJmNjNlMmM4NDk5MmQifQ==
 .payment
+
 .discounts (notify me when this article is on discount)
+
 .social sharing buttons
 
+.optimization
+ - do not load all css on app.blade.php that is included in all pages, for example include summernote only on pages where needed. this way homepage should load quickly.
+
 .pagination
-.languages - sr/en/ge
+
 .statistics
  - how many people opened that article
  
 .events/workshops
+
 .contact
+
 .about
 
 
