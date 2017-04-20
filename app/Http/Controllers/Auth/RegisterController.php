@@ -69,7 +69,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'picture' => '',
-            'description' => '',
         ]);
     }
 
@@ -100,8 +99,7 @@ class RegisterController extends Controller
                 'email' => $providerUser->getEmail(),
                 'name' => $providerUser->getName(),
                 'password' => 'nigfig',
-                'picture' => $providerUser->getAvatar(),
-                'description' => 'default value',
+                'picture' => $providerUser->getAvatar()
             ]);
         }
 
