@@ -35,6 +35,7 @@
  + add edit/new/delete buttons only for admin
  + link to articles and vice versa
  + protect create/edit/delete route if logged in is not author
+ - add course picture
 
 php artisan make:model Article -m
 php artisan make:controller ArticleController --resource
@@ -47,6 +48,20 @@ php artisan make:middleware SetLanguage
  + add relationship
  + list authors
  + list articles by author
+
+ + artisan tinker author
+    $author = new App\Author;
+    $author->name = "Gorana Rakic-Bajic"
+    $author->title = 'Phd of Psychology';
+    $author->biography = '';
+    $author->image = '';
+    $author->user_id = '1';
+    $author->save();
+
+attach tag to article
+ $article = App\Article::find(1);
+ $article->tags()->attach(1);
+
 
  + add author manually:
     php artisan tinker
@@ -75,6 +90,13 @@ php artisan make:middleware SetLanguage
  + create model and controller
  + many to many relationship with article
  - add new tags while creating article
+
+artisan tinker tag:
+ $tag = new App\Tag;
+ $tag->name = 'psychology';
+ $tag->save();
+
+
 
 .google/facebook authentication (OAuth?)
  - google
@@ -142,64 +164,3 @@ eyJpdiI6Ilhnd2xOb3hVckhcL0h4c1BzWXR6RXZnPT0iLCJ2YWx1ZSI6InowTTIwNWdmZjRFeHBSZWk1
 .contact
 
 .about
-
-
-
-
-
-
-
-
-
-
-
-160x33x2 - 1 kom
-160x15x2 - 1 kom
-85x33x2 - 2 kom
-160x4x4 - 2 kom
-71x4x4 - 2 kom
-80x10x1 - 6 kom
-
-viktorsiranji@yahoo.com
-
-
-- deci poklone
-- Petri cizme
-- racune 50
-- doprinosi 70
-+ solarevic knjizice
-+ solarevic resenje
-+ uplata 150
-- tabla osiguraci elektricar
-- kablovi
-- luster sobica
-- luster dnevna
-- luster decija
-- luster milosa bajica 1
-- luster milosa bajica 2
-- tepih zuti
-- pavlu krevet stolar ..
-+ babi racunar
-- akvarijum
-- kais
-- gogi lap ekran
-- moj stari telefon ekran
-- led sijalice
-- kupindo
-
-
-+ 07
-+ 08
-- 09 doktor, georgi, harfa
-
-- 12
-- 13
-- 14
-- 15
-- 16
-
-- 19
-- 20
-- 21
-- 22
-- 23

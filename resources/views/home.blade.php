@@ -39,25 +39,25 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 
 
-
-
-
-
+  @foreach ($articles as $article)
 
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
-  <img src="/images/woods.jpg" alt="Nature" style="width:100%">
+
+    <div class="article_image" style="background:url('/{{$article->image}}') no-repeat; background-size:cover; width:100%; background-position: 0px -50px; height:270px;"> </div>
     <div class="w3-container w3-padding-8">
-      <h3><b>TITLE HEADING</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+      <h3 class="article_heading"><b>{{$article->title}}</b></h3>
+      <p><a href="/authors/{{$article->author->id}}">{{$article->author->name}}</a></p>
+      <h5>{{$article->description}}, <span class="w3-opacity">April 7, 2014</span></h5>
     </div>
 
     <div class="w3-container">
-      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <div style="height:100px; width:100%; overflow:hidden; white-space: nowrap;">
+        {!! $article->body !!}
+      </div>
       <div class="w3-row">
         <div class="w3-col m8 s12">
-          <p><button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black"><b>READ MORE »</b></button></p>
+          <p><a href="/articles/{{$article->id}}"><button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black"><b>READ MORE »</b></button></a></p>
         </div>
         <div class="w3-col m4 w3-hide-small">
           <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
@@ -67,77 +67,7 @@ and is wrapped around the whole page content, except for the footer in this exam
   </div>
   <hr>
 
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-  <img src="/images/bridge.jpg" alt="Norway" style="width:100%">
-    <div class="w3-container w3-padding-8">
-      <h3><b>BLOG ENTRY</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
-    </div>
-
-    <div class="w3-container">
-      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black"><b>READ MORE »</b></button></p>
-        </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-  <img src="/images/bridge.jpg" alt="Norway" style="width:100%">
-    <div class="w3-container w3-padding-8">
-      <h3><b>BLOG ENTRY</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
-    </div>
-
-    <div class="w3-container">
-      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black"><b>READ MORE »</b></button></p>
-        </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-  <img src="/images/bridge.jpg" alt="Norway" style="width:100%">
-    <div class="w3-container w3-padding-8">
-      <h3><b>BLOG ENTRY</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
-    </div>
-
-    <div class="w3-container">
-      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black"><b>READ MORE »</b></button></p>
-        </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr>
+  @endforeach
 
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
@@ -204,15 +134,19 @@ and is wrapped around the whole page content, except for the footer in this exam
   <!-- Posts -->
   <div class="w3-card-2 w3-margin">
     <div class="w3-container w3-padding">
-      <h4>Popular Posts</h4>
+      <h4>Recent Courses</h4>
     </div>
     <ul class="w3-ul w3-hoverable w3-white">
 
+    @foreach ($courses as $course)
+
       <li class="w3-padding-16">
         <img src="/images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Lorem</span><br>
-        <span>Sed mattis nunc</span>
+        <a href="/courses/{{$course->id}}"><span class="w3-large">{{$course->title}}</span></a><br>
+        <span>{{$course->description}}</span>
       </li>
+
+    @endforeach
 
       <li class="w3-padding-16">
         <img src="/images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">

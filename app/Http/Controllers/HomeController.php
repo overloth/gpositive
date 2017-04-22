@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App;
+use App\Article;
+use App\Course;
 
 class HomeController extends Controller
 {
@@ -27,12 +29,14 @@ class HomeController extends Controller
     {
         //dd($request);
         
-        Log::info('Showing index: ' . session('lang'));
+        Log::info('Showing indexx: ' . session('lang'));
 
+        $articles = Article::latest('updated_at')->get();
+        $courses = Course::latest('updated_at')->get();
 
         //if($request->cookie('lang')) App::setLocale($request->cookie('lang'));
 
-        return view('home');
+        return view('home', compact('articles', 'courses'));
     }
 
     public function setLanguage(Request $request, $locale = '')
