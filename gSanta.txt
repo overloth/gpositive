@@ -109,7 +109,7 @@ artisan tinker tag:
    + some error "reason":"accessNotConfigured" go to console and on dashboard click google+ api then click enable in top row
    + sve radi ali nije ulogovan, sta sad? trebalo je dodati usera u nas sistem prema: https://blog.damirmiladinov.com/laravel/laravel-5.2-socialite-facebook-login.html#.WE2CaswrJhE
    + stavi lepe dugmice za login
-   - dodaj facebook
+   + dodaj facebook
    - dodaj tweeter
    - remember me for long
 
@@ -129,10 +129,11 @@ User {#260 ▼
 
 
 .languages - sr/en/ge
+ + link to change language: http://gpositive.app/language/sr
  + add sr lang
  + postavi sr lang u cookie
  + pozovi sr lang translate u bladeu
- - namesti zastavice sa linkovima koje setuju jezike
+ + namesti zastavice sa linkovima koje setuju jezike
  + namesti da na jednom mestu se postavlja lang za sve strane
 
 .picni sajt

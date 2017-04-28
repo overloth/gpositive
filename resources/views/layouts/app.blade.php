@@ -64,6 +64,38 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><div style="border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_{{Cookie::get('lang')}}.png'); background-size:cover;""></div>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+
+                                <a href="{{ url('/language/en') }}" onclick="event.preventDefault(); window.location.href = '/language/en';" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <div style="clear:both">
+                                    <div style="float:left; margin:4px; border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_en.png'); background-size:cover;""></div> 
+                                    <div style="margin:4px; padding-top: 4px;">English</div>
+                                </div>
+                                </a>
+
+                                <a href="{{ url('/language/sr') }}" onclick="event.preventDefault(); window.location.href = '/language/sr';" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <div style="clear:both">
+                                    <div style="float:left; margin:4px; border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_sr.png'); background-size:cover;""></div> 
+                                    <div style="margin:4px; padding-top: 4px;">Srpski</div>
+                                </div>
+                                </a>
+
+                                <a href="{{ url('/language/de') }}" onclick="event.preventDefault(); window.location.href = '/language/de';" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <div style="clear:both">
+                                    <div style="float:left; margin:4px; border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_de.png'); background-size:cover;""></div> 
+                                    <div style="margin:4px; padding-top: 4px;">Deutch</div>
+                                </div>
+                                </a>
+                            </ul>
+                        </li>
+                    </ul>
+
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
