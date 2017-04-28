@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Log;
 use App;
 use App\Article;
 use App\Course;
-
+use App\Tag;
+use App\Comment;
 class HomeController extends Controller
 {
     /**
@@ -33,10 +34,12 @@ class HomeController extends Controller
 
         $articles = Article::latest('updated_at')->get();
         $courses = Course::latest('updated_at')->get();
+        $tags = Tag::all();
+        
 
         //if($request->cookie('lang')) App::setLocale($request->cookie('lang'));
 
-        return view('home', compact('articles', 'courses'));
+        return view('home', compact('articles', 'courses', 'tags'));
     }
 
     public function setLanguage(Request $request, $locale = '')
@@ -49,4 +52,6 @@ class HomeController extends Controller
         //dd($locale);
         return redirect()->to('/')->cookie('lang', $locale, 24*60*290);
     }
+
+
 }

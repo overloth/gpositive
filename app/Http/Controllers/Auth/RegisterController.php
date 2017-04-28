@@ -111,4 +111,45 @@ class RegisterController extends Controller
         // $user->token;
     }
 
+
+    /* Facebook Login
+
+    */
+     
+     
+
+     public function redirect()
+    {
+        return Socialite::driver('facebook')->redirect();   
+    }   
+    
+
+    
+
+    public function callback()
+    {
+       $providerUser = Socialite::driver('facebook')->user();
+
+        $user = User::whereEmail($providerUser->getEmail())->first();
+
+        if (!$user) {
+
+            $user = User::create([
+                'email' => $providerUser->getEmail(),
+                'name' => $providerUser->getName(),
+                'password' => 'nigfig',
+                'picture' => $providerUser->getAvatar(),
+                
+            ]);
+        }
+
+        auth()->login($user);
+
+        return redirect()->to('/');
+
+        //dd($user);
+        // $user->token;  
+    }
+
+
 }

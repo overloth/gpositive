@@ -81,7 +81,7 @@ class ArticleController extends Controller
         //$inss['course_id'] = 0;
         $article = Article::create($inss);
 
-        dd($request->input('tag_list'));
+        //dd($request->input('tag_list'));
         $article->tags()->attach($request->input('tag_list'));
     
         //$article->author = 'Gorana Rakic-Bajic';

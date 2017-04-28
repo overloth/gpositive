@@ -2,6 +2,65 @@
 
 
 @section('content')
+<p> <a href="/articles"><-Back</a></p>
+    <div class="w3-card-4 w3-margin w3-white">
+
+    <div class="article_image" style="background:url('/{{$article->image}}') no-repeat;display:block;margin-left:auto;margin-right:auto;background-size:cover; width:100%; background-position: 0px -50px; height:500px;"> </div>
+    <div class="w3-container w3-padding-8">
+      <h3 class="article_heading"><b>{{$article->title}}</b></h3>
+      <p><a href="/authors/{{$article->author->id}}">{{$article->author->name}}</a><span class="w3-opacity" style="float:right;padding-right:25px;">{{ date('d M Y ', $article->created_at->timestamp) }}</span></p>
+      <h5>{{$article->description}}</h5>
+    </div>
+
+    <div class="w3-container">
+      <div style="height:100px; width:100%; overflow:hidden; white-space: nowrap;">
+        {!! $article->body !!}
+      </div><hr>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+         <p>Comments:<br></p><p> 
+	@foreach ($article->comments as $comment)
+		<p>{{$comment->user->name}}: {{$comment->text}}</p>
+	@endforeach</b></div></a></p>
+        </p>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">{{App\Comment::where('article_id', $article->id)->count()}}</span></span></p>
+        </div>
+      </div>
+    </div>
+    {!! Form::open(array('url' => URL::to('/comments'), 'method' => 'post', 'class'=>'form-horizontal', 'files' => true)) !!}
+
+		{!! Form::hidden('article_id', $article->id) !!}
+
+		{{--New Comment--}}
+		<div class="form-group{{ $errors->has('text') ? ' has-error' : '' }}">
+
+			<label for="text" class="col-md-4 control-label">Join Discussion</label>
+
+			<div class="col-md-6">
+			    {!! Form::text('text', null, array('class' => 'form-control', 'placeholder'=> 'Enter comment here..')) !!}
+
+			    @if ($errors->has('text'))
+			        <span class="help-block">
+			            <strong>{{ $errors->first('text') }}</strong>
+			        </span>
+			    @endif
+			</div>
+		</div>
+
+		<div class="form-group">
+		    <div class="col-md-6 col-md-offset-6 w3-padding-large">
+		        <button type="submit" class="btn btn-primary">
+		            <i class="fa fa-btn fa-shield" px;"></i> Submit Comment
+		        </button>
+		    </div>
+		</div>
+
+	{!! Form::close() !!}
+  </div>
+  <hr>
+
+
 	
 	<p> <a href="/articles"><-Back</a></p>
 	<p> Selected article: {{$article->title}} </p>

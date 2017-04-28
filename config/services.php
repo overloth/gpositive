@@ -41,4 +41,11 @@ return [
         'redirect' => 'http://gpositive.app/auth/google/callback',
     ],
 
+    'facebook' => [
+    'client_id' => '278732849245974',
+    'client_secret' => 'ac354b2f7b1b75ec905144cdc94edc45',
+    'redirect' => 'http://gpositive.app/auth/facebook/callback',
+    
+    ],
+
 ];
