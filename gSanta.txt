@@ -128,13 +128,16 @@ User {#260 ▼
 
 
 
-.languages - sr/en/ge
++languages - sr/en/de
  + link to change language: http://gpositive.app/language/sr
  + add sr lang
  + postavi sr lang u cookie
  + pozovi sr lang translate u bladeu
  + namesti zastavice sa linkovima koje setuju jezike
  + namesti da na jednom mestu se postavlja lang za sve strane
+ - isprevedi sve
+ - prikazi na jeziku posetioca
+ - definisi jezik artikla preko taga npr "lang-en"
 
 .picni sajt
  - lista articla
