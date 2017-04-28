@@ -2,8 +2,10 @@
 
 
 @section('content')
+<div class="w3-content" style="max-width:1400px">
+
 <p> <a href="/articles"><-Back</a></p>
-    <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-card-4 w3-margin w3-white ">
 
     <div class="article_image" style="background:url('/{{$article->image}}') no-repeat;display:block;margin-left:auto;margin-right:auto;background-size:cover; width:100%; background-position: 0px -50px; height:500px;"> </div>
     <div class="w3-container w3-padding-8">
@@ -15,7 +17,18 @@
     <div class="w3-container">
       <div style="height:100px; width:100%; overflow:hidden; white-space: nowrap;">
         {!! $article->body !!}
-      </div><hr>
+      </div>
+       @if ($article->tags)
+	<p>Tags:
+	
+	@foreach ($article->tags as $tag)
+		<a href="/tags/{{$tag->id}}" class="w3-tag w3-black w3-margin-bottom">{{$tag->name}}</a>  
+	@endforeach
+	</p>
+	
+	@endif
+
+      <hr>
       <div class="w3-row">
         <div class="w3-col m8 s12">
          <p>Comments:<br></p><p> 
@@ -57,6 +70,7 @@
 		</div>
 
 	{!! Form::close() !!}
+  </div>
   </div>
   <hr>
 
