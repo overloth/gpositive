@@ -35,6 +35,26 @@
 	</div>
 </div>
 
+{{--Item Image--}}
+<div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
+
+	<label for="image" class="col-md-4 control-label">Image</label>
+
+	<div class="col-md-6">
+
+		{{--<div style="border: solid #cccccc 1px; width: 100%; height: 200px; background:url('/@if(! empty($item)) {{$item->image}} @endif'); background-size:cover;"></div>--}}
+		
+	    {!! Form::file('image') !!}
+
+
+	    @if ($errors->has('image'))
+	        <span class="help-block">
+	            <strong>{{ $errors->first('image') }}</strong>
+	        </span>
+	    @endif
+	</div>
+</div>
+
 {{--Item Price--}}
 <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
 

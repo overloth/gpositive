@@ -56,7 +56,43 @@ class CourseController extends Controller
         $inss = $request->all();
         //dd($inss);
 
-        Course::create($inss);
+        $course = Course::create($inss);
+
+
+        if ($request->hasFile('image')) {
+
+            if ($request->file('image')->isValid()) {
+                
+                //set upload path
+                $destinationPath = 'uploads';
+                //get filename
+                $filename = $request->file('image')->getClientOriginalName();
+                //uploading file to given path
+                $request->file('image')->move($destinationPath, $filename);
+                //dd($filename);
+                //set item image
+                $course->image = $destinationPath . '/' . $filename;
+                //save
+                $course->save();
+
+            }
+            else
+            {
+                //there was problem uploading image
+                dd('there was problem uploading image');
+            }
+
+            
+
+        }
+        else
+        {
+            //image file not uploaded
+            dd('image file not uploaded');
+        }
+
+
+
     
         return redirect('courses');
     }

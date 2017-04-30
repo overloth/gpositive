@@ -35,7 +35,7 @@
  + add edit/new/delete buttons only for admin
  + link to articles and vice versa
  + protect create/edit/delete route if logged in is not author
- - add course picture
+ + add course picture
 
 php artisan make:model Article -m
 php artisan make:controller ArticleController --resource
@@ -168,3 +168,4 @@ eyJpdiI6Ilhnd2xOb3hVckhcL0h4c1BzWXR6RXZnPT0iLCJ2YWx1ZSI6InowTTIwNWdmZjRFeHBSZWk1
 .contact
 
 .about
+ - made site about one of articles so author/admin can edit it like article

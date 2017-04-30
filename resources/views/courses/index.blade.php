@@ -15,6 +15,7 @@
 
 	@foreach ($courses as $course)
 
+	<div class="article_image" style="background:url('/{{$course->image}}') no-repeat;display:block;margin-left:auto;margin-right:auto;background-size:cover; width:100%; background-position: 0px -50px; height:100px;"> </div>
 	<p>Title: <a href="/courses/{{$course->id}}">{{$course->title}} [${{$course->price}}]</a></p>
 	<p>Description: {{$course->description}}</p>
 	<p>Videos/Articles: 
