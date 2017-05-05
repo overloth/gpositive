@@ -144,7 +144,9 @@ User {#260 ▼
  - lista kurseva sa videjima
  - show article
  - picni komente
- - picni tagove
+ + picni tagove
+ - picni listu artikala od tagova
+ - picni listu artikala od autora
 
 eyJpdiI6IjA5SXFxbEpTQVNrbGNWMExqS3RpUGc9PSIsInZhbHVlIjoiN3hvbmZ5QmhCU1FLdHptM3R2OENNZz09IiwibWFjIjoiZTNjZmM5NjczMDZmZjc4MDk0NGQ5YTU2NDE1MjhjZGM1YjFmMGEzYjdlNTA2MGRiZWU0YmM2OTk1YmIyOTIwMiJ9
 eyJpdiI6IjA5SXFxbEpTQVNrbGNWMExqS3RpUGc9PSIsInZhbHVlIjoiN3hvbmZ5QmhCU1FLdHptM3R2OENNZz09IiwibWFjIjoiZTNjZmM5NjczMDZmZjc4MDk0NGQ5YTU2NDE1MjhjZGM1YjFmMGEzYjdlNTA2MGRiZWU0YmM2OTk1YmIyOTIwMiJ9
@@ -168,4 +170,4 @@ eyJpdiI6Ilhnd2xOb3hVckhcL0h4c1BzWXR6RXZnPT0iLCJ2YWx1ZSI6InowTTIwNWdmZjRFeHBSZWk1
 .contact
 
 .about
- - made site about one of articles so author/admin can edit it like article
+ - make 'site about' to be one of articles so author/admin can edit it like article
