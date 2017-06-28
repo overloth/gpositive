@@ -21,5 +21,6 @@ return [
     'course' => 'Kurs',
     'courses' => 'Kursevi',
     'event' => 'Dogadjaj',
-    'events' => 'Dogadjaji',
+    'events' => 'Psiholosko savetovaliste Basta',
+    'workshops' => 'Radionice',
 ];

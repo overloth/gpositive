@@ -10,13 +10,11 @@
                 <div class="panel-heading">Edit: {{$course->title}}</div>
                 <div class="panel-body">
 
-           
+				{!! Form::model($course, array('url' => URL::to('/courses/' . $course->id), 'class'=>'form-horizontal', 'method' => 'PUT', 'files' => true)) !!}
 
-	{!! Form::model($course, array('url' => URL::to('/courses/' . $course->id), 'class'=>'form-horizontal', 'method' => 'PUT', 'files' => true)) !!}
+				@include('courses.partials.form')
 
-	@include('courses.partials.form')
-
-	{!! Form::close() !!}
+				{!! Form::close() !!}
 
 				</div>
 			</div>

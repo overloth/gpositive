@@ -3,11 +3,11 @@
 @section('content')
 <!-- w3-content defines a container for fixed size centered content,
 and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1400px">
+<div class="w3-content" style="max-width:1400px;background:url('/images/zuticvet.jpg') no-repeat;display:block;background-attachment: fixed;background-size:cover; width:100%;background-position:fixed;">
 
 <!-- Header -->
-<header class="w3-container w3-center w3-padding-32">
-  <h1><b>gPositive</b></h1>
+<header class="w3-container w3-center w3-padding-32" >
+    <h1 style="font-family: Sans-serif;"><b style="color: white;">CENTAR ZA POZITIVNU PSIHOLOGIJU</b></h1>
   <!-- <p>Welcome to the blog of <span class="w3-tag">unknown</span></p> -->
 </header>
 
@@ -46,13 +46,16 @@ and is wrapped around the whole page content, except for the footer in this exam
 
     <div class="article_image" style="background:url('/{{$article->image}}') no-repeat; background-size:cover; width:100%; background-position: 0px -50px; height:270px;"> </div>
     <div class="w3-container w3-padding-8">
-      <h3 class="article_heading"><b>{{$article->title}}</b></h3>
+        @if ($article->course)
+      <h4><b><a style="color:black;" href="/courses/{{$article->course->id}}">{{$article->course->title}}</a></b></h4>
+        @endif
+      <h3 class="article_heading"><b><a href="/articles/{{$article->id}}">{{$article->title}}</a></b></h3>
       <p><a href="/authors/{{$article->author->id}}">{{$article->author->name}}</a><span class="w3-opacity" style="float:right;padding-right:25px;">{{ date('d M Y ', $article->created_at->timestamp) }}</span></p>
-      <h5>{{$article->description}}</h5>
+      <h5 style="font-style: italic;">{{$article->description}}</h5>
     </div>
 
     <div class="w3-container">
-      <div style="height:100px; width:100%; overflow:hidden; white-space: nowrap;">
+      <div style="height:100px; width:100%; overflow:hidden;">
         {!! $article->body !!}
       </div>
       <div class="w3-row">
@@ -61,7 +64,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
         <div class="w3-col m4 w3-hide-small">
           <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">{{App\Comment::where('article_id', $article->id)->count()}}</span></span></p>
-        </div>
+        </div> 
       </div>
     </div>
   </div>
@@ -90,50 +93,23 @@ and is wrapped around the whole page content, except for the footer in this exam
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- END BLOG ENTRIES -->
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Introduction menu -->
 <div class="w3-col l4 w3-hide-medium w3-hide-small">
   <!-- About Card -->
   <div class="w3-card-2 w3-margin w3-margin-top">
-  <img src="/images/avatar_g.jpg" style="width:100%">
+  <img src="/images/radionica_basta.jpg" style="width:100%">
     <div class="w3-container w3-white">
-      <h4><b>My Name</b></h4>
-      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+      <h4><b>RADIONICA BASTA</b></h4>
+      <p><a href="/events">idi u radionicu</a></p>
     </div>
   </div><hr>
   
   <!-- Posts -->
   <div class="w3-card-2 w3-margin">
-    <div class="w3-container w3-padding">
+    <div class="w3-container w3-padding" style="color:white;">
       <h4>Recent Courses</h4>
     </div>
     <ul class="w3-ul w3-hoverable w3-white">
@@ -141,9 +117,9 @@ and is wrapped around the whole page content, except for the footer in this exam
     @foreach ($courses as $course)
 
       <li class="w3-padding-16">
-        <img src="/images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <img src="{{$course->image}}" alt="Image" class="w3-left w3-margin-right" style="width:75px;height: 50px;">
         <a href="/courses/{{$course->id}}"><span class="w3-large">{{$course->title}}</span></a><br>
-        <span>{{$course->description}}</span>
+        <p>{{$course->description}}</p>
       </li>
 
     @endforeach
@@ -170,19 +146,12 @@ and is wrapped around the whole page content, except for the footer in this exam
   </div>
   <hr>
  
-
-
-
-
-
-
- 
   <!-- Labels / tags -->
   <div class="w3-card-2 w3-margin">
-    <div class="w3-container w3-padding">
+    <div class="w3-container w3-padding"  style="color:white;">
       <h4>Tags</h4>
     </div>
-    <div class="w3-container w3-white">
+    <div class="w3-container w3-white" >
     <p> 
 
   @foreach ($tags as $tag)
@@ -190,9 +159,6 @@ and is wrapped around the whole page content, except for the footer in this exam
     <a href="http://gpositive.app/tags/{{$tag->id}}"><span class="w3-tag w3-black w3-margin-bottom">{{ $tag->name }}</span></a> 
 
   @endforeach
-
-
-
  
     </p>
     </div>
@@ -200,27 +166,6 @@ and is wrapped around the whole page content, except for the footer in this exam
   
 <!-- END Introduction Menu -->
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- END GRID -->
 </div><br>

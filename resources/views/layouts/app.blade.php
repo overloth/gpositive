@@ -12,7 +12,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'gPositive') }}</title>
+    <title>{{ config('app.name', 'CENTAR ZA POZITIVNU PSIHOLOGIJU') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 </head>
 <body>
     <div id="bapp">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0px;">
             <div class="container">
                 <div class="navbar-header">
 
@@ -43,7 +43,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" style="{{ Request::is('/') ? 'background-color: #eeeeee;' : '' }}" href="{{ url('/') }}">
-                        {{ config('app.name', 'gPositive') }}
+                        Home
                     </a>
 
                     <!--<a class="navbar-brand" href="{{ url('/articles') }}">
@@ -60,6 +60,7 @@
                     <ul class="nav navbar-nav">
                         <li class="{{ Request::is('articles') ? 'active' : '' }}"><a class="djek" href="{{ url('/articles') }}">@lang('various.articles')</a></li>
                         <li class="{{ Request::is('courses') ? 'active' : '' }}"><a href="{{ url('/courses') }}">@lang('various.courses')</a></li>
+                        <li class="{{ Request::is('workshops') ? 'active' : '' }}"><a href="{{ url('/workshops') }}">@lang('various.workshops')</a></li>
                         <li class="{{ Request::is('events') ? 'active' : '' }}"><a href="{{ url('/events') }}">@lang('various.events')</a></li>
                     </ul>
 

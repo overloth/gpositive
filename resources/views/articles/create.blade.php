@@ -10,13 +10,11 @@
                 <div class="panel-heading">Create New Article</div>
                 <div class="panel-body">
 
-              
+			{!! Form::open(array('url' => URL::to('/articles'), 'method' => 'post', 'class'=>'form-horizontal', 'files' => true)) !!}
 
-	{!! Form::open(array('url' => URL::to('/articles'), 'method' => 'post', 'class'=>'form-horizontal', 'files' => true)) !!}
+			@include('articles.partials.form')
 
-		@include('articles.partials.form')
-
-	{!! Form::close() !!}
+			{!! Form::close() !!}
 
 				</div>
 			</div>

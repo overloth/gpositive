@@ -9,6 +9,7 @@ use App\Article;
 use App\Course;
 use App\Tag;
 use App\Comment;
+use App\Event;
 class HomeController extends Controller
 {
     /**

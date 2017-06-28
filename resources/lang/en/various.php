@@ -17,9 +17,10 @@ return [
     'author' => 'Author',
     'authors' => 'Authors',
     'article' => 'Article',
-    'articles' => 'PArticles',
+    'articles' => 'Articles',
     'course' => 'Course',
     'courses' => 'Courses',
     'event' => 'Event',
-    'events' => 'Events',
+    'events' => 'Psychology counseling Garden',
+    'workshops' => 'Workshops',
 ];

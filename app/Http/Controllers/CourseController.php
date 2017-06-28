@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Course;
 use App;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+use App\Article;
+use Illuminate\Support\Facades\DB;
 
 class CourseController extends Controller
 {
@@ -18,8 +21,9 @@ class CourseController extends Controller
     {
         
         $courses = Course::all();
+        $articles = Article::all();
 
-        return view('courses.index', compact('courses'));
+        return view('courses.index', compact('courses','articles'));
     }
 
     /**
@@ -148,6 +152,33 @@ class CourseController extends Controller
         //find specified course and update it
         $course = Course::findOrFail($id);
         $course->update($request->all());
+
+        if ($request->hasFile('image'))
+         {  
+            $destinationPath = 'uploads';
+            $image = $request->file('image');
+            $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString()); 
+            $filename = $timestamp. '-' .$image->getClientOriginalName();
+            $course->image = $filename;
+            //uploading file to given path
+            $request->file('image')->move($destinationPath, $filename);
+            //set item image
+            $course->image = $destinationPath . '/' . $filename; 
+             //save
+            $course->save();
+            //$article->update($request->all());
+ 
+            //$article->tags()->sync($request->input('tag_list'));
+
+            //return redirect('articles');
+            
+            //dd ('slika uspesno upload-ovana');
+            //return;
+            //return '/uploads/' . $filename;
+            //return redirect('articles');                  
+        }   
+
+
         
         return redirect('courses');
     }

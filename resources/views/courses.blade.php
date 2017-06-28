@@ -35,15 +35,6 @@ and is wrapped around the whole page content, except for the footer in this exam
 <div class="w3-col l8 s12">
 
 
-
-
-
-
-
-
-
-
-
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
   <img src="/images/woods.jpg" alt="Nature" style="width:100%">

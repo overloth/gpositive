@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Comment;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class CommentController extends Controller
 {
@@ -15,7 +17,24 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+         //not logged in, no editing comments
+        if(!Auth::user())
+        {
+            dd('there was problem saying you are not logged in');
+            return;
+        }
+
+        // check if author logged in
+        if(!Auth::user()->author)
+        {
+            dd('there was problem saying you are not author');
+            return;
+        }
+
+
+       $comments = Comment::latest('updated_at')->get();
+
+        return view('Comments.comments', compact('comments'));
     }
 
     /**
@@ -39,8 +58,11 @@ class CommentController extends Controller
         // check if user logged in
         if(!Auth::user())
         {
-            dd('there was problem saying you are not logged in');
-            return;
+            
+            return  redirect()->guest('login');
+            
+
+
         }
 
         $inss = $request->all();

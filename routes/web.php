@@ -46,9 +46,12 @@ Route::resource('tags','TagController');
     return view('courses');
 });*/
 
-Route::get('events', function () {
-    return view('events');
-});
+//Route::get('events', function () {
+//    return view('events');
+//});
+
+Route::get('/events','EventController@events');
+Route::resource('workshops','WorkshopController');
 
 
 

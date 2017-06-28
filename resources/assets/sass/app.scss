@@ -8,7 +8,77 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-.article_heading {
+.article_heading_courses {
   margin-top: 0px;
-  font-size: 36px;
+  font-size: 18px;
 }
+
+.course-card {
+  width:400px;
+  height: 300px;
+  display: inline-block;
+
+.course-card1{
+  width:400px;
+  height: 300px;
+  
+
+  
+}
+
+
+}
+.course-image{
+  background:url('/{{$course->image}}') no-repeat;
+  
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  background-size:cover;
+  width:100%;
+  background-position: 0px -50px;
+  height:100px;
+}
+.article-image{
+  height:170px;
+}
+@media screen and  (min-width:960px) {
+  .course-card {
+    width:400px;
+    height:300px;
+    display: inline-block;
+  }
+  
+  .course-image{
+    height:100px;
+  }
+  
+  .article-image{
+    height:170px;
+  }
+  .article_heading_courses {
+  margin-top: 0px;
+  font-size: 18px;
+}
+
+}
+
+@media screen and  (max-width:960px){
+.course-card {
+    width:300px;
+    height:100px;
+    display: inline-block;
+  }
+  .course-image{
+  
+  height:50px;
+  }
+  .article-image{
+    height:75px;
+  }
+  .article_heading {
+  margin-top: 0px;
+  font-size: 16px;
+  }
+
+}  

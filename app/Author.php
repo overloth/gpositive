@@ -23,4 +23,9 @@ class Author extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+     public function workshops()
+    {
+        return $this->hasMany('App\Workshop');
+    }
 }

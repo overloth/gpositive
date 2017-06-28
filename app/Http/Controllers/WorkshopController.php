@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Comment;
 use Carbon\Carbon;
-
-class ArticleController extends Controller
+use App\Workshop;
+class WorkshopController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,9 +21,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::latest('updated_at')->get();
+       $workshops = Workshop::latest('updated_at')->get();
 
-        return view('articles.index', compact('articles'));
+        return view('workshops.index', compact('workshops'));
     }
 
     /**
@@ -47,10 +47,9 @@ class ArticleController extends Controller
             return;
         }
         
-        $tags = Tag::pluck('name', 'id');
-        $courses = [0 => 'None'] + DB::table('courses')->pluck('title','id')->toArray();
+        
 
-        return view('articles.create', compact('courses', 'tags'));
+        return view('workshops.create', compact('workshops'));
     }
 
     /**
@@ -61,9 +60,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //$request->author = 'Gorana Rakic-Bajic';
-        //$request->input('author') = 'Gorana Rakic-Bajic';
-
+       
         if(!Auth::user())
         {
             dd('there was problem saying you are not logged in');
@@ -81,10 +78,9 @@ class ArticleController extends Controller
         //$user = Auth::user()->author->id;
         $inss['author_id'] = Auth::user()->author->id;
         //$inss['course_id'] = 0;
-        $article = Article::create($inss);
+        $workshop = Workshop::create($inss);
 
-        //dd($request->input('tag_list'));
-        $article->tags()->attach($request->input('tag_list'));
+        
     
         //$article->author = 'Gorana Rakic-Bajic';
 
@@ -100,9 +96,9 @@ class ArticleController extends Controller
                 $request->file('image')->move($destinationPath, $filename);
                 //dd($filename);
                 //set item image
-                $article->image = $destinationPath . '/' . $filename;
+                $workshop->image = $destinationPath . '/' . $filename;
                 //save
-                $article->save();
+                $workshop->save();
 
             }
             else
@@ -121,7 +117,7 @@ class ArticleController extends Controller
         }
 
 
-        return redirect('articles');
+        return redirect('workshops');
     }
 
     /**
@@ -133,8 +129,8 @@ class ArticleController extends Controller
     public function show($id)
     {
         //find article by id
-        $article = Article::findOrFail($id);
-        return view('articles.show', compact('article'));
+        $workshop = Workshop::findOrFail($id);
+        return view('workshops.show', compact('workshop'));
     }
 
     /**
@@ -159,19 +155,17 @@ class ArticleController extends Controller
             return;
         }
 
-        $article = Article::findOrFail($id);
+        $workshop = Workshop::findOrFail($id);
 
         //check if author is editing his article
-        if(Auth::user()->author->id != $article->author_id)
+        if(Auth::user()->author->id != $workshop->author_id)
         {
             dd('there was problem saying you are not author of this article');
             return;
         }
 
-        $tags = Tag::pluck('name', 'id')->toArray();
-        $courses = [0 => 'None'] + DB::table('courses')->pluck('title','id')->toArray();
-
-        return view('articles.edit', compact('article', 'courses', 'tags'));
+        
+        return view('workshops.edit', compact('workshop'));
     }
 
     /**
@@ -183,7 +177,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //not logged in, no updating articles
+       //not logged in, no updating articles
         if(!Auth::user())
         {
             dd('there was problem saying you are not logged in');
@@ -198,10 +192,10 @@ class ArticleController extends Controller
         }
 
         //find specified article
-        $article = Article::findOrFail($id);
+        $workshop = Workshop::findOrFail($id);
 
         //check if author is editing his article
-        if(Auth::user()->author->id != $article->author_id)
+        if(Auth::user()->author->id != $workshop->author_id)
         {
             dd('there was problem saying you are not author of this article');
             return;
@@ -210,23 +204,22 @@ class ArticleController extends Controller
         
 
         // and update it
-        $article->update($request->all());
+        $workshop->update($request->all());
 
-        $article->tags()->sync($request->input('tag_list'));
-
+        
          if ($request->hasFile('image'))
          {  
             $destinationPath = 'uploads';
             $image = $request->file('image');
             $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString()); 
             $filename = $timestamp. '-' .$image->getClientOriginalName();
-            $article->image = $filename;
+            $workshop->image = $filename;
             //uploading file to given path
             $request->file('image')->move($destinationPath, $filename);
             //set item image
-            $article->image = $destinationPath . '/' . $filename; 
+            $workshop->image = $destinationPath . '/' . $filename; 
              //save
-            $article->save();
+            $workshop->save();
             //$article->update($request->all());
  
             //$article->tags()->sync($request->input('tag_list'));
@@ -239,18 +232,8 @@ class ArticleController extends Controller
             //return redirect('articles');                  
         }   
 
- 
-        
-
-      
-
-
-
-
-
-
-
-        return redirect('articles');
+        return redirect('workshops');
+    
     }
 
     /**
@@ -261,7 +244,7 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //not logged in, no updating articles
+       //not logged in, no updating articles
         if(!Auth::user())
         {
             dd('there was problem saying you are not logged in');
@@ -276,17 +259,18 @@ class ArticleController extends Controller
         }
 
         //find specified article
-        $article = Article::findOrFail($id);
+        $workshop = Workshop::findOrFail($id);
 
         //check if author is editing his article
-        if(Auth::user()->author->id != $article->author_id)
+        if(Auth::user()->author->id != $workshop->author_id)
         {
             dd('there was problem saying you are not author of this article');
             return;
         }
 
-        $article->delete();
+        $workshop->delete();
         
-        return redirect('articles');
+        return redirect('workshops');
+    
     }
 }
