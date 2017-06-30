@@ -174,10 +174,10 @@ eyJpdiI6Ilhnd2xOb3hVckhcL0h4c1BzWXR6RXZnPT0iLCJ2YWx1ZSI6InowTTIwNWdmZjRFeHBSZWk1
 
 
 .pedja
- - translate all new text
+ + translate all new text
  - remove hr tags
- - background pictures not to scroll
- - inline indentation (tabs -> 2 spaces)
+ + background pictures not to scroll
+ + inline indentation (tabs -> 2 spaces)
  - 
 
 

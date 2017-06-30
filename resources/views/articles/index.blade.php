@@ -2,10 +2,11 @@
 @extends('layouts.app')
 
 @section('content')
+
    
     
-<div class="w3-content" style="max-width:1400px;background:url('/images/prozor.jpg') no-repeat;display:block;margin-left:auto;margin-right:auto;background-size:cover; width:100%; background-position: fixed;min-height: 2000px;">
-   
+<div class="w3-content" style="max-width:1400px;background:url('/images/prozor.jpg') no-repeat;display:block;background-attachment: fixed;background-size:cover; width:100%;background-position:fixed;">
+   <div class="w3-row">
   @if (auth()->check())
     @if (auth()->user()->id == 1  || auth()->user()->author)
       <p style="text-align: center;"><b><a href="/articles/create" style="color: white;"> [Add New Article] </a><b></p>
@@ -58,6 +59,6 @@
     </a>
   @endforeach
    
-  </div>
-
+</div>
+</div>
 @stop

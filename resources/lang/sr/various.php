@@ -20,7 +20,8 @@ return [
     'articles' => 'Clanci',
     'course' => 'Kurs',
     'courses' => 'Kursevi',
-    'event' => 'Dogadjaj',
-    'events' => 'Psiholosko savetovaliste Basta',
+    'event' => 'SAVETOVALIŠTE BAŠTA',
+    'events' => 'Psiholosko savetovalište Basta',
     'workshops' => 'Radionice',
+    'positive' => 'CENTAR ZA POZITIVNU PSIHOLOGIJU'
 ];

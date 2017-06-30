@@ -7,7 +7,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <!-- Header -->
 <header class="w3-container w3-center w3-padding-32" >
-    <h1 style="font-family: Sans-serif;"><b style="color: white;">CENTAR ZA POZITIVNU PSIHOLOGIJU</b></h1>
+    <b style="color: white;"><h1 class="{{ Request::is('positive') ? 'active' : '' }}"><h1 class="djek" style="font-family: Sans-serif;text-shadow: 0 0 3px #ffe1f5, 0 0 5px #FFE4E1;" =>@lang('various.positive')</h1></h1></b>
   <!-- <p>Welcome to the blog of <span class="w3-tag">unknown</span></p> -->
 </header>
 

@@ -20,7 +20,8 @@ return [
     'articles' => 'Articles',
     'course' => 'Course',
     'courses' => 'Courses',
-    'event' => 'Event',
-    'events' => 'Psychology counseling Garden',
+    'event' => 'COUNSELING CENTER GARDEN',
+    'events' => 'Psychology Counseling Center Garden',
     'workshops' => 'Workshops',
+    'positive' =>'POSITIVE PSYCHOLOGY CENTER'
 ];

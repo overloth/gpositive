@@ -4,7 +4,7 @@
 @section('content')
    
     
-<div class="w3-content" style="max-width:1400px;background:url('/images/zuticvet.jpg') no-repeat;display:block;margin-left:auto;margin-right:auto;background-size:cover; width:100%; background-position: fixed;">
+<div class="w3-content" style="max-width:1400px;background:url('/images/zuticvet.jpg') no-repeat;display:block;background-attachment: fixed;background-size:cover; width:100%;background-position:fixed;">
    
   <div class="w3-row">
     @if (auth()->check())
