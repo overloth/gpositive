@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -61,7 +62,7 @@
                         <li class="{{ Request::is('articles') ? 'active' : '' }}"><a class="djek" href="{{ url('/articles') }}">@lang('various.articles')</a></li>
                         <li class="{{ Request::is('courses') ? 'active' : '' }}"><a href="{{ url('/courses') }}">@lang('various.courses')</a></li>
                         <li class="{{ Request::is('workshops') ? 'active' : '' }}"><a href="{{ url('/workshops') }}">@lang('various.workshops')</a></li>
-                        <li class="{{ Request::is('events') ? 'active' : '' }}"><a href="{{ url('/events') }}">@lang('various.events')</a></li>
+                      <!--  <li class="{{ Request::is('events') ? 'active' : '' }}"><a href="{{ url('/events') }}">@lang('various.events')</a></li> -->
                     </ul>
 
                     <!-- Right Side Of Navbar -->

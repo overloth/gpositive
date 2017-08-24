@@ -180,5 +180,11 @@ eyJpdiI6Ilhnd2xOb3hVckhcL0h4c1BzWXR6RXZnPT0iLCJ2YWx1ZSI6InowTTIwNWdmZjRFeHBSZWk1
  + inline indentation (tabs -> 2 spaces)
  - 
 
+igor:
 
++prikazuje kurseve samo ako ima chlanak u njemu
++ ukloniti skroz basta iz menija i sa home page
++kratko about o autoru/psihologu sa linkom ka njegovim textovima
  
+
+ -online kachenje za laravel, free ili trial bar mesec dana
