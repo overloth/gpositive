@@ -14,7 +14,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- About Card on medium screens -->
 <div class="w3-hide-large w3-hide-small w3-margin-top w3-margin-bottom">
     <div class="w3-container w3-white w3-padding-32">
-    <img src="/images/avatar2.jpg" alt="Me" style="width:150px" class="w3-left w3-round-large w3-margin-right">
+    <img src="/images/avatar_g.jpg" alt="Me" style="width:150px" class="w3-left w3-round-large w3-margin-right">
     <h4><b>Gorana Rakic Bajic</b></h4>
     <span>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</span>
     <p><a href="/authors/1">Pogledaj textove</a>
@@ -144,7 +144,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
     @if(count($courses) === 0)
     <li class="w3-padding-16">
-        <img src="/images/sad3.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <img src="/images/sad.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
         <span class="w3-large">Trenutno nemamo nijedan kurs organizovan!</span><br>
         
       </li>
