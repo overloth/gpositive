@@ -7,8 +7,8 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <!-- Header -->
 <header class="w3-container w3-center w3-padding-32" >
-    <b><h1 class="{{ Request::is('positive') ? 'active' : '' }}"><h1 class="djek" style="font-family: 'Gloria Hallelujah', cursive; padding-bottom: 10px;" =>@lang('various.positive')</h1></h1></b>
-  <p style="font-family: 'Gloria Hallelujah', cursive;"> centar za pozitivnu psihologiju</p>
+    <b><h1 class="{{ Request::is('positive') ? 'active' : '' }}"><h1 class="djek" style="font-family: 'Gloria Hallelujah', cursive; padding-bottom: 10px;" =>@lang('various.name')</h1></h1></b>
+  <p style="font-family: 'Gloria Hallelujah', cursive;"> @lang('various.positive') </p>
 </header>
 
 <!-- About Card on medium screens -->
@@ -40,7 +40,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 @if(count($articles) === 0)
 
   <div class="w3-card-4 w3-margin w3-white">
-  <img src="/images/pisaca.jpg" alt="Norway" style="width:100%">
+  <img src="/images/woods.jpg" alt="Norway" style="width:100%">
     <div class="w3-container w3-padding-8">
       <h3><b>NEDOSTATAK TEKSTOVA</b></h3>
       <h5>Malo objasnjenje, <span class="w3-opacity">Avgust 18 2017</span></h5>

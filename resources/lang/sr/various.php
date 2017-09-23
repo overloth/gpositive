@@ -23,5 +23,6 @@ return [
     'event' => 'SAVETOVALIŠTE BAŠTA',
     'events' => 'Psiholosko savetovalište Basta',
     'workshops' => 'Radionice',
-    'positive' => 'gPositive'
+    'positive' =>'centar za pozitivnu psihologiju',
+    'name'=>'gPositive'
 ];
