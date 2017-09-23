@@ -54,11 +54,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'sql11.freesqldatabase.com'),
+            'host' => env('DB_HOST', 'us-cdbr-iron-east-05.cleardb.net'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'sql11193160'),
-            'username' => env('DB_USERNAME', 'sql11193160'),
-            'password' => env('DB_PASSWORD', 'VBsUuHkglV'),
+            'database' => env('DB_DATABASE', 'heroku_5dc5d91cf3e6fa6'),
+            'username' => env('DB_USERNAME', 'bbff912134ab25'),
+            'password' => env('DB_PASSWORD', '163c5f1c'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
