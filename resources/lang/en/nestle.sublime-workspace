@@ -1,0 +1,495 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wines",
+				"winesService"
+			],
+			[
+				"w",
+				"wine"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"on",
+				"onError"
+			],
+			[
+				"find",
+				"findById"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"add",
+				"addWineController"
+			],
+			[
+				"a",
+				"activePage"
+			],
+			[
+				"new",
+				"newActivePage"
+			],
+			[
+				"so",
+				"sortDirection"
+			],
+			[
+				"sco",
+				"sortCriteria"
+			],
+			[
+				"sor",
+				"sortCriteria"
+			],
+			[
+				"search",
+				"searchQuery"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"wi",
+				"wines"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"to",
+				"todos"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pro",
+				"prod"
+			],
+			[
+				"PA",
+				"padding-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"w3",
+				"w3-margin"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"backgrou",
+				"background-image"
+			],
+			[
+				"res",
+				"resource"
+			],
+			[
+				"arti",
+				"article"
+			],
+			[
+				"l",
+				"li\tTag"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"publi",
+				"published_at"
+			],
+			[
+				"ari",
+				"articles"
+			],
+			[
+				"is",
+				"is_null"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"string",
+				"string"
+			],
+			[
+				"sq",
+				"sqlite"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"h",
+				"h3\tTag"
+			],
+			[
+				"t",
+				"third"
+			],
+			[
+				"s",
+				"second"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/overloth/projects/nestle/tatil.co.tt/wp-includes/js/jquery/jquery.js",
+			"settings":
+			{
+				"buffer_size": 97184,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "in",
+		"selected_items":
+		[
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/overloth/projects/nestle",
+		"/home/overloth/projects/nestle/tatil.co.tt",
+		"/home/overloth/projects/nestle/tatil.co.tt/html"
+	],
+	"file_history":
+	[
+		"/home/overloth/projects/gpositive/gulpfile.js",
+		"/home/overloth/projects/gpositive/config/database.php",
+		"/home/overloth/projects/gpositive/routes/web.php",
+		"/home/overloth/projects/gpositive/resources/views/layouts/app.blade.php",
+		"/home/overloth/projects/gpositive/resources/views/home.blade.php",
+		"/home/overloth/projects/gpositive/app/Http/Controllers/HomeController.php",
+		"/home/overloth/projects/gpositive/package.json",
+		"/home/overloth/projects/gpositive/node_modules/webpack/package.json",
+		"/home/overloth/projects/gpositive/.npmignore",
+		"/home/overloth/Downloads/public_html/admin/expositieswachtlijst_ok.php",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/routes/vinarija.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/routes/index.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/app.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/AddWineController.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/AddWine.html",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/WinesController.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/Navbar.html",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/WineTable.html",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/WinesService.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/views/index.ejs",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/models/Vinarija.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/app.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/package.json",
+		"/home/overloth/todo-app/todo-api/app.js",
+		"/home/overloth/todo-app/todo-api/views/index.ejs",
+		"/home/overloth/todo-app/todo-api/routes/index.js",
+		"/home/overloth/todo-app/todo-api/routes/todos.js",
+		"/home/overloth/todo-app/todo-api/models/Todo.js",
+		"/home/overloth/ToDo/todos.html",
+		"/home/overloth/ToDo/index.html",
+		"/home/overloth/ToDo/toDoDetails.html",
+		"/home/overloth/ToDo/app.js",
+		"/home/overloth/ToDo/ToDoFactory.js",
+		"/home/overloth/ToDo/toDoDetailsController.js",
+		"/home/overloth/ToDo/ToDoController.js",
+		"/home/overloth/todo-app/package.json",
+		"/home/overloth/kurs/app.js",
+		"/home/overloth/kurs/controllers/addWineController.js",
+		"/home/overloth/kurs/view/AddWine.html",
+		"/home/overloth/kurs/controllers/winesController.js",
+		"/home/overloth/kurs/svinarija-api/models/Svinarija.js",
+		"/home/overloth/kurs/svinarija-api/routes/vina.js",
+		"/home/overloth/kurs/services/httpServices.js",
+		"/home/overloth/kurs/svinarija-api/app.js",
+		"/home/overloth/kurs/controllers/mainController.js",
+		"/home/overloth/kurs/view/WineTable.html",
+		"/home/overloth/kurs/index.html",
+		"/home/overloth/kurs/view/Header.html",
+		"/home/overloth/kurs/view/Navbar.html",
+		"/home/overloth/kurs/view/LoremIpsum.html",
+		"/home/overloth/mean/templates/todoDetails.html",
+		"/home/overloth/mean/moduls/app.js",
+		"/home/overloth/mean/routes/routes.js",
+		"/home/overloth/mean/templates/todo.html",
+		"/home/overloth/mean/controllers/TodoDetailCtrl.js",
+		"/home/overloth/mean/controllers/TodoController.js",
+		"/home/overloth/mean/index.html",
+		"/home/overloth/projects/gpositive/composer.json",
+		"/home/overloth/projects/gpositive/resources/views/articles/index.blade.php",
+		"/home/overloth/projects/gpositive/resources/lang/en/various.php",
+		"/home/overloth/projects/gpositive/app/Http/Controllers/UserController.php",
+		"/home/overloth/projects/gpositive/config/app.php",
+		"/home/overloth/projects/gpositive/.env",
+		"/home/overloth/projects/gpositive/Procfile",
+		"/home/overloth/projects/gpositive/gSanta.txt",
+		"/home/overloth/projects/gpositive/.gitignore",
+		"/home/overloth/projects/favorit/app/User.php",
+		"/home/overloth/projects/gpositive/app/Course.php",
+		"/home/overloth/projects/gpositive/resources/views/courses/index.blade.php",
+		"/home/overloth/projects/gpositive/app/Article.php",
+		"/home/overloth/projects/gpositive/resources/lang/sr/various.php",
+		"/home/overloth/projects/gpositive/app/Http/Controllers/ArticleController.php",
+		"/home/overloth/projects/gpositive/resources/views/articles/show.blade.php",
+		"/home/overloth/projects/favorit/.env",
+		"/home/overloth/Homestead/Homestead.yaml",
+		"/home/overloth/Documents/paralax/index.html",
+		"/home/overloth/Documents/paralax/parallax.css",
+		"/home/overloth/Documents/paralax/style.css",
+		"/home/overloth/Documents/paralax/paralax.js",
+		"/home/overloth/Downloads/simple-parallax-scrolling-tutorial-s/simple-parallax-scrolling-tutorial-s/index.html",
+		"/home/overloth/Downloads/simple-parallax-scrolling-tutorial-s/simple-parallax-scrolling-tutorial-s/css/main.css",
+		"/home/overloth/Downloads/simple-parallax-scrolling-tutorial-s/simple-parallax-scrolling-tutorial-s/js/_main.js",
+		"/home/overloth/projects/favorit/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/home/overloth/projects/favorit/app/Http/Controllers/Auth/RegisterController.php",
+		"/home/overloth/projects/favorit/config/database.php",
+		"/home/overloth/projects/favorit/resources/views/auth/register.blade.php",
+		"/home/overloth/projects/favorit/app/Http/Controllers/Auth/LoginController.php",
+		"/home/overloth/projects/favorit/routes/web.php",
+		"/home/overloth/projects/example/routes/web.php",
+		"/home/overloth/projects/favorit/resources/views/articles/index.blade.php",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_24_135741_create_articles_table.php",
+		"/home/overloth/projects/favorit/resources/views/articles/form.blade.php",
+		"/home/overloth/projects/favorit/resources/views/auth/login.blade.php",
+		"/home/overloth/projects/favorit/app/Article.php",
+		"/home/overloth/projects/favorit/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
+		"/home/overloth/projects/favorit/app/Http/Controllers/LoginController.php",
+		"/home/overloth/projects/favorit/resources/views/articles/create.blade.php",
+		"/home/overloth/projects/favorit/app/Http/Requests/ArticleRequest.php",
+		"/home/overloth/projects/favorit/resources/views/articles/edit.blade.php",
+		"/home/overloth/projects/favorit/resources/views/errors/list.blade.php",
+		"/home/overloth/projects/favorit/app/Http/Controllers/ArticleController.php",
+		"/home/overloth/projects/favorit/app/Http/Requests/CreateArticleRequest.php",
+		"/home/overloth/projects/favorit/resources/views/articles/show.blade.php",
+		"/home/overloth/projects/favorit/resources/views/master.blade.php",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_25_123937_create_chlanovi_table.php",
+		"/home/overloth/projects/favorit/composer.json",
+		"/home/overloth/projects/favorit/config/app.php",
+		"/home/overloth/Desktop/index.html",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_25_123618_create_chlanovi_table.php",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_25_122957_create_chlanovi_table.php",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_25_120655_create_chlanovi_table.php",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_25_103414_create_chlanovi_table.php",
+		"/home/overloth/projects/favorit/resources/views/pages/about.blade.php",
+		"/home/overloth/projects/favorit/resources/views/pages/contact.blade.php",
+		"/home/overloth/projects/favorit/app/Http/Controllers/PagesController.php",
+		"/home/overloth/projects/favorit/app/Http/routes.php",
+		"/home/overloth/projects/favorit/resources/views/about.blade.php",
+		"/home/overloth/projects/favorit/resources/views/abote.blade.php",
+		"/home/overloth/projects/favorit/resources/views/contact.php",
+		"/home/overloth/projects/test/index.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/overloth/projects/nestle/tatil.co.tt/wp-includes/js/jquery/jquery.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 97184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "nestle.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"jq",
+				"tatil.co.tt/wp-includes/js/jquery/jquery.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/gpositive/resources/lang/en/gpositive.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 469.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

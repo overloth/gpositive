@@ -23,6 +23,6 @@ return [
     'event' => 'COUNSELING CENTER GARDEN',
     'events' => 'Psychology Counseling Center Garden',
     'workshops' => 'Workshops',
-    'positive' =>'positive psycholgy center',
+    'positive' =>'positive psychology center',
     'name'=>'gPositive'
 ];

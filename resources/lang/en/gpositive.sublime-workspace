@@ -1,0 +1,800 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wines",
+				"winesService"
+			],
+			[
+				"w",
+				"wine"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"on",
+				"onError"
+			],
+			[
+				"find",
+				"findById"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"add",
+				"addWineController"
+			],
+			[
+				"a",
+				"activePage"
+			],
+			[
+				"new",
+				"newActivePage"
+			],
+			[
+				"so",
+				"sortDirection"
+			],
+			[
+				"sco",
+				"sortCriteria"
+			],
+			[
+				"sor",
+				"sortCriteria"
+			],
+			[
+				"search",
+				"searchQuery"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"wi",
+				"wines"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"to",
+				"todos"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pro",
+				"prod"
+			],
+			[
+				"PA",
+				"padding-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"w3",
+				"w3-margin"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"backgrou",
+				"background-image"
+			],
+			[
+				"res",
+				"resource"
+			],
+			[
+				"arti",
+				"article"
+			],
+			[
+				"l",
+				"li\tTag"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"publi",
+				"published_at"
+			],
+			[
+				"ari",
+				"articles"
+			],
+			[
+				"is",
+				"is_null"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"string",
+				"string"
+			],
+			[
+				"sq",
+				"sqlite"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"h",
+				"h3\tTag"
+			],
+			[
+				"t",
+				"third"
+			],
+			[
+				"s",
+				"second"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/overloth/projects/gpositive/config/database.php",
+			"settings":
+			{
+				"buffer_size": 4024,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/resources/views/home.blade.php",
+			"settings":
+			{
+				"buffer_size": 8400,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\nreturn [\n\n    /*\n    |--------------------------------------------------------------------------\n    | Third Party Services\n    |--------------------------------------------------------------------------\n    |\n    | This file is for storing the credentials for third party services such\n    | as Stripe, Mailgun, SparkPost and others. This file provides a sane\n    | default location for this type of information, allowing packages\n    | to have a conventional place to find your various credentials.\n    |\n    */\n\n    'mailgun' => [\n        'domain' => env('MAILGUN_DOMAIN'),\n        'secret' => env('MAILGUN_SECRET'),\n    ],\n\n    'ses' => [\n        'key' => env('SES_KEY'),\n        'secret' => env('SES_SECRET'),\n        'region' => 'us-east-1',\n    ],\n\n    'sparkpost' => [\n        'secret' => env('SPARKPOST_SECRET'),\n    ],\n\n    'stripe' => [\n        'model' => App\\User::class,\n        'key' => env('STRIPE_KEY'),\n        'secret' => env('STRIPE_SECRET'),\n    ],\n\n    'google' => [\n        'client_id' => '57182562399-4up23bv4k5bdtv5ld6g1hol6pam0cb3b.apps.googleusercontent.com',\n        'client_secret' => 'yB6W0cYr0QUsYK_DcGWSQ8h7',\n        'redirect' => 'http://gpositive.app/auth/google/callback',\n    ],\n\n    'facebook' => [\n    'client_id' => '122590138393703',\n    'client_secret' => 'b2a188ae62ef9aca07dea9a01f6d4086',\n    'redirect' => '',\n    \n    ],\n\n];\n",
+			"file": "/home/overloth/projects/gpositive/config/services.php",
+			"file_size": 1400,
+			"file_write_time": 131484117319780284,
+			"settings":
+			{
+				"buffer_size": 1378,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\nreturn [\n\n    /*\n    |--------------------------------------------------------------------------\n    | Authentication Language Lines\n    |--------------------------------------------------------------------------\n    |\n    | The following language lines are used during authentication for various\n    | messages that we need to display to the user. You are free to modify\n    | these language lines according to your application's requirements.\n    |\n    */\n\n    'menu' => 'Menu',\n    'author' => 'Author',\n    'authors' => 'Authors',\n    'article' => 'Article',\n    'articles' => 'Articles',\n    'course' => 'Course',\n    'courses' => 'Courses',\n    'event' => 'COUNSELING CENTER GARDEN',\n    'events' => 'Psychology Counseling Center Garden',\n    'workshops' => 'Workshops',\n    'positive' =>'positive psychology center',\n    'name'=>'gPositive'\n];\n",
+			"file": "various.php",
+			"file_size": 857,
+			"file_write_time": 131506506941662584,
+			"settings":
+			{
+				"buffer_size": 858,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/resources/lang/sr/various.php",
+			"settings":
+			{
+				"buffer_size": 846,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "mysql://bbff912134ab25:163c5f1c@us-cdbr-iron-east-05.cleardb.net/heroku_5dc5d91cf3e6fa6?reconnect=true\n\nDB_HOST:us-cdbr-iron-east-05.cleardb.net\n\nDB_DATABASE: heroku_5dc5d91cf3e6fa6\n\nDB_USERNAME: bbff912134ab25\n\nDB_PASSWORD: \n\n\nenv('FACEBOOK_REDIRECT')",
+			"settings":
+			{
+				"buffer_size": 252,
+				"line_ending": "Unix",
+				"name": "mysql://bbff912134ab25:163c5f1c@us-cdbr-iron-east-"
+			}
+		},
+		{
+			"contents": "<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass SocialAuthFacebookController extends Controller\n{\n    /**\n   * Create a redirect method to facebook api.\n   *\n   * @return void\n   */\n    public function redirect()\n    {\n        return Socialite::driver('facebook')->redirect();\n    }\n\n    /**\n     * Return a callback method from facebook api.\n     *\n     * @return callback URL from facebook\n     */\n    public function callback()\n    {\n       \n    }\n}\n",
+			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/SocialAuthFacebookController.php",
+			"file_size": 135,
+			"file_write_time": 131506532276211459,
+			"settings":
+			{
+				"buffer_size": 481,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/Auth/RegisterController.php",
+			"settings":
+			{
+				"buffer_size": 3502,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "in",
+		"selected_items":
+		[
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/overloth/projects/gpositive",
+		"/home/overloth/projects/gpositive/app",
+		"/home/overloth/projects/gpositive/app/Http",
+		"/home/overloth/projects/gpositive/resources",
+		"/home/overloth/projects/gpositive/resources/lang",
+		"/home/overloth/projects/gpositive/resources/lang/en",
+		"/home/overloth/projects/gpositive/resources/lang/sr",
+		"/home/overloth/projects/gpositive/routes",
+		"/home/overloth/Downloads/public_html"
+	],
+	"file_history":
+	[
+		"/home/overloth/projects/gpositive/gulpfile.js",
+		"/home/overloth/projects/gpositive/config/database.php",
+		"/home/overloth/projects/gpositive/routes/web.php",
+		"/home/overloth/projects/gpositive/resources/views/layouts/app.blade.php",
+		"/home/overloth/projects/gpositive/resources/views/home.blade.php",
+		"/home/overloth/projects/gpositive/app/Http/Controllers/HomeController.php",
+		"/home/overloth/projects/gpositive/package.json",
+		"/home/overloth/projects/gpositive/node_modules/webpack/package.json",
+		"/home/overloth/projects/gpositive/.npmignore",
+		"/home/overloth/Downloads/public_html/admin/expositieswachtlijst_ok.php",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/routes/vinarija.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/routes/index.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/app.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/AddWineController.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/AddWine.html",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/WinesController.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/Navbar.html",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/WineTable.html",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/public/WinesService.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/views/index.ejs",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/models/Vinarija.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/app.js",
+		"/home/overloth/vinarija/vinarija-app/vinarija-api/package.json",
+		"/home/overloth/todo-app/todo-api/app.js",
+		"/home/overloth/todo-app/todo-api/views/index.ejs",
+		"/home/overloth/todo-app/todo-api/routes/index.js",
+		"/home/overloth/todo-app/todo-api/routes/todos.js",
+		"/home/overloth/todo-app/todo-api/models/Todo.js",
+		"/home/overloth/ToDo/todos.html",
+		"/home/overloth/ToDo/index.html",
+		"/home/overloth/ToDo/toDoDetails.html",
+		"/home/overloth/ToDo/app.js",
+		"/home/overloth/ToDo/ToDoFactory.js",
+		"/home/overloth/ToDo/toDoDetailsController.js",
+		"/home/overloth/ToDo/ToDoController.js",
+		"/home/overloth/todo-app/package.json",
+		"/home/overloth/kurs/app.js",
+		"/home/overloth/kurs/controllers/addWineController.js",
+		"/home/overloth/kurs/view/AddWine.html",
+		"/home/overloth/kurs/controllers/winesController.js",
+		"/home/overloth/kurs/svinarija-api/models/Svinarija.js",
+		"/home/overloth/kurs/svinarija-api/routes/vina.js",
+		"/home/overloth/kurs/services/httpServices.js",
+		"/home/overloth/kurs/svinarija-api/app.js",
+		"/home/overloth/kurs/controllers/mainController.js",
+		"/home/overloth/kurs/view/WineTable.html",
+		"/home/overloth/kurs/index.html",
+		"/home/overloth/kurs/view/Header.html",
+		"/home/overloth/kurs/view/Navbar.html",
+		"/home/overloth/kurs/view/LoremIpsum.html",
+		"/home/overloth/mean/templates/todoDetails.html",
+		"/home/overloth/mean/moduls/app.js",
+		"/home/overloth/mean/routes/routes.js",
+		"/home/overloth/mean/templates/todo.html",
+		"/home/overloth/mean/controllers/TodoDetailCtrl.js",
+		"/home/overloth/mean/controllers/TodoController.js",
+		"/home/overloth/mean/index.html",
+		"/home/overloth/projects/gpositive/composer.json",
+		"/home/overloth/projects/gpositive/resources/views/articles/index.blade.php",
+		"/home/overloth/projects/gpositive/resources/lang/en/various.php",
+		"/home/overloth/projects/gpositive/app/Http/Controllers/UserController.php",
+		"/home/overloth/projects/gpositive/config/app.php",
+		"/home/overloth/projects/gpositive/.env",
+		"/home/overloth/projects/gpositive/Procfile",
+		"/home/overloth/projects/gpositive/gSanta.txt",
+		"/home/overloth/projects/gpositive/.gitignore",
+		"/home/overloth/projects/favorit/app/User.php",
+		"/home/overloth/projects/gpositive/app/Course.php",
+		"/home/overloth/projects/gpositive/resources/views/courses/index.blade.php",
+		"/home/overloth/projects/gpositive/app/Article.php",
+		"/home/overloth/projects/gpositive/resources/lang/sr/various.php",
+		"/home/overloth/projects/gpositive/app/Http/Controllers/ArticleController.php",
+		"/home/overloth/projects/gpositive/resources/views/articles/show.blade.php",
+		"/home/overloth/projects/favorit/.env",
+		"/home/overloth/Homestead/Homestead.yaml",
+		"/home/overloth/Documents/paralax/index.html",
+		"/home/overloth/Documents/paralax/parallax.css",
+		"/home/overloth/Documents/paralax/style.css",
+		"/home/overloth/Documents/paralax/paralax.js",
+		"/home/overloth/Downloads/simple-parallax-scrolling-tutorial-s/simple-parallax-scrolling-tutorial-s/index.html",
+		"/home/overloth/Downloads/simple-parallax-scrolling-tutorial-s/simple-parallax-scrolling-tutorial-s/css/main.css",
+		"/home/overloth/Downloads/simple-parallax-scrolling-tutorial-s/simple-parallax-scrolling-tutorial-s/js/_main.js",
+		"/home/overloth/projects/favorit/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/home/overloth/projects/favorit/app/Http/Controllers/Auth/RegisterController.php",
+		"/home/overloth/projects/favorit/config/database.php",
+		"/home/overloth/projects/favorit/resources/views/auth/register.blade.php",
+		"/home/overloth/projects/favorit/app/Http/Controllers/Auth/LoginController.php",
+		"/home/overloth/projects/favorit/routes/web.php",
+		"/home/overloth/projects/example/routes/web.php",
+		"/home/overloth/projects/favorit/resources/views/articles/index.blade.php",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_24_135741_create_articles_table.php",
+		"/home/overloth/projects/favorit/resources/views/articles/form.blade.php",
+		"/home/overloth/projects/favorit/resources/views/auth/login.blade.php",
+		"/home/overloth/projects/favorit/app/Article.php",
+		"/home/overloth/projects/favorit/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
+		"/home/overloth/projects/favorit/app/Http/Controllers/LoginController.php",
+		"/home/overloth/projects/favorit/resources/views/articles/create.blade.php",
+		"/home/overloth/projects/favorit/app/Http/Requests/ArticleRequest.php",
+		"/home/overloth/projects/favorit/resources/views/articles/edit.blade.php",
+		"/home/overloth/projects/favorit/resources/views/errors/list.blade.php",
+		"/home/overloth/projects/favorit/app/Http/Controllers/ArticleController.php",
+		"/home/overloth/projects/favorit/app/Http/Requests/CreateArticleRequest.php",
+		"/home/overloth/projects/favorit/resources/views/articles/show.blade.php",
+		"/home/overloth/projects/favorit/resources/views/master.blade.php",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_25_123937_create_chlanovi_table.php",
+		"/home/overloth/projects/favorit/composer.json",
+		"/home/overloth/projects/favorit/config/app.php",
+		"/home/overloth/Desktop/index.html",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_25_123618_create_chlanovi_table.php",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_25_122957_create_chlanovi_table.php",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_25_120655_create_chlanovi_table.php",
+		"/home/overloth/projects/favorit/database/migrations/2017_07_25_103414_create_chlanovi_table.php",
+		"/home/overloth/projects/favorit/resources/views/pages/about.blade.php",
+		"/home/overloth/projects/favorit/resources/views/pages/contact.blade.php",
+		"/home/overloth/projects/favorit/app/Http/Controllers/PagesController.php",
+		"/home/overloth/projects/favorit/app/Http/routes.php",
+		"/home/overloth/projects/favorit/resources/views/about.blade.php",
+		"/home/overloth/projects/favorit/resources/views/abote.blade.php",
+		"/home/overloth/projects/favorit/resources/views/contact.php",
+		"/home/overloth/projects/test/index.php"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+			"/home/overloth/projects/gpositive",
+			"/home/overloth/Downloads/public_html",
+			"/home/overloth/vinarija/vinarija-app/vinarija-api",
+			"/home/overloth/vinarija/vinarija-api",
+			"/home/overloth/vinarija-api",
+			"/home/overloth/todo-app/todo-api",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"=>@lang",
+			"@lang",
+			"js-beautify",
+			"sethome",
+			"tentoonstellingen_home",
+			"exposities.php",
+			"sethome",
+			"tentoonstellingen_home",
+			"addBtn",
+			"AddWineController",
+			"open()",
+			"open",
+			"centar",
+			"course_id",
+			"where course_id",
+			"hasMany",
+			"nav",
+			"'/';"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/overloth/projects/gpositive/config/database.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4024,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2195,
+								2195
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/overloth/projects/gpositive/resources/views/home.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								704,
+								704
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/overloth/projects/gpositive/config/services.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1360,
+								1360
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "various.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 858,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								819,
+								819
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/overloth/projects/gpositive/resources/lang/sr/various.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 846,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								845,
+								845
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								252,
+								252
+							]
+						],
+						"settings":
+						{
+							"auto_name": "mysql://bbff912134ab25:163c5f1c@us-cdbr-iron-east-",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/SocialAuthFacebookController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 481,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								478,
+								478
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 22.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/Auth/RegisterController.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3502,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1980.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "gpositive.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/gpositive/resources/lang/en/nestle.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 469.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
