@@ -22,7 +22,7 @@
                         
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <a href="{{url('/redirect')}}" class="btn btn-block btn-social btn-facebook">
+                                <a href="redirect" class="btn btn-block btn-social btn-facebook">
                                     <span class="fa fa-facebook"></span> Login with Facebook
                                 </a>
                             </div>
