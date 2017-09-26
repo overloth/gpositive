@@ -69,5 +69,5 @@ Route::get('/callback', 'SocialAuthFacebookController@callback');
 Route::get('auth/google', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\RegisterController@handleProviderCallback');
 
-//Route::get('auth/facebook', 'Auth\RegisterController@redirect');
-//Route::get('auth/facebook/callback', 'Auth\RegisterController@callback');
+Route::get('auth/facebook', 'Auth\RegisterController@redirect');
+Route::get('auth/facebook/callback', 'Auth\RegisterController@callback');
