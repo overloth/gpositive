@@ -62,8 +62,8 @@ Route::post('upload/image', function(Request $request) {
     return '/uploads/' . $filename;
 });
 
-Route::get('/redirect', 'SocialAuthFacebookController@redirect');
-Route::get('/callback', 'SocialAuthFacebookController@callback');
+//Route::get('/redirect', 'SocialAuthFacebookController@redirect');
+//Route::get('/callback', 'SocialAuthFacebookController@callback');
 
 
 Route::get('auth/google', 'Auth\RegisterController@redirectToProvider');
