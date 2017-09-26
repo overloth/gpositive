@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Log;
 
 //if($_COOKIE['lang']) App::setLocale($_COOKIE['lang']);
 
-Route::get('/', 'HomeController@index') -> name('home');
+Route::get('/', 'HomeController@index');
 Route::get('/language/{locale}', 'HomeController@setLanguage');
 
 Auth::routes();
