@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Log;
 
 //if($_COOKIE['lang']) App::setLocale($_COOKIE['lang']);
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index') -> name('home');
 Route::get('/language/{locale}', 'HomeController@setLanguage');
 
 Auth::routes();
@@ -62,9 +62,12 @@ Route::post('upload/image', function(Request $request) {
     return '/uploads/' . $filename;
 });
 
+Route::get('/redirect', 'SocialAuthFacebookController@redirect');
+Route::get('/callback', 'SocialAuthFacebookController@callback');
+
 
 Route::get('auth/google', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\RegisterController@handleProviderCallback');
 
-Route::get('auth/facebook', 'Auth\RegisterController@redirect');
-Route::get('auth/facebook/callback', 'Auth\RegisterController@callback');
+//Route::get('auth/facebook', 'Auth\RegisterController@redirect');
+//Route::get('auth/facebook/callback', 'Auth\RegisterController@callback');

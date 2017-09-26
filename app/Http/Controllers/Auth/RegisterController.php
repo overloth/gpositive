@@ -125,7 +125,7 @@ class RegisterController extends Controller
     
 
     
-
+/*
     public function callback()
     {
        $providerUser = Socialite::driver('facebook')->user();
@@ -149,7 +149,7 @@ class RegisterController extends Controller
 
         //dd($user);
         // $user->token;  
-    }
+    } */
 
 
 }
