@@ -163,14 +163,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/home/overloth/projects/nestle/tatil.co.tt/wp-includes/js/jquery/jquery.js",
-			"settings":
-			{
-				"buffer_size": 97184,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -214,6 +206,7 @@
 	],
 	"file_history":
 	[
+		"/home/overloth/projects/nestle/tatil.co.tt/wp-includes/js/jquery/jquery.js",
 		"/home/overloth/projects/gpositive/gulpfile.js",
 		"/home/overloth/projects/gpositive/config/database.php",
 		"/home/overloth/projects/gpositive/routes/web.php",
@@ -337,13 +330,14 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
 		"height": 98.0,
 		"where_history":
 		[
+			"/home/overloth/projects/nestle/tatil.co.tt/wp-includes"
 		]
 	},
 	"find_state":
@@ -351,6 +345,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"jQuery ui",
+			"jQuery 1.",
+			"jQuery 1.11.4",
+			"jQuery 1.7",
+			"jQuery 1",
+			"jQuery 2",
+			"jQuery 1",
+			"jQuery"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -368,37 +370,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/home/overloth/projects/nestle/tatil.co.tt/wp-includes/js/jquery/jquery.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 97184,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
