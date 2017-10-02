@@ -116,7 +116,7 @@ class RegisterController extends Controller
 
     */
      
-     
+     /*
 
      public function redirect()
     {
@@ -149,7 +149,7 @@ class RegisterController extends Controller
 
         //dd($user);
         // $user->token;  
-    } 
+    } */
 
 
 }

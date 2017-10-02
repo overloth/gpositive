@@ -164,24 +164,6 @@
 	"buffers":
 	[
 		{
-			"file": "/home/overloth/projects/gpositive/config/database.php",
-			"settings":
-			{
-				"buffer_size": 4024,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/views/home.blade.php",
-			"settings":
-			{
-				"buffer_size": 8400,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/home/overloth/projects/gpositive/config/services.php",
 			"settings":
 			{
@@ -191,85 +173,127 @@
 			}
 		},
 		{
+			"file": "/home/overloth/projects/gpositive/database/migrations/2014_10_12_000000_create_users_table.php",
+			"settings":
+			{
+				"buffer_size": 816,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/database/migrations/2017_09_26_130108_create_social_accounts_table.php",
+			"settings":
+			{
+				"buffer_size": 685,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/app/SocialAccount.php",
+			"settings":
+			{
+				"buffer_size": 259,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/app/SocialAccountService.php",
+			"settings":
+			{
+				"buffer_size": 973,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/app/User.php",
+			"settings":
+			{
+				"buffer_size": 804,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/config/database.php",
+			"settings":
+			{
+				"buffer_size": 4025,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "/home/overloth/projects/gpositive/resources/views/auth/login.blade.php",
 			"settings":
 			{
-				"buffer_size": 4551,
+				"buffer_size": 4539,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "various.php",
+			"file": "/home/overloth/projects/gpositive/resources/views/auth/register.blade.php",
 			"settings":
 			{
-				"buffer_size": 858,
+				"buffer_size": 5085,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/.env",
+			"settings":
+			{
+				"buffer_size": 550,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/overloth/projects/gpositive/database/migrations/2017_09_25_135140_create_social_facebook_accounts_table.php",
+			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/Auth/LoginController.php",
 			"settings":
 			{
-				"buffer_size": 723,
+				"buffer_size": 1022,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/overloth/projects/gpositive/app/SocialFacebookAccount.php",
+			"contents": "mysql://bbff912134ab25:163c5f1c@us-cdbr-iron-east-05.cleardb.net/heroku_5dc5d91cf3e6fa6?reconnect=true\n\nDB_HOST:us-cdbr-iron-east-05.cleardb.net\n\nDB_DATABASE: heroku_5dc5d91cf3e6fa6\n\nDB_USERNAME: bbff912134ab25\n\nDB_PASSWORD: \n\n\nenv('FACEBOOK_REDIRECT')\n\nFACEBOOK_CLIENT_ID=122590138393703\nFACEBOOK_CLIENT_SECRET=b2a188ae62ef9aca07dea9a01f6d4086\nCALLBACK_URL=http://gpositive.app:8000/callback",
 			"settings":
 			{
-				"buffer_size": 266,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/app/Services/SocialFacebookAccountService.php",
-			"settings":
-			{
-				"buffer_size": 1102,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/lang/sr/various.php",
-			"settings":
-			{
-				"buffer_size": 846,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "mysql://bbff912134ab25:163c5f1c@us-cdbr-iron-east-05.cleardb.net/heroku_5dc5d91cf3e6fa6?reconnect=true\n\nDB_HOST:us-cdbr-iron-east-05.cleardb.net\n\nDB_DATABASE: heroku_5dc5d91cf3e6fa6\n\nDB_USERNAME: bbff912134ab25\n\nDB_PASSWORD: \n\n\nenv('FACEBOOK_REDIRECT')",
-			"settings":
-			{
-				"buffer_size": 252,
+				"buffer_size": 392,
 				"line_ending": "Unix",
 				"name": "mysql://bbff912134ab25:163c5f1c@us-cdbr-iron-east-"
 			}
 		},
 		{
-			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/SocialAuthFacebookController.php",
+			"file": "/home/overloth/projects/gpositive/routes/web.php",
 			"settings":
 			{
-				"buffer_size": 724,
+				"buffer_size": 1892,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<?php\n\n/*\n|--------------------------------------------------------------------------\n| Web Routes\n|--------------------------------------------------------------------------\n|\n| This file is where you may define all of the routes that are handled\n| by your application. Just tell Laravel the URIs it should respond\n| to using a Closure or controller method. Build something great!\n|\n*/\n\nuse Illuminate\\Http\\Request;\nuse Illuminate\\Http\\Input;\nuse Illuminate\\Contracts\\Validation\\Validator;\nuse Illuminate\\Support\\Facades\\Log;\n\n/*Route::get('/', function () {\n    return view('welcome');\n});*/\n\n//dd($_COOKIE['lang']);\n//Log::info('Showing web: ' . session('lang'));\n\n//if($_COOKIE['lang']) App::setLocale($_COOKIE['lang']);\n\nRoute::get('/', 'HomeController@index');\nRoute::get('/language/{locale}', 'HomeController@setLanguage');\n\nAuth::routes();\n\nRoute::resource('articles','ArticleController');\n\nRoute::resource('courses','CourseController');\n\nRoute::resource('authors','AuthorController');\n\nRoute::resource('comments','CommentController');\n\nRoute::resource('tags','TagController');\n\n//Route::get('/home', 'HomeController@index');\n\n/*Route::get('courses', function () {\n    return view('courses');\n});*/\n\n//Route::get('events', function () {\n//    return view('events');\n//});\n\nRoute::get('/events','EventController@events');\nRoute::resource('workshops','WorkshopController');\n\n\n\nRoute::post('upload/image', function(Request $request) {\n    $file = $request->file('file');\n    $filename = $file->getClientOriginalName();\n    $file->move('uploads/', $filename);\n    return '/uploads/' . $filename;\n});\n\nRoute::get('/redirect', 'SocialAuthFacebookController@redirect');\nRoute::get('/callback', 'SocialAuthFacebookController@callback');\n\n\nRoute::get('auth/google', 'Auth\\RegisterController@redirectToProvider');\nRoute::get('auth/google/callback', 'Auth\\RegisterController@handleProviderCallback');\n\n//Route::get('auth/facebook', 'Auth\\RegisterController@redirect');\n//Route::get('auth/facebook/callback', 'Auth\\RegisterController@callback');\n",
-			"file": "/home/overloth/projects/gpositive/routes/web.php",
-			"file_size": 1905,
-			"file_write_time": 131506448378693487,
+			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/SocialAuthController.php",
 			"settings":
 			{
-				"buffer_size": 2042,
+				"buffer_size": 557,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/Auth/RegisterController.php",
+			"settings":
+			{
+				"buffer_size": 3507,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -311,13 +335,6 @@
 	"expanded_folders":
 	[
 		"/home/overloth/projects/gpositive",
-		"/home/overloth/projects/gpositive/app",
-		"/home/overloth/projects/gpositive/app/Http",
-		"/home/overloth/projects/gpositive/app/Http/Controllers",
-		"/home/overloth/projects/gpositive/app/Http/Controllers/Auth",
-		"/home/overloth/projects/gpositive/app/Services",
-		"/home/overloth/projects/gpositive/database",
-		"/home/overloth/projects/gpositive/database/migrations",
 		"/home/overloth/projects/gpositive/resources",
 		"/home/overloth/projects/gpositive/resources/views",
 		"/home/overloth/projects/gpositive/resources/views/auth",
@@ -326,11 +343,20 @@
 	],
 	"file_history":
 	[
-		"/home/overloth/projects/gpositive/gulpfile.js",
+		"/home/overloth/projects/gpositive/.env",
+		"/home/overloth/projects/gpositive/app/Services/SocialFacebookAccountService.php",
+		"/home/overloth/projects/gpositive/app/Http/Controllers/SocialAuthFacebookController.php",
+		"/home/overloth/projects/gpositive/app/SocialFacebookAccount.php",
+		"/home/overloth/projects/gpositive/resources/lang/sr/various.php",
 		"/home/overloth/projects/gpositive/config/database.php",
+		"/home/overloth/projects/gpositive/resources/views/home.blade.php",
+		"/home/overloth/projects/gpositive/resources/views/auth/login.blade.php",
+		"/home/overloth/projects/gpositive/resources/lang/en/various.php",
+		"/home/overloth/projects/gpositive/database/migrations/2017_09_25_135140_create_social_facebook_accounts_table.php",
+		"/home/overloth/projects/gpositive/database/migrations/2016_12_10_230423_create_tags_table.php",
+		"/home/overloth/projects/gpositive/gulpfile.js",
 		"/home/overloth/projects/gpositive/routes/web.php",
 		"/home/overloth/projects/gpositive/resources/views/layouts/app.blade.php",
-		"/home/overloth/projects/gpositive/resources/views/home.blade.php",
 		"/home/overloth/projects/gpositive/app/Http/Controllers/HomeController.php",
 		"/home/overloth/projects/gpositive/package.json",
 		"/home/overloth/projects/gpositive/node_modules/webpack/package.json",
@@ -385,10 +411,8 @@
 		"/home/overloth/mean/index.html",
 		"/home/overloth/projects/gpositive/composer.json",
 		"/home/overloth/projects/gpositive/resources/views/articles/index.blade.php",
-		"/home/overloth/projects/gpositive/resources/lang/en/various.php",
 		"/home/overloth/projects/gpositive/app/Http/Controllers/UserController.php",
 		"/home/overloth/projects/gpositive/config/app.php",
-		"/home/overloth/projects/gpositive/.env",
 		"/home/overloth/projects/gpositive/Procfile",
 		"/home/overloth/projects/gpositive/gSanta.txt",
 		"/home/overloth/projects/gpositive/.gitignore",
@@ -396,7 +420,6 @@
 		"/home/overloth/projects/gpositive/app/Course.php",
 		"/home/overloth/projects/gpositive/resources/views/courses/index.blade.php",
 		"/home/overloth/projects/gpositive/app/Article.php",
-		"/home/overloth/projects/gpositive/resources/lang/sr/various.php",
 		"/home/overloth/projects/gpositive/app/Http/Controllers/ArticleController.php",
 		"/home/overloth/projects/gpositive/resources/views/articles/show.blade.php",
 		"/home/overloth/projects/favorit/.env",
@@ -505,71 +528,11 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/overloth/projects/gpositive/config/database.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4024,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2195,
-								2195
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 720.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/overloth/projects/gpositive/resources/views/home.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8400,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								704,
-								704
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "/home/overloth/projects/gpositive/config/services.php",
 					"semi_transient": false,
 					"settings":
@@ -581,8 +544,8 @@
 						"selection":
 						[
 							[
-								1389,
-								1389
+								1416,
+								1416
 							]
 						],
 						"settings":
@@ -592,7 +555,67 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 75.0,
+						"translation.y": 553.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/overloth/projects/gpositive/database/migrations/2014_10_12_000000_create_users_table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 816,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								522,
+								522
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/overloth/projects/gpositive/database/migrations/2017_09_26_130108_create_social_accounts_table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								513,
+								513
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
@@ -600,19 +623,47 @@
 				},
 				{
 					"buffer": 3,
-					"file": "/home/overloth/projects/gpositive/resources/views/auth/login.blade.php",
+					"file": "/home/overloth/projects/gpositive/app/SocialAccount.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4551,
+						"buffer_size": 259,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1035,
-								1035
+								256,
+								256
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/overloth/projects/gpositive/app/SocialAccountService.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 973,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								973,
+								973
 							]
 						],
 						"settings":
@@ -622,27 +673,117 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 135.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "various.php",
+					"buffer": 5,
+					"file": "/home/overloth/projects/gpositive/app/User.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 858,
+						"buffer_size": 804,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								819,
-								819
+								342,
+								342
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 119.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/overloth/projects/gpositive/config/database.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4025,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2366,
+								2366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/overloth/projects/gpositive/resources/views/auth/login.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1023,
+								1023
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1486.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/overloth/projects/gpositive/resources/views/auth/register.blade.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5085,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -659,20 +800,48 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/home/overloth/projects/gpositive/database/migrations/2017_09_25_135140_create_social_facebook_accounts_table.php",
+					"buffer": 9,
+					"file": "/home/overloth/projects/gpositive/.env",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 723,
+						"buffer_size": 550,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								720,
-								720
+								209,
+								209
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/Auth/LoginController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1022,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1018,
+								1018
 							]
 						],
 						"settings":
@@ -682,114 +851,26 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/home/overloth/projects/gpositive/app/SocialFacebookAccount.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 266,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								266,
-								266
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 495.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "/home/overloth/projects/gpositive/app/Services/SocialFacebookAccountService.php",
+					"buffer": 11,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1102,
+						"buffer_size": 392,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								463,
-								463
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/home/overloth/projects/gpositive/resources/lang/sr/various.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 846,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								845,
-								845
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 252,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								252,
-								252
+								392,
+								392
 							]
 						],
 						"settings":
@@ -801,54 +882,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/SocialAuthFacebookController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 724,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								723,
-								723
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "/home/overloth/projects/gpositive/routes/web.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2042,
+						"buffer_size": 1892,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1968,
-								1968
+								1692,
+								1692
 							]
 						],
 						"settings":
@@ -856,10 +907,68 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 450.0,
+						"translation.y": 913.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/SocialAuthController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 557,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								545,
+								545
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/Auth/RegisterController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3507,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3503,
+								3503
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1471.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -913,6 +1022,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"gpositive/app/Http/Controllers/SocialAuthController.php"
+			],
+			[
+				"soci",
+				"gpositive/app/SocialAccount.php"
+			],
+			[
+				"logi",
+				"gpositive/resources/views/auth/login.blade.php"
+			],
+			[
+				"serv",
+				"gpositive/config/services.php"
+			]
 		],
 		"width": 0.0
 	},
