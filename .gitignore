@@ -5,6 +5,8 @@
 /public/js
 /public/images
 /vendor
+!vendor/laravel/socialite/src/Two/AbstractProvider.php
+
 /.idea
 Homestead.json
 Homestead.yaml
