@@ -44,7 +44,7 @@ return [
     'facebook' => [
     'client_id' => '122590138393703',
     'client_secret' => 'b2a188ae62ef9aca07dea9a01f6d4086',
-    'redirect' => 'http://gpositive.herokuapp.com/callback',
+    'redirect' => 'https://gpositive.herokuapp.com//callback',
     
     ],
 
