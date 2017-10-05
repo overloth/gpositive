@@ -36,9 +36,9 @@ return [
     ],
 
     'google' => [
-        'client_id' => '57182562399-4up23bv4k5bdtv5ld6g1hol6pam0cb3b.apps.googleusercontent.com',
-        'client_secret' => 'yB6W0cYr0QUsYK_DcGWSQ8h7',
-        'redirect' => 'http://gpositive.app:8000/callback/google',
+        'client_id' => ' 153237184271-btq370jmm00kjub501bvusm1765ep432.apps.googleusercontent.com ',
+        'client_secret' => ' 8-eLWRZhDj199CdBq7AwzIPC ',
+        'redirect' => 'http://gpositive.herokuapp.com/callback/google',
     ],
 
     'facebook' => [
