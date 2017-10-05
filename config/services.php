@@ -36,8 +36,8 @@ return [
     ],
 
     'google' => [
-        'client_id' => ' 153237184271-btq370jmm00kjub501bvusm1765ep432.apps.googleusercontent.com ',
-        'client_secret' => ' 8-eLWRZhDj199CdBq7AwzIPC ',
+        'client_id' => '153237184271-btq370jmm00kjub501bvusm1765ep432.apps.googleusercontent.com',
+        'client_secret' => '8-eLWRZhDj199CdBq7AwzIPC',
         'redirect' => 'http://gpositive.herokuapp.com/callback/google',
     ],
 
