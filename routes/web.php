@@ -68,5 +68,5 @@ Route::post('upload/image', function(Request $request) {
 Route::get('auth/google', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\loginController@handleProviderCallback');
 
-Route::get('/redirect', 'SocialAuthController@redirect');
-Route::get('/callback', 'SocialAuthController@callback');
+Route::get('/redirect/{service2}', 'SocialAuthController@redirect');
+Route::get('/callback/{service2}', 'SocialAuthController@callback');

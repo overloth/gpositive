@@ -167,25 +167,16 @@
 			"file": "/home/overloth/projects/gpositive/config/services.php",
 			"settings":
 			{
-				"buffer_size": 1418,
+				"buffer_size": 1422,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/overloth/projects/gpositive/database/migrations/2014_10_12_000000_create_users_table.php",
+			"file": "/home/overloth/projects/gpositive/.gitignore",
 			"settings":
 			{
-				"buffer_size": 816,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/database/migrations/2017_09_26_130108_create_social_accounts_table.php",
-			"settings":
-			{
-				"buffer_size": 685,
+				"buffer_size": 134,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -230,7 +221,7 @@
 			"file": "/home/overloth/projects/gpositive/config/app.php",
 			"settings":
 			{
-				"buffer_size": 9399,
+				"buffer_size": 9408,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -245,10 +236,13 @@
 			}
 		},
 		{
-			"file": "/home/overloth/Homestead/composer.json",
+			"contents": "yes<?php\n\nuse Illuminate\\Support\\Facades\\Schema;\nuse Illuminate\\Database\\Schema\\Blueprint;\nuse Illuminate\\Database\\Migrations\\Migration;\n\nclass CreateSocialAccountsTable extends Migration\n{\n    /**\n     * Run the migrations.\n     *\n     * @return void\n     */\n    public function up()\n    {\n        Schema::create('social_accounts', function (Blueprint $table) {\n        $table->integer('user_id');\n        $table->string('provider_user_id');\n        $table->string('provider');\n        $table->timestamps();\n    });\n    }\n\n    /**\n     * Reverse the migrations.\n     *\n     * @return void\n     */\n    public function down()\n    {\n        Schema::dropIfExists('social_accounts');\n    }\n}\n",
+			"file": "/home/overloth/projects/gpositive/database/migrations/2017_09_26_130108_create_social_accounts_table.php",
+			"file_size": 685,
+			"file_write_time": 131509045645239658,
 			"settings":
 			{
-				"buffer_size": 809,
+				"buffer_size": 688,
 				"line_ending": "Unix"
 			}
 		},
@@ -257,15 +251,6 @@
 			"settings":
 			{
 				"buffer_size": 4539,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/.env",
-			"settings":
-			{
-				"buffer_size": 550,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -298,7 +283,10 @@
 			}
 		},
 		{
+			"contents": "<?php\n\nnamespace Laravel\\Socialite\\Two;\n\nuse GuzzleHttp\\Client;\nuse Illuminate\\Support\\Arr;\nuse Illuminate\\Support\\Str;\nuse Illuminate\\Http\\Request;\nuse GuzzleHttp\\ClientInterface;\nuse Symfony\\Component\\HttpFoundation\\RedirectResponse;\nuse Laravel\\Socialite\\Contracts\\Provider as ProviderContract;\n\nabstract class AbstractProvider implements ProviderContract\n{\n    /**\n     * The HTTP request instance.\n     *\n     * @var \\Illuminate\\Http\\Request\n     */\n    protected $request;\n\n    /**\n     * The HTTP Client instance.\n     *\n     * @var \\GuzzleHttp\\Client\n     */\n    protected $httpClient;\n\n    /**\n     * The client ID.\n     *\n     * @var string\n     */\n    protected $clientId;\n\n    /**\n     * The client secret.\n     *\n     * @var string\n     */\n    protected $clientSecret;\n\n    /**\n     * The redirect URL.\n     *\n     * @var string\n     */\n    protected $redirectUrl;\n\n    /**\n     * The custom parameters to be sent with the request.\n     *\n     * @var array\n     */\n    protected $parameters = [];\n\n    /**\n     * The scopes being requested.\n     *\n     * @var array\n     */\n    protected $scopes = [];\n\n    /**\n     * The separating character for the requested scopes.\n     *\n     * @var string\n     */\n    protected $scopeSeparator = ',';\n\n    /**\n     * The type of the encoding in the query.\n     *\n     * @var int Can be either PHP_QUERY_RFC3986 or PHP_QUERY_RFC1738.\n     */\n    protected $encodingType = PHP_QUERY_RFC1738;\n\n    /**\n     * Indicates if the session state should be utilized.\n     *\n     * @var bool\n     */\n    protected $stateless = false;\n\n    /**\n     * Create a new provider instance.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @param  string  $clientId\n     * @param  string  $clientSecret\n     * @param  string  $redirectUrl\n     * @return void\n     */\n    public function __construct(Request $request, $clientId, $clientSecret, $redirectUrl)\n    {\n        $this->request = $request;\n        $this->clientId = $clientId;\n        $this->redirectUrl = $redirectUrl;\n        $this->clientSecret = $clientSecret;\n    }\n\n    /**\n     * Get the authentication URL for the provider.\n     *\n     * @param  string  $state\n     * @return string\n     */\n    abstract protected function getAuthUrl($state);\n\n    /**\n     * Get the token URL for the provider.\n     *\n     * @return string\n     */\n    abstract protected function getTokenUrl();\n\n    /**\n     * Get the raw user for the given access token.\n     *\n     * @param  string  $token\n     * @return array\n     */\n    abstract protected function getUserByToken($token);\n\n    /**\n     * Map the raw user array to a Socialite User instance.\n     *\n     * @param  array  $user\n     * @return \\Laravel\\Socialite\\Two\\User\n     */\n    abstract protected function mapUserToObject(array $user);\n\n    /**\n     * Redirect the user of the application to the provider's authentication screen.\n     *\n     * @return \\Symfony\\Component\\HttpFoundation\\RedirectResponse\n     */\n    public function redirect()\n    {\n        $state = null;\n\n        if ($this->usesState()) {\n            $this->request->session()->put('state', $state = $this->getState()); //set to put\n        }\n\n        return new RedirectResponse($this->getAuthUrl($state));\n    }\n\n    /**\n     * Get the authentication URL for the provider.\n     *\n     * @param  string  $url\n     * @param  string  $state\n     * @return string\n     */\n    protected function buildAuthUrlFromBase($url, $state)\n    {\n        return $url.'?'.http_build_query($this->getCodeFields($state), '', '&', $this->encodingType);\n    }\n\n    /**\n     * Get the GET parameters for the code request.\n     *\n     * @param  string|null  $state\n     * @return array\n     */\n    protected function getCodeFields($state = null)\n    {\n        $fields = [\n            'client_id' => $this->clientId, 'redirect_uri' => $this->redirectUrl,\n            'scope' => $this->formatScopes($this->getScopes(), $this->scopeSeparator),\n            'response_type' => 'code',\n        ];\n\n        if ($this->usesState()) {\n            $fields['state'] = $state;\n        }\n\n        return array_merge($fields, $this->parameters);\n    }\n\n    /**\n     * Format the given scopes.\n     *\n     * @param  array  $scopes\n     * @param  string  $scopeSeparator\n     * @return string\n     */\n    protected function formatScopes(array $scopes, $scopeSeparator)\n    {\n        return implode($scopeSeparator, $scopes);\n    }\n\n    /**\n     * {@inheritdoc}\n     */\n    public function user()\n    {\n        if ($this->hasInvalidState()) {\n            throw new InvalidStateException;\n        }\n\n        $response = $this->getAccessTokenResponse($this->getCode());\n\n        $user = $this->mapUserToObject($this->getUserByToken(\n            $token = Arr::get($response, 'access_token')\n        ));\n\n        return $user->setToken($token)\n                    ->setRefreshToken(Arr::get($response, 'refresh_token'))\n                    ->setExpiresIn(Arr::get($response, 'expires_in'));\n    }\n\n    /**\n     * Get a Social User instance from a known access token.\n     *\n     * @param  string  $token\n     * @return \\Laravel\\Socialite\\Two\\User\n     */\n    public function userFromToken($token)\n    {\n        $user = $this->mapUserToObject($this->getUserByToken($token));\n\n        return $user->setToken($token);\n    }\n\n    /**\n     * Determine if the current request / session has a mismatching \"state\".\n     *\n     * @return bool\n     */\n    protected function hasInvalidState()\n    {\n        if ($this->isStateless()) {\n            return false;\n        }\n\n        $state = $this->request->session()->pull('state');\n\n        return ! (strlen($state) > 0 && $this->request->input('state') === $state);\n    }\n\n    /**\n     * Get the access token response for the given code.\n     *\n     * @param  string  $code\n     * @return array\n     */\n    public function getAccessTokenResponse($code)\n    {\n        $postKey = (version_compare(ClientInterface::VERSION, '6') === 1) ? 'form_params' : 'body';\n\n        $response = $this->getHttpClient()->post($this->getTokenUrl(), [\n            'headers' => ['Accept' => 'application/json'],\n            $postKey => $this->getTokenFields($code),\n        ]);\n\n        return json_decode($response->getBody(), true);\n    }\n\n    /**\n     * Get the POST fields for the token request.\n     *\n     * @param  string  $code\n     * @return array\n     */\n    protected function getTokenFields($code)\n    {\n        return [\n            'client_id' => $this->clientId, 'client_secret' => $this->clientSecret,\n            'code' => $code, 'redirect_uri' => $this->redirectUrl,\n        ];\n    }\n\n    /**\n     * Get the code from the request.\n     *\n     * @return string\n     */\n    protected function getCode()\n    {\n        return $this->request->input('code');\n    }\n\n    /**\n     * Set the scopes of the requested access.\n     *\n     * @param  array  $scopes\n     * @return $this\n     */\n    public function scopes(array $scopes)\n    {\n        $this->scopes = array_unique(array_merge($this->scopes, $scopes));\n\n        return $this;\n    }\n\n    /**\n     * Get the current scopes.\n     *\n     * @return array\n     */\n    public function getScopes()\n    {\n        return $this->scopes;\n    }\n\n    /**\n     * Set the redirect URL.\n     *\n     * @param  string  $url\n     * @return $this\n     */\n    public function redirectUrl($url)\n    {\n        $this->redirectUrl = $url;\n\n        return $this;\n    }\n\n    /**\n     * Get a instance of the Guzzle HTTP client.\n     *\n     * @return \\GuzzleHttp\\Client\n     */\n    protected function getHttpClient()\n    {\n        if (is_null($this->httpClient)) {\n            $this->httpClient = new Client();\n        }\n\n        return $this->httpClient;\n    }\n\n    /**\n     * Set the Guzzle HTTP client instance.\n     *\n     * @param  \\GuzzleHttp\\Client  $client\n     * @return $this\n     */\n    public function setHttpClient(Client $client)\n    {\n        $this->httpClient = $client;\n\n        return $this;\n    }\n\n    /**\n     * Set the request instance.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @return $this\n     */\n    public function setRequest(Request $request)\n    {\n        $this->request = $request;\n\n        return $this;\n    }\n\n    /**\n     * Determine if the provider is operating with state.\n     *\n     * @return bool\n     */\n    protected function usesState()\n    {\n        return ! $this->stateless;\n    }\n\n    /**\n     * Determine if the provider is operating as stateless.\n     *\n     * @return bool\n     */\n    protected function isStateless()\n    {\n        return $this->stateless;\n    }\n\n    /**\n     * Indicates that the provider should operate as stateless.\n     *\n     * @return $this\n     */\n    public function stateless()\n    {\n        $this->stateless = true;\n\n        return $this;\n    }\n\n    /**\n     * Get the string used for session state.\n     *\n     * @return string\n     */\n    protected function getState()\n    {\n        return Str::random(40);\n    }\n\n    /**\n     * Set the custom parameters of the request.\n     *\n     * @param  array  $parameters\n     * @return $this\n     */\n    public function with(array $parameters)\n    {\n        $this->parameters = $parameters;\n\n        return $this;\n    }\n}\n",
 			"file": "/home/overloth/projects/gpositive/vendor/laravel/socialite/src/Two/AbstractProvider.php",
+			"file_size": 9203,
+			"file_write_time": 131514947101499979,
 			"settings":
 			{
 				"buffer_size": 9203,
@@ -371,12 +359,15 @@
 	"expanded_folders":
 	[
 		"/home/overloth/projects/gpositive",
+		"/home/overloth/projects/gpositive/routes",
 		"/home/overloth/Downloads/public_html"
 	],
 	"file_history":
 	[
-		"/home/overloth/projects/gpositive/vendor/laravel/socialite/src/One/AbstractProvider.php",
 		"/home/overloth/projects/gpositive/.env",
+		"/home/overloth/projects/gpositive/database/migrations/2017_09_26_130108_create_social_accounts_table.php",
+		"/home/overloth/projects/gpositive/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/home/overloth/projects/gpositive/vendor/laravel/socialite/src/One/AbstractProvider.php",
 		"/home/overloth/projects/gpositive/app/Services/SocialFacebookAccountService.php",
 		"/home/overloth/projects/gpositive/app/Http/Controllers/SocialAuthFacebookController.php",
 		"/home/overloth/projects/gpositive/app/SocialFacebookAccount.php",
@@ -500,8 +491,7 @@
 		"/home/overloth/projects/favorit/app/Http/routes.php",
 		"/home/overloth/projects/favorit/resources/views/about.blade.php",
 		"/home/overloth/projects/favorit/resources/views/abote.blade.php",
-		"/home/overloth/projects/favorit/resources/views/contact.php",
-		"/home/overloth/projects/test/index.php"
+		"/home/overloth/projects/favorit/resources/views/contact.php"
 	],
 	"find":
 	{
@@ -526,6 +516,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"put",
 			"set",
 			"php",
 			"=>@lang",
@@ -563,7 +554,7 @@
 	"groups":
 	[
 		{
-			"selected": 16,
+			"selected": 15,
 			"sheets":
 			[
 				{
@@ -572,15 +563,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1418,
+						"buffer_size": 1422,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1401,
-								1401
+								1208,
+								1208
 							]
 						],
 						"settings":
@@ -588,76 +579,44 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 169.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/overloth/projects/gpositive/.gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/overloth/projects/gpositive/database/migrations/2014_10_12_000000_create_users_table.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 816,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								522,
-								522
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 135.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/home/overloth/projects/gpositive/database/migrations/2017_09_26_130108_create_social_accounts_table.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 685,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								513,
-								513
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 30.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "/home/overloth/projects/gpositive/app/SocialAccount.php",
 					"semi_transient": false,
 					"settings":
@@ -681,11 +640,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "/home/overloth/projects/gpositive/app/SocialAccountService.php",
 					"semi_transient": false,
 					"settings":
@@ -711,11 +670,11 @@
 						"translation.y": 289.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "/home/overloth/projects/gpositive/app/User.php",
 					"semi_transient": false,
 					"settings":
@@ -741,11 +700,11 @@
 						"translation.y": 119.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "/home/overloth/projects/gpositive/config/database.php",
 					"semi_transient": false,
 					"settings":
@@ -768,27 +727,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 720.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "/home/overloth/projects/gpositive/config/app.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9399,
+						"buffer_size": 9408,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4372,
-								4372
+								6820,
+								6820
 							]
 						],
 						"settings":
@@ -798,14 +757,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1440.0,
+						"translation.y": 2895.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "/home/overloth/projects/gpositive/composer.json",
 					"semi_transient": false,
 					"settings":
@@ -817,38 +776,8 @@
 						"selection":
 						[
 							[
-								287,
-								287
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/home/overloth/Homestead/composer.json",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 809,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								357,
+								357
 							]
 						],
 						"settings":
@@ -865,7 +794,37 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 8,
+					"file": "/home/overloth/projects/gpositive/database/migrations/2017_09_26_130108_create_social_accounts_table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3,
+								3
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "/home/overloth/projects/gpositive/resources/views/auth/login.blade.php",
 					"semi_transient": false,
 					"settings":
@@ -891,39 +850,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "/home/overloth/projects/gpositive/.env",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 550,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								254,
-								254
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
+					"buffer": 10,
 					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/Auth/LoginController.php",
 					"semi_transient": false,
 					"settings":
@@ -946,14 +877,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 435.0,
+						"translation.y": 375.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 11,
 					"semi_transient": false,
 					"settings":
 					{
@@ -977,11 +908,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 12,
 					"file": "/home/overloth/projects/gpositive/routes/web.php",
 					"semi_transient": false,
 					"settings":
@@ -993,8 +924,8 @@
 						"selection":
 						[
 							[
-								1692,
-								1692
+								1664,
+								1664
 							]
 						],
 						"settings":
@@ -1002,14 +933,14 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 484.0,
+						"translation.y": 409.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 13,
 					"file": "/home/overloth/projects/gpositive/vendor/laravel/socialite/src/Two/AbstractProvider.php",
 					"semi_transient": false,
 					"settings":
@@ -1021,8 +952,8 @@
 						"selection":
 						[
 							[
-								3236,
-								3236
+								2990,
+								2990
 							]
 						],
 						"settings":
@@ -1032,14 +963,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1997.0,
+						"translation.y": 1952.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 14,
 					"file": "/home/overloth/fatlama.txt",
 					"semi_transient": false,
 					"settings":
@@ -1051,8 +982,8 @@
 						"selection":
 						[
 							[
-								5834,
-								5834
+								4294,
+								4294
 							]
 						],
 						"settings":
@@ -1063,11 +994,11 @@
 						"translation.y": 1755.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 15,
 					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/SocialAuthController.php",
 					"semi_transient": false,
 					"settings":
@@ -1079,8 +1010,8 @@
 						"selection":
 						[
 							[
-								545,
-								545
+								476,
+								476
 							]
 						],
 						"settings":
@@ -1090,14 +1021,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 90.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 16,
 					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/Auth/RegisterController.php",
 					"semi_transient": false,
 					"settings":
@@ -1120,10 +1051,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1471.0,
+						"translation.y": 421.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 11,
 					"type": "text"
 				}
 			]
@@ -1212,9 +1143,17 @@
 	"select_symbol":
 	{
 		"height": 392.0,
-		"last_filter": "abstract",
+		"last_filter": "set",
 		"selected_items":
 		[
+			[
+				"set",
+				"set"
+			],
+			[
+				"log",
+				"log"
+			],
 			[
 				"abstract",
 				"AbstractProvider"
