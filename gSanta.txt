@@ -187,4 +187,9 @@ igor:
 +kratko about o autoru/psihologu sa linkom ka njegovim textovima
  
 
- -online kachenje za laravel, free ili trial bar mesec dana
+ +online kachenje za laravel, free ili trial bar mesec dana
+
+ -dodati tag workshop
+
+ -namestiti workshop, da prikazuje isto kao i article ali samo ako su tagovani kao workshop,
+  a u artiklima da prikazuje one koje nisu tagovani kao workshop
