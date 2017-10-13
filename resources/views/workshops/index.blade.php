@@ -9,11 +9,12 @@
   <div class="w3-row">
     @if (auth()->check())
       @if (auth()->user()->id == 1  || auth()->user()->author)
-        <p style="text-align: center;"><b><a href="/workshops/create" style="color:white;"> [Add New Workshop] </a></b></p>
+        <p style="text-align: center;"><b><a href="/workshops/create"> [Add New Workshop] </a></b></p>
       @endif
     @endif
 
     <br>
+    <!--
     <div class="w3-col l4 w3-hide-medium w3-hide-small" style="float:left;">
       <div class="w3-card-2 w3-margin w3-margin-top">
       <img src="/images/lale2.jpg" style="width:100%;">
@@ -28,8 +29,30 @@
           <h4><b>mesto za text 2 :)</b></h4>
           <p></p>
         </div>
-      </div><hr>
+      </div>
+      
+      <hr>
     </div>
+    -->@if(count($workshops) === 0)
+
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="/images/pisaca.jpg" alt="Norway" style="width:100%">
+    <div class="w3-container w3-padding-8">
+      <h3><b>NEDOSTATAK Radionica</b></h3>
+      <h5>Malo objasnjenje, <span class="w3-opacity">Avgust 18 2017</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>MAjstori su usled nedostatka ispiracije uzeli pauzu kako bi pronashli savrshen kapucino. Ne brinite chim ga pronadju, vratice im se inspiracija. Samim tim bice i radionica!  </p>
+      <div class="w3-row">
+        
+        
+      </div>
+    </div>
+  </div>
+    
+
+  @else
   @foreach ($workshops as $workshop)
     <a style="color:black;" href="/workshops/{{$workshop->id}}">
       <div class="w3-col l4 m6 s12 ">
@@ -56,7 +79,8 @@
           </div>
         </div>
       </a>
-  @endforeach  
+  @endforeach 
+  @endif 
   </div>  
 </div>
 
