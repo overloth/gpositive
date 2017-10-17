@@ -174,6 +174,8 @@ and is wrapped around the whole page content, except for the footer in this exam
     
      
     @endif
+
+
 <!--
       <li class="w3-padding-16">
         <img src="/images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
@@ -196,6 +198,43 @@ and is wrapped around the whole page content, except for the footer in this exam
       -->
 
     </ul>
+  </div>
+  <hr>
+
+  <div class="w3-card-2 w3-margin">
+    <div class="w3-container w3-padding" >
+      <h4>Radionice</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+
+      @if(count($workshops) === 0)
+      <li class="w3-padding-16">
+        <img src="/images/sad.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Trenutno nemamo nijednu radionicu organizovanu!</span><br>
+        
+      </li>
+
+      @else
+
+
+      
+      @foreach ($workshops as $workshop)
+      
+      <li class="w3-padding-16">
+        <img src="{{$workshop->image}}" alt="Image" class="w3-left w3-margin-right" style="width:75px;height: 50px;">
+        <a href="/workshops/{{$workshop->id}}"><span class="w3-large">{{$workshop->title}}</span></a><br>
+        <p>{{$workshop->description}}</p>
+      </li>
+
+      
+
+     
+      @endforeach
+
+
+      @endif
+
+      </ul>
   </div>
   <hr>
  

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Log;
 use App;
 use App\Article;
 use App\Course;
+use App\Workshop;
 use App\Tag;
 use App\Comment;
 use App\Event;
@@ -35,12 +36,13 @@ class HomeController extends Controller
 
         $articles = Article::latest('updated_at')->get();
         $courses = Course::latest('updated_at')->get();
+        $workshops = Workshop::latest('updated_at')->get();
         $tags = Tag::all();
         
 
         //if($request->cookie('lang')) App::setLocale($request->cookie('lang'));
 
-        return view('home', compact('articles', 'courses', 'tags'));
+        return view('home', compact('articles', 'courses', 'workshops', 'tags'));
     }
 
     public function setLanguage(Request $request, $locale = '')
