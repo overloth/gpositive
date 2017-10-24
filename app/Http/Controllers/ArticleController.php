@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Comment;
 use Carbon\Carbon;
 
+use Illuminate\Contracts\Filesystem\Filesystem;
+
 class ArticleController extends Controller
 {
     /**
