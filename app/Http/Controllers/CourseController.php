@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\Article;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Contracts\Filesystem\Filesystem;
 
 class CourseController extends Controller
 {
@@ -66,16 +68,23 @@ class CourseController extends Controller
         if ($request->hasFile('image')) {
 
             if ($request->file('image')->isValid()) {
+
+                $file = $request->file('image');
                 
                 //set upload path
-                $destinationPath = 'uploads';
+               // $destinationPath = 'uploads';
                 //get filename
                 $filename = $request->file('image')->getClientOriginalName();
                 //uploading file to given path
-                $request->file('image')->move($destinationPath, $filename);
+                Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
+               // $destinationPath = Storage::disk('s3')->url($filename)
+
+
+              //  $request->file('image')->move($destinationPath, $filename);
                 //dd($filename);
+
                 //set item image
-                $course->image = $destinationPath . '/' . $filename;
+                $course->image = 'https://s3.us-east-2.amazonaws.com/gpositive/uploads/' . $filename;
                 //save
                 $course->save();
 

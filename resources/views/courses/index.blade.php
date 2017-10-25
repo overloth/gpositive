@@ -39,7 +39,7 @@
   	@foreach ($courses as $course)
   	  <div class="w3-card-4 w3-margin w3-white">
               <a style="color:black;" href="/courses/{{$course->id}}">
-                   <div class="course-image" style="background:url('/{{$course->image}}') no-repeat;display:block;margin-left:auto;margin-right:auto;background-size:cover; width:100%; background-position: 0px -50px;"> </div>
+                   <div class="course-image" style="background:url('{{$course->image}}') no-repeat;display:block;margin-left:auto;margin-right:auto;background-size:cover; width:100%; background-position: 0px -50px;"> </div>
               </a>	
   	                 <p><a href="/courses/{{$course->id}}">{{$course->title}} [${{$course->price}}]</a></p>
   	                 <p>{{$course->description}}</p> 

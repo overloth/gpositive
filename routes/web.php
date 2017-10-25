@@ -10,11 +10,12 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
+use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\Input;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 /*Route::get('/', function () {
     return view('welcome');
@@ -54,14 +55,27 @@ Route::get('/events','EventController@events');
 Route::resource('workshops','WorkshopController');
 
 
-
+/*
 Route::post('upload/image', function(Request $request) {
     $file = $request->file('file');
     $filename = $file->getClientOriginalName();
     $file->move('uploads/', $filename);
     return '/uploads/' . $filename;
 });
+*/
+/*
+Route::get('test', function(){
 
+	echo 123;
+	$s3 = Storage::disk('s3');
+	$s3 -> put('myfileproba.txt', 'nadam se da radi', 'public');
+	$s3 -> putObject(array(
+    'Bucket'     => 'gpositive',
+    'Key'        => 'imagename/len.jpg',
+    'SourceFile' => 'uploads/len.jpg',
+  ));
+});
+*/
 
 
 
