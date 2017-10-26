@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Comment;
 use Carbon\Carbon;
 use App\Workshop;
+
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 
@@ -124,9 +125,9 @@ class WorkshopController extends Controller
                 //dd($filename);
 
                 //set item image
-                $course->image = 'https://s3.us-east-2.amazonaws.com/gpositive/uploads/' . $filename;
+                $workshop->image = 'https://s3.us-east-2.amazonaws.com/gpositive/uploads/' . $filename;
                 //save
-                $course->save();
+                $workshop->save();
 
             }
             else
