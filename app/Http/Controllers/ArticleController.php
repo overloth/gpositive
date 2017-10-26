@@ -131,10 +131,7 @@ class ArticleController extends Controller
                 // Print the URL to the object.
                 
                 // show image
-                echo('<p><img src="'.$result['ObjectURL'].'" /></p>');
-                } catch (S3Exception $e) {
-        echo $e->getMessage() . "\n";
-    }
+               
 
               //  $request->file('image')->move($destinationPath, $filename);
                 //dd($filename);
