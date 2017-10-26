@@ -2,14 +2,16 @@
 // upload files to s3 from Heroku using PHP SDK v3
 // requires config vars: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET
 require('./../vendor/autoload.php');
+
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
+
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES['userfile']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['userfile']['tmp_name'])) {
     
     // try upload
     
     // for now, use existing name
-    $uploadfolder = 'somefolder';
+    $uploadfolder = 'uploads';
     $uploadname = $_FILES['userfile']['name'];
     
     // set up s3
@@ -17,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
     $keyname = $uploadfolder.'/'.$uploadname;
     $s3 = S3Client::factory([
         'version' => '2006-03-01',
-        'region' => 'eu-west-1'
+        'region' => 'us-east-2'
     ]);
     
     // try
