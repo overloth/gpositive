@@ -13,6 +13,10 @@ use App\Comment;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Contracts\Filesystem\Filesystem;
+require('./../vendor/autoload.php');
+
+use Aws\S3\S3Client;
+use Aws\S3\Exception\S3Exception;
 
 class ArticleController extends Controller
 {
@@ -101,9 +105,33 @@ class ArticleController extends Controller
                 //get filename
                 $filename = $request->file('image')->getClientOriginalName();
                 //uploading file to given path
-                Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
+               // Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
                // $destinationPath = Storage::disk('s3')->url($filename)
-
+                // set up s3
+                $bucket = getenv('S3_BUCKET');
+                $keyname = 'uploads/'.$filename;
+                $s3 = S3Client::factory([
+                    'version' => '2006-03-01',
+                    'region' => 'us-east-2'
+                ]);
+    
+                // try
+                try {
+                    // Upload data.
+                    $result = $s3->putObject(array(
+                        'Bucket' => $bucket,
+                        'Key'    => $keyname,
+                        'Body'   => fopen($_FILES['userfile']['tmp_name'], 'rb'),
+                        'ACL'    => 'public-read'
+                    ));
+    
+                // Print the URL to the object.
+                
+                // show image
+                echo('<p><img src="'.$result['ObjectURL'].'" /></p>');
+                } catch (S3Exception $e) {
+        echo $e->getMessage() . "\n";
+    }
 
               //  $request->file('image')->move($destinationPath, $filename);
                 //dd($filename);
@@ -120,7 +148,25 @@ class ArticleController extends Controller
                 dd('there was problem uploading image');
             }
 
-            
+            {
+    
+    // try upload
+    
+    // for now, use existing name
+    $uploadfolder = 'uploads';
+    $uploadname = $_FILES['userfile']['name'];
+    
+    
+    
+    
+    
+}
+else {
+    ?>
+        <h2>Upload a file</h2>
+        <form enctype="multipart/form-data" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+            <input name="userfile" type="file"><input type="submit" value="Upload">
+        </form>
 
         }
         else
