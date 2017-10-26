@@ -124,7 +124,7 @@ class ArticleController extends Controller
                     $s3->putObject(array(
                         'Bucket' => $bucket,
                         'Key'    => $keyname,
-                        'Body'   => fopen($_FILES['userfile']['tmp_name'], 'rb'),
+                        'Body'   => fopen($_FILES['image']['tmp_name'], 'rb'),
                         'ACL'    => 'public-read'
                     ));
     
