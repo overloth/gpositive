@@ -1,5 +1,6 @@
 <?php
 
+define ('RDS_HOSTNAME', $_SERVER['RDS_HOSTNAME'])
 
 
 return [

@@ -79,6 +79,8 @@ Route::get('test', function(){
 
 
 
+
+
 Route::get('auth/google', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\loginController@handleProviderCallback');
 
