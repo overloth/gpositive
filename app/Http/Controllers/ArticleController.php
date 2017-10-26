@@ -119,15 +119,15 @@ class ArticleController extends Controller
                 ]);
     
                 // try
-                try {
+                
                     // Upload data.
-                    $result = $s3->putObject(array(
+                    $s3->putObject(array(
                         'Bucket' => $bucket,
                         'Key'    => $keyname,
                         'Body'   => fopen($_FILES['userfile']['tmp_name'], 'rb'),
                         'ACL'    => 'public-read'
-                    ));
-    }
+                    
+    
                 // Print the URL to the object.
                 
                 // show image
