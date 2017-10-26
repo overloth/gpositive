@@ -1,4 +1,5 @@
 <?php
+require('./../vendor/autoload.php');
 
 namespace App\Http\Controllers;
 
@@ -13,7 +14,7 @@ use App\Comment;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Contracts\Filesystem\Filesystem;
-require('./../vendor/autoload.php');
+
 
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
