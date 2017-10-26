@@ -126,7 +126,7 @@ class ArticleController extends Controller
                         'Key'    => $keyname,
                         'Body'   => fopen($_FILES['userfile']['tmp_name'], 'rb'),
                         'ACL'    => 'public-read'
-                    
+                    ));
     
                 // Print the URL to the object.
                 
