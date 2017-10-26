@@ -1,5 +1,5 @@
 <?php
-
+require('./../vendor/autoload.php');
 
 namespace App\Http\Controllers;
 
@@ -149,28 +149,16 @@ class ArticleController extends Controller
                 dd('there was problem uploading image');
             }
 
-            {
+            
     
-    // try upload
     
-    // for now, use existing name
-    $uploadfolder = 'uploads';
-    $uploadname = $_FILES['userfile']['name'];
     
     
     
     
     
 }
-else {
-    ?>
-        <h2>Upload a file</h2>
-        <form enctype="multipart/form-data" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-            <input name="userfile" type="file"><input type="submit" value="Upload">
-        </form>
-
-        }
-        else
+else 
         {
             //image file not uploaded
             dd('image file not uploaded');
