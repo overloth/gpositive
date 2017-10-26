@@ -1,7 +1,9 @@
 <?php
-require('./../vendor/autoload.php');
+
 
 namespace App\Http\Controllers;
+
+require('./../vendor/autoload.php');
 
 use Illuminate\Http\Request;
 use App\Article;
@@ -106,7 +108,7 @@ class ArticleController extends Controller
                 //get filename
                 $filename = $request->file('image')->getClientOriginalName();
                 //uploading file to given path
-               Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
+               //Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
                // $destinationPath = Storage::disk('s3')->url($filename)
                 // set up s3
                 $bucket = getenv('S3_BUCKET');
