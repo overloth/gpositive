@@ -16,7 +16,7 @@ use App\Comment;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Contracts\Filesystem\Filesystem;
-use App\Http\Controllers\File
+use App\Http\Controllers\File;
 
 
 use Aws\S3\S3Client;
