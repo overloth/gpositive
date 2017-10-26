@@ -108,12 +108,14 @@ class ArticleController extends Controller
                 //get filename
                 $filename = $request->file('image')->getClientOriginalName();
                 $uniqFilename = md5_file($filename);
+                $extension = File::extension($filename);
+                $newName = $uniqFilename.$extension;
                 //uploading file to given path
                //Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
                // $destinationPath = Storage::disk('s3')->url($filename)
                 // set up s3
                 $bucket = getenv('S3_BUCKET');
-                $keyname = 'uploads/'.$filename;
+                $keyname = 'uploads/'.$newName;
                 $s3 = S3Client::factory([
                     'version' => '2006-03-01',
                     'region' => 'us-east-2'
@@ -136,7 +138,7 @@ class ArticleController extends Controller
                 //dd($filename);
 
                 //set item image
-                $article->image = 'https://s3.us-east-2.amazonaws.com/gpositive/uploads/' . $uniqFilename;
+                $article->image = 'https://s3.us-east-2.amazonaws.com/gpositive/' . $keyname;
                 //save
                 $article->save();
 
