@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+require('./../vendor/autoload.php');
+
 use Illuminate\Http\Request;
 use App\Course;
 use App;
@@ -11,6 +13,9 @@ use App\Article;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Contracts\Filesystem\Filesystem;
+
+use Aws\S3\S3Client;
+use Aws\S3\Exception\S3Exception;
 
 class CourseController extends Controller
 {
@@ -75,11 +80,26 @@ class CourseController extends Controller
                // $destinationPath = 'uploads';
                 //get filename
                 $filename = $request->file('image')->getClientOriginalName();
-                //uploading file to given path
-                Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
+                 //uploading file to given path
+               //Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
                // $destinationPath = Storage::disk('s3')->url($filename)
-
-
+                // set up s3
+                $bucket = getenv('S3_BUCKET');
+                $keyname = 'uploads/'.$filename;
+                $s3 = S3Client::factory([
+                    'version' => '2006-03-01',
+                    'region' => 'us-east-2'
+                ]);
+    
+                // try
+                
+                    // Upload data.
+                    $s3->putObject(array(
+                        'Bucket' => $bucket,
+                        'Key'    => $keyname,
+                        'Body'   => fopen($_FILES['image']['tmp_name'], 'rb'),
+                        'ACL'    => 'public-read'
+                    ));
               //  $request->file('image')->move($destinationPath, $filename);
                 //dd($filename);
 

@@ -128,9 +128,7 @@ class ArticleController extends Controller
                         'ACL'    => 'public-read'
                     ));
     
-                // Print the URL to the object.
                 
-                // show image
                
 
               //  $request->file('image')->move($destinationPath, $filename);
