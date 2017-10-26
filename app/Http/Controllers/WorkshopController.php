@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+require('./../vendor/autoload.php');
+
 use Illuminate\Http\Request;
 use App\Article;
 use App\Course;
@@ -12,6 +14,10 @@ use Illuminate\Support\Facades\Auth;
 use App\Comment;
 use Carbon\Carbon;
 use App\Workshop;
+use Aws\S3\S3Client;
+use Aws\S3\Exception\S3Exception;
+
+
 class WorkshopController extends Controller
 {
     /**
@@ -84,21 +90,43 @@ class WorkshopController extends Controller
     
         //$article->author = 'Gorana Rakic-Bajic';
 
-        if ($request->hasFile('image')) {
+         if ($request->hasFile('image')) {
 
             if ($request->file('image')->isValid()) {
+
+                $file = $request->file('image');
                 
                 //set upload path
-                $destinationPath = 'uploads';
+               // $destinationPath = 'uploads';
                 //get filename
                 $filename = $request->file('image')->getClientOriginalName();
-                //uploading file to given path
-                $request->file('image')->move($destinationPath, $filename);
+                 //uploading file to given path
+               //Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
+               // $destinationPath = Storage::disk('s3')->url($filename)
+                // set up s3
+                $bucket = getenv('S3_BUCKET');
+                $keyname = 'uploads/'.$filename;
+                $s3 = S3Client::factory([
+                    'version' => '2006-03-01',
+                    'region' => 'us-east-2'
+                ]);
+    
+                // try
+                
+                    // Upload data.
+                    $s3->putObject(array(
+                        'Bucket' => $bucket,
+                        'Key'    => $keyname,
+                        'Body'   => fopen($_FILES['image']['tmp_name'], 'rb'),
+                        'ACL'    => 'public-read'
+                    ));
+              //  $request->file('image')->move($destinationPath, $filename);
                 //dd($filename);
+
                 //set item image
-                $workshop->image = $destinationPath . '/' . $filename;
+                $course->image = 'https://s3.us-east-2.amazonaws.com/gpositive/uploads/' . $filename;
                 //save
-                $workshop->save();
+                $course->save();
 
             }
             else
