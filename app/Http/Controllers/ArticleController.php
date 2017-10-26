@@ -107,7 +107,7 @@ class ArticleController extends Controller
                // $destinationPath = 'uploads';
                 //get filename
                 $filename = $request->file('image')->getClientOriginalName();
-                $uniqFilename = md5_file($filename);
+                $uniqFilename = md5($filename);
                 $extension = File::extension($filename);
                 $newName = $uniqFilename.$extension;
                 //uploading file to given path
