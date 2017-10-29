@@ -38,13 +38,13 @@ return [
     'google' => [
         'client_id' => '153237184271-btq370jmm00kjub501bvusm1765ep432.apps.googleusercontent.com',
         'client_secret' => '8-eLWRZhDj199CdBq7AwzIPC',
-        'redirect' => 'http://gpositive.herokuapp.com/callback/google',
+        'redirect' => 'http://gpositive.app:8000/callback/google',
     ],
 
     'facebook' => [
     'client_id' => '122590138393703',
     'client_secret' => 'b2a188ae62ef9aca07dea9a01f6d4086',
-    'redirect' => 'http://gpositive.herokuapp.com/callback/facebook',
+    'redirect' => 'http://gpositive.app:8000/callback/facebook',
     
     ],
 
