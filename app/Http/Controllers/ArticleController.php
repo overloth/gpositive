@@ -136,7 +136,7 @@ class ArticleController extends Controller
                
 
               //  $request->file('image')->move($destinationPath, $filename);
-                //dd($filename);
+                dd($newName);
 
                 //set item image
                 $article->image = 'https://s3.us-east-2.amazonaws.com/' . $bucket . '/' . $keyname;
