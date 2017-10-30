@@ -109,7 +109,7 @@ class ArticleController extends Controller
                 //get filename
                 $filename = $request->file('image')->getClientOriginalName();
                 $uniqFilename = md5($filename . time());
-                $extension = File::extension($filename);
+                $extension = \File::extension($filename);
                 $newName = $uniqFilename . '.' . $extension;
                 //uploading file to given path
                //Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
