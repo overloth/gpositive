@@ -101,12 +101,15 @@ class WorkshopController extends Controller
                // $destinationPath = 'uploads';
                 //get filename
                 $filename = $request->file('image')->getClientOriginalName();
-                 //uploading file to given path
+                $uniqFilename = md5($filename . time());
+                $extension = \File::extension($filename);
+                $newName = $uniqFilename . '.' . $extension;
+                //uploading file to given path
                //Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
                // $destinationPath = Storage::disk('s3')->url($filename)
                 // set up s3
                 $bucket = getenv('S3_BUCKET');
-                $keyname = 'uploads/'.$filename;
+                $keyname = 'uploads/'.$newName;
                 $s3 = S3Client::factory([
                     'version' => '2006-03-01',
                     'region' => 'us-east-2'
@@ -121,11 +124,15 @@ class WorkshopController extends Controller
                         'Body'   => fopen($_FILES['image']['tmp_name'], 'rb'),
                         'ACL'    => 'public-read'
                     ));
+    
+                
+               
+
               //  $request->file('image')->move($destinationPath, $filename);
-                //dd($filename);
+               
 
                 //set item image
-                $workshop->image = 'https://s3.us-east-2.amazonaws.com/gpositive/uploads/' . $filename;
+                $workshop->image = 'https://s3.us-east-2.amazonaws.com/' . $bucket . '/' . $keyname;
                 //save
                 $workshop->save();
 
