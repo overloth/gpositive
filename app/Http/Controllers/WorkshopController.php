@@ -109,6 +109,7 @@ class WorkshopController extends Controller
                // $destinationPath = Storage::disk('s3')->url($filename)
                 // set up s3
                 $bucket = getenv('S3_BUCKET');
+                $address = getenv('S3_ADDRESS');
                 $keyname = 'uploads/'.$newName;
                 $s3 = S3Client::factory([
                     'version' => '2006-03-01',
@@ -132,7 +133,7 @@ class WorkshopController extends Controller
                
 
                 //set item image
-                $workshop->image = 'https://s3.us-east-2.amazonaws.com/' . $bucket . '/' . $keyname;
+                $article->image = $address . $bucket . '/' . $keyname;
                 //save
                 $workshop->save();
 
