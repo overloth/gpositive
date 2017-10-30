@@ -108,9 +108,9 @@ class ArticleController extends Controller
                // $destinationPath = 'uploads';
                 //get filename
                 $filename = $request->file('image')->getClientOriginalName();
-                $uniqFilename = md5($filename);
+                $uniqFilename = md5($filename . time());
                 $extension = File::extension($filename);
-                $newName = $uniqFilename.$extension;
+                $newName = $uniqFilename . '.' . $extension;
                 //uploading file to given path
                //Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
                // $destinationPath = Storage::disk('s3')->url($filename)
@@ -139,7 +139,7 @@ class ArticleController extends Controller
                 //dd($filename);
 
                 //set item image
-                $article->image = 'https://s3.us-east-2.amazonaws.com/gpositive/' . $keyname;
+                $article->image = 'https://s3.us-east-2.amazonaws.com/' . $bucket . '/' . $keyname;
                 //save
                 $article->save();
 
