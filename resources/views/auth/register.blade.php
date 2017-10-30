@@ -17,7 +17,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <a href="auth/google" class="btn btn-block btn-social btn-google">
+                                <a href="redirect/google" class="btn btn-block btn-social btn-google">
                                     <i class="fa fa-google"></i> Register with Google
                                 </a>
                             </div>
@@ -25,7 +25,7 @@
                         
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <a href="auth/facebook" class="btn btn-block btn-social btn-facebook">
+                                <a href="redirect/facebook" class="btn btn-block btn-social btn-facebook">
                                     <span class="fa fa-facebook"></span> Register with Facebook
                                 </a>
                             </div>
