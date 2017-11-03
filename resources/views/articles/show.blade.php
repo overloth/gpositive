@@ -15,7 +15,7 @@
     </div>
 
     <div class="w3-container">
-      <div style="height:100px; width:100%; overflow:hidden;">
+      <div style="height:auto; width:100%; overflow:auto;">
         {!! $article->body !!}
       </div>
       @if ($article->tags)
@@ -31,7 +31,13 @@
           <p>Comments:</p>
           <p>
             @foreach ($article->comments as $comment)
-            <p>{{$comment->user->name}}: {{$comment->text}}</p>
+            <p>{{$comment->user->name}}: {{$comment->text}} <button type="submit" class="btn btn-primary">
+              <i class="fa fa-btn fa-pencil-square-o" px;"></i> 
+            </button><button type="submit" class="btn btn-primary">
+              <i class="fa fa-btn fa-trash-o" px;"></i> 
+            </button>
+
+</p>
             @endforeach
           </p>
           <!-- <div class="w3-col m4 w3-hide-small">
