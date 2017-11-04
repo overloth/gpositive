@@ -29,17 +29,29 @@
       <div class="w3-row">
         <div class="w3-col m8 s12">
           <p>Comments:</p>
-          <p>
+          
             @foreach ($article->comments as $comment)
-            <p>{{$comment->user->name}}: {{$comment->text}} <button type="submit" class="btn btn-primary">
-              <i class="fa fa-btn fa-pencil-square-o" px;"></i> 
-            </button><button type="submit" class="btn btn-primary">
-              <i class="fa fa-btn fa-trash-o" px;"></i> 
-            </button>
+             
 
-</p>
+              {{ Form::open(array('url' => URL::to('/comments/' . $comment->id), 'method' => 'DELETE', 'style'=>'display:inline-block')) }}
+
+              
+           <div class="form-group">
+          
+           
+              
+                 <p>{{$comment->user->name}}: {{$comment->text}} <strong>{{$comment->created_at->diffForHumans()}}</strong>
+            <button type="submit" class="btn btn-default pull-right">
+              <i class="fa fa-btn fa-trash-o" px;"></i>
+            </button></p>
+          
+        </div>
+           {{ Form::close() }}
+
+
+
             @endforeach
-          </p>
+          
           <!-- <div class="w3-col m4 w3-hide-small">
             <p>
             <span class="w3-padding-large w3-right"><b>Comments</b>

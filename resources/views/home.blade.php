@@ -84,9 +84,23 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-col m8 s12">
           <p><a href="/articles/{{$article->id}}"><button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black"><b>READ MORE »</b></button></a></p>
         </div>
-        <div class="w3-col m4 w3-hide-small">
+        
+        @if (auth()->check())
+        @if (auth()->user()->id == 1  || (auth()->user()->author && auth()->user()->author->id == $article->author->id))
+        
+          <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><a href="/comments/{{$article->id}}"><b>Comments  </b> <span class="w3-tag">{{App\Comment::where('article_id', $article->id)->count()}}</span></span></a></p>
+        </div>
+          
+
+
+        @endif
+        @else
+         <div class="w3-col m4 w3-hide-small">
           <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">{{App\Comment::where('article_id', $article->id)->count()}}</span></span></p>
-        </div> 
+        </div>
+        @endif
+         
       </div>
     </div>
   </div>

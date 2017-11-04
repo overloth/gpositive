@@ -36,7 +36,12 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tag = new Tag;
+        $tag-> name = $request->name;
+        dd($tag);
+        $tag->save();
+
+        return redirect('articles');
     }
 
     /**

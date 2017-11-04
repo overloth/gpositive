@@ -32,7 +32,7 @@ class CommentController extends Controller
         }
 
 
-       $comments = Comment::latest('updated_at')->get();
+       $comments = Comment::latest('article_id')->get();
 
         return view('Comments.comments', compact('comments'));
     }
@@ -82,7 +82,10 @@ class CommentController extends Controller
      */
     public function show($id)
     {
-        //
+        $comments = Comment::where('article_id', $id)->get();
+      // dd($comments);
+
+        return view('Comments.show', compact('comments'));
     }
 
     /**
@@ -115,7 +118,13 @@ class CommentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+
     {
-        //
+
+        Comment::Where('id',$id)->delete();
+        //dd($id);
+
+        
+        return redirect()->back();
     }
 }

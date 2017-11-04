@@ -94,7 +94,17 @@ class ArticleController extends Controller
         $article = Article::create($inss);
 
         //dd($request->input('tag_list'));
+        
+        
+        //adding new tag
+        $tag = $inss['new_tag'];
+        $tagdone = Tag::create(['name'=>$tag]);
+        $tagid = $tagdone->id;
+       //dd($inss,$tag, $tagdone, $tagid);
         $article->tags()->attach($request->input('tag_list'));
+        $article->tags()->attach($tagid);
+
+       
     
         //$article->author = 'Gorana Rakic-Bajic';
 
@@ -142,7 +152,7 @@ class ArticleController extends Controller
                 //set item image
                 $article->image = $address . $bucket . '/' . $keyname;
                 //save
-                $article->save();
+               $article->save();
 
             }
             else

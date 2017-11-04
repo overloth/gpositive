@@ -54,6 +54,8 @@ Route::resource('tags','TagController');
 Route::get('/events','EventController@events');
 Route::resource('workshops','WorkshopController');
 
+Route::get('/comments/{{$article->id}}','CommentController@show');
+
 
 /*
 Route::post('upload/image', function(Request $request) {

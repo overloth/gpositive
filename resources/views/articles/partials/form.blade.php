@@ -70,6 +70,10 @@
 	<div class="col-md-6">
 	    {!! Form::select('tag_list[]', $tags, null, array('class' => 'form-control', 'multiple')) !!}
 	</div>
+	<label for="tag_list" class="col-md-4 control-label">New tags</label>
+	<div class="col-md-6 ">
+	    {!! Form::text('new_tag', null, array('class' => 'form-control', 'placeholder'=> 'Enter new tags here..')) !!}
+	</div>
 </div>
 
 {{--Item Price--}}

@@ -133,7 +133,7 @@ class WorkshopController extends Controller
                
 
                 //set item image
-                $article->image = $address . $bucket . '/' . $keyname;
+                $workshop->image = $address . $bucket . '/' . $keyname;
                 //save
                 $workshop->save();
 

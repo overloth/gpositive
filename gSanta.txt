@@ -201,6 +201,6 @@ igor:
      - razdvajaju se na mestu razmaka
      - proveriti da li tag postoji, ako ne postoji onda ga dodati u tabelu sa tagovima
 
-  -proveriti register
+  +proveriti register
 
 -redesign!!! po goginim primerima :)

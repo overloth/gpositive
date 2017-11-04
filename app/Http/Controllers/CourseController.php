@@ -112,7 +112,7 @@ class CourseController extends Controller
                
 
                 //set item image
-                $article->image = $address . $bucket . '/' . $keyname;
+                $course->image = $address . $bucket . '/' . $keyname;
                 //save
                 $course->save();
 
