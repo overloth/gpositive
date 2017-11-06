@@ -335,7 +335,7 @@ else
         $article = Article::findOrFail($id);
 
         //check if author is editing his article
-        if(Auth::user()->author->id != $article->author_id || !Auth::user('id'=='41'))
+        if(Auth::user()->author->id != $article->author_id && !Auth::user('id'=='41'))
         {
             dd('there was problem saying you are not author of this article');
             return;
