@@ -8,7 +8,7 @@
    
   <div class="w3-row">
     @if (auth()->check())
-      @if (auth()->user()->id == 1  || auth()->user()->author)
+      @if (auth()->user()->id == 11  || auth()->user()->author)
         <p style="text-align: center;"><b><a href="/workshops/create"> [Add New Workshop] </a></b></p>
       @endif
     @endif
@@ -64,7 +64,7 @@
             <h5 style="font-style: italic;">{{$workshop->description}}</h5>
           </div>
             @if (auth()->check())
-              @if (auth()->user()->id == 1  || (auth()->user()->author && auth()->user()->author->id == $workshop->author->id))
+              @if (auth()->user()->id == 11  || (auth()->user()->author && auth()->user()->author->id == $workshop->author->id))
                 <div style="text-align: center;"> 
                   {{ Form::open(array('url' => URL::to('/workshops/' . $workshop->id . '/edit'), 'method' => 'GET', 'style'=>'display:inline-block')) }}
                   <button type="submit" class="btn btn-primary " style="margin-bottom: 10px;"  >Edit</button>

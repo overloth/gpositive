@@ -195,7 +195,7 @@ class WorkshopController extends Controller
         $workshop = Workshop::findOrFail($id);
 
         //check if author is editing his article
-        if(Auth::user()->author->id != $workshop->author_id)
+        if(Auth::user()->author->id != $workshop->author_id && !Auth::user('id'=='11')))
         {
             dd('there was problem saying you are not author of this article');
             return;
@@ -232,7 +232,7 @@ class WorkshopController extends Controller
         $workshop = Workshop::findOrFail($id);
 
         //check if author is editing his article
-        if(Auth::user()->author->id != $workshop->author_id)
+        if(Auth::user()->author->id != $workshop->author_id && !Auth::user('id'=='11')))
         {
             dd('there was problem saying you are not author of this article');
             return;
@@ -299,7 +299,7 @@ class WorkshopController extends Controller
         $workshop = Workshop::findOrFail($id);
 
         //check if author is editing his article
-        if(Auth::user()->author->id != $workshop->author_id)
+        if(Auth::user()->author->id != $workshop->author_id && !Auth::user('id'=='11')))
         {
             dd('there was problem saying you are not author of this article');
             return;
