@@ -86,7 +86,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
         
         @if (auth()->check())
-        @if (auth()->user()->id == 1  || (auth()->user()->author && auth()->user()->author->id == $article->author->id))
+        @if (auth()->user()->id == 41  ||  auth()->user()->author->id == $article->author->id)
         
           <div class="w3-col m4 w3-hide-small">
           <p><span class="w3-padding-large w3-right"><a href="/comments/{{$article->id}}"><b>Comments  </b> <span class="w3-tag">{{App\Comment::where('article_id', $article->id)->count()}}</span></span></a></p>
