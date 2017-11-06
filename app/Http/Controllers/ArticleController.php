@@ -247,7 +247,7 @@ else
         }
 
         //check if user is author
-        if(!Auth::user()->author || !Auth::user('id'=='11'))
+        if(!Auth::user()->author)
         {
             dd('there was problem saying you are not author');
             return;
@@ -358,7 +358,7 @@ else
         }
 
         //check if user is author
-        if(!Auth::user()->author && !Auth::user('id'=='11'))
+        if(!Auth::user()->author )
         {
             dd('there was problem saying you are not author');
             return;
