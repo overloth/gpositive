@@ -11,7 +11,7 @@
  <div class="w3-row">
 
  @if (auth()->check())
-    @if (auth()->user()->id == 1)
+    @if (auth()->user()->id == 41)
   <p style="text-align: center;"><b><a href="/courses/create" > [Add New Course] </a></b></p>
   @endif
   @endif
