@@ -23,6 +23,6 @@ return [
     'event' => 'SAVETOVALIŠTE BAŠTA',
     'events' => 'Psiholosko savetovalište Basta',
     'workshops' => 'Radionice',
-    'positive' =>'centar za pozitivnu psihologiju',
-    'name'=>'gPositive'
+    'positive' =>'Institut Pozitivne Psihologije',
+    'name'=>'gPositiv'
 ];
