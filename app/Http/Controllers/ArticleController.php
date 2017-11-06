@@ -209,7 +209,7 @@ else
         }
 
         //check if user is author
-        if(!Auth::user()->author || !Auth::user('id'=='31'))
+        if(!Auth::user()->author || !Auth::user('id'=='41'))
         {
             dd('there was problem saying you are not author');
             return;
@@ -218,7 +218,7 @@ else
         $article = Article::findOrFail($id);
 
         //check if author is editing his article
-        if(Auth::user()->author->id != $article->author_id)
+        if(Auth::user()->author->id != $article->author_id || !Auth::user('id'=='41'))
         {
             dd('there was problem saying you are not author of this article');
             return;
@@ -247,7 +247,7 @@ else
         }
 
         //check if user is author
-        if(!Auth::user()->author || !Auth::user('id'=='31'))
+        if(!Auth::user()->author || !Auth::user('id'=='41'))
         {
             dd('there was problem saying you are not author');
             return;
@@ -257,7 +257,7 @@ else
         $article = Article::findOrFail($id);
 
         //check if author is editing his article
-        if(Auth::user()->author->id != $article->author_id)
+        if(Auth::user()->author->id != $article->author_id || !Auth::user('id'=='41'))
         {
             dd('there was problem saying you are not author of this article');
             return;
@@ -325,7 +325,7 @@ else
         }
 
         //check if user is author
-        if(!Auth::user()->author || !Auth::user('id'=='31'))
+        if(!Auth::user()->author || !Auth::user('id'=='41'))
         {
             dd('there was problem saying you are not author');
             return;
@@ -335,7 +335,7 @@ else
         $article = Article::findOrFail($id);
 
         //check if author is editing his article
-        if(Auth::user()->author->id != $article->author_id)
+        if(Auth::user()->author->id != $article->author_id || !Auth::user('id'=='41'))
         {
             dd('there was problem saying you are not author of this article');
             return;
