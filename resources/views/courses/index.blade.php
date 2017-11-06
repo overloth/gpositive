@@ -11,7 +11,7 @@
  <div class="w3-row">
 
  @if (auth()->check())
-    @if (auth()->user()->id == 41)
+    @if (auth()->user()->id == 1 || auth()->user()->id == 11 || auth()->user()->id == 41 || auth()->user()->id == 51)
   <p style="text-align: center;"><b><a href="/courses/create" > [Add New Course] </a></b></p>
   @endif
   @endif
@@ -70,7 +70,7 @@
   </div>
 
   	     @if (auth()->check())
-     	      @if (auth()->user()->id == 1)
+     	      @if (auth()->user()->id == 1 || auth()->user()->id == 11 || auth()->user()->id == 41 || auth()->user()->id == 51)
      	    <div style="text-align: center;">
   	         {{ Form::open(array('url' => URL::to('/courses/' . $course->id . '/edit'), 'method' => 'GET', 'style'=>'display:inline-block')) }}
             <button type="submit" >Edit</button>

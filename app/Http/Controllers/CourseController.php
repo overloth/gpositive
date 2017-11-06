@@ -41,7 +41,7 @@ class CourseController extends Controller
     public function create()
     {
         // check if admin logged in
-        if(Auth::user()->id != 41 )
+        if(Auth::user()->id != 11 || Auth::user()->id != 1 || Auth::user()->id != 41 || Auth::user()->id != 11)
         {
             dd('there was problem saying you are not admin');
             return;
@@ -58,7 +58,7 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         // check if admin logged in
-        if(Auth::user()->id != 41 )
+        if(Auth::user()->id != 11 || Auth::user()->id != 1 || Auth::user()->id != 41 || Auth::user()->id != 11)
         {
             dd('there was problem saying you are not admin');
             return;
@@ -160,7 +160,7 @@ class CourseController extends Controller
     public function edit($id)
     {
         // check if admin logged in
-        if(Auth::user()->id != 41 )
+        if(Auth::user()->id != 11 || Auth::user()->id != 1 || Auth::user()->id != 41 || Auth::user()->id != 11)
         {
             dd('there was problem saying you are not admin');
             return;
@@ -180,7 +180,7 @@ class CourseController extends Controller
     public function update(Request $request, $id)
     {
         // check if admin logged in
-        if(Auth::user()->id != 41 )
+        if(Auth::user()->id != 11 )
         {
             dd('there was problem saying you are not admin');
             return;
@@ -229,7 +229,7 @@ class CourseController extends Controller
     public function destroy($id)
     {
         // check if admin logged in
-        if(Auth::user()->id != 41 )
+        if(Auth::user()->id != 11 || Auth::user()->id != 1 || Auth::user()->id != 41 || Auth::user()->id != 11)
         {
             dd('there was problem saying you are not admin');
             return;
