@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"tag",
+				"tagid"
+			],
+			[
+				"tags",
+				"tag_list"
+			],
+			[
+				"comment",
+				"comments"
+			],
+			[
+				"ar",
+				"article_id"
+			],
+			[
+				"article",
+				"article_id"
+			],
+			[
 				"cour",
 				"course"
 			],
@@ -191,24 +211,7 @@
 			"file": "/home/overloth/projects/gpositive/routes/web.php",
 			"settings":
 			{
-				"buffer_size": 2272,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/views/auth/login.blade.php",
-			"settings":
-			{
-				"buffer_size": 4556,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/views/auth/register.blade.php",
-			"settings":
-			{
-				"buffer_size": 5093,
+				"buffer_size": 2340,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -217,7 +220,60 @@
 			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/ArticleController.php",
 			"settings":
 			{
-				"buffer_size": 8932,
+				"buffer_size": 10358,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/resources/views/articles/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 3921,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/resources/views/home.blade.php",
+			"settings":
+			{
+				"buffer_size": 9783,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/resources/views/articles/show.blade.php",
+			"settings":
+			{
+				"buffer_size": 3526,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/app/Tag.php",
+			"settings":
+			{
+				"buffer_size": 294,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/TagController.php",
+			"settings":
+			{
+				"buffer_size": 1829,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/resources/views/articles/partials/form.blade.php",
+			"settings":
+			{
+				"buffer_size": 4490,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -232,99 +288,10 @@
 			}
 		},
 		{
-			"file": "/home/overloth/projects/gpositive/resources/views/articles/index.blade.php",
+			"file": "/home/overloth/projects/gpositive/.env",
 			"settings":
 			{
-				"buffer_size": 3523,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/views/home.blade.php",
-			"settings":
-			{
-				"buffer_size": 9299,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/CourseController.php",
-			"settings":
-			{
-				"buffer_size": 6685,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/WorkshopController.php",
-			"settings":
-			{
-				"buffer_size": 8291,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/views/workshops/show.blade.php",
-			"settings":
-			{
-				"buffer_size": 979,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/views/workshops/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 3624,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/views/courses/show.blade.php",
-			"settings":
-			{
-				"buffer_size": 2802,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/views/courses/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 3633,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/views/articles/show.blade.php",
-			"settings":
-			{
-				"buffer_size": 3019,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<div class=\"w3-content\" style=\"max-width:1400px;background:url('/images/zuticvet.jpg') no-repeat;display:block;background-attachment: fixed;background-size:cover; width:100%;background-position:fixed;\">\n   \n  <div class=\"w3-row\">\n    @if (auth()->check())\n      @if (auth()->user()->id == 1  || auth()->user()->author)\n        <p style=\"text-align: center;\"><b><a href=\"/workshops/create\" style=\"color:white;\"> [Add New Workshop] </a></b></p>\n      @endif\n    @endif\n\n    <br>\n    <div class=\"w3-col l4 w3-hide-medium w3-hide-small\" style=\"float:left;\">\n      <div class=\"w3-card-2 w3-margin w3-margin-top\">\n      <img src=\"/images/lale2.jpg\" style=\"width:100%;\">\n        <div class=\"w3-container w3-white\">\n          <h4><b>mesto za text :)</b></h4>\n          <p></p>\n        </div>\n      </div><hr>\n      <div class=\"w3-card-2 w3-margin w3-margin-top\">\n      <img src=\"/images/lotus.jpg\" style=\"width:100%\">\n        <div class=\"w3-container w3-white\">\n          <h4><b>mesto za text 2 :)</b></h4>\n          <p></p>\n        </div>\n      </div><hr>\n    </div>\n  @foreach ($workshops as $workshop)\n    <a style=\"color:black;\" href=\"/workshops/{{$workshop->id}}\">\n      <div class=\"w3-col l4 m6 s12 \">\n        <div class=\"w3-card-4 w3-margin w3-white \">\n          <div class=\"article_image\" style=\"background:url('/{{$workshop->image}}') no-repeat;display:block;margin-left:auto;margin-right:auto;background-size:cover; width:100%; background-position: 0px -50px; height:170px;\"> </div>\n          <div class=\"w3-container w3-padding-8\">\n            <h3 class=\"article_heading\"><b><a href=\"/workshops/{{$workshop->id}}\">{{$workshop->title}}</a></b></h3>\n            <p><a href=\"/authors/{{$workshop->author->id}}\">{{$workshop->author->name}}</a><span class=\"w3-opacity\" style=\"float:right;padding-right:25px;\">{{ date('d M Y ', $workshop->created_at->timestamp) }}</span></p>\n            <h5 style=\"font-style: italic;\">{{$workshop->description}}</h5>\n          </div>\n            @if (auth()->check())\n              @if (auth()->user()->id == 1  || (auth()->user()->author && auth()->user()->author->id == $workshop->author->id))\n                <div style=\"text-align: center;\"> \n                  {{ Form::open(array('url' => URL::to('/workshops/' . $workshop->id . '/edit'), 'method' => 'GET', 'style'=>'display:inline-block')) }}\n                  <button type=\"submit\" class=\"btn btn-primary \" style=\"margin-bottom: 10px;\"  >Edit</button>\n                  {{ Form::close() }}\n\n                  {{ Form::open(array('url' => URL::to('/workshops/' . $workshop->id), 'method' => 'DELETE', 'style'=>'display:inline-block')) }}\n                  <button type=\"submit\" class=\"btn btn-primary \" style=\"margin-bottom: 10px;\" >Delete</button>\n                  {{ Form::close() }}\n                </div>\n              @endif\n            @endif\n          </div>\n        </div>\n      </a>\n  @endforeach  \n  </div>  \n</div>\n\n/* index.php */\n\n<?php\n\n/**\n * Laravel - A PHP Framework For Web Artisans\n *\n * @package  Laravel\n * @author   Taylor Otwell <taylor@laravel.com>\n */\n\n/*\n|--------------------------------------------------------------------------\n| Register The Auto Loader\n|--------------------------------------------------------------------------\n|\n| Composer provides a convenient, automatically generated class loader for\n| our application. We just need to utilize it! We'll simply require it\n| into the script here so that we don't have to worry about manual\n| loading any of our classes later on. It feels nice to relax.\n|\n*/\n\nrequire __DIR__.'/../bootstrap/autoload.php';\n\n/*\n|--------------------------------------------------------------------------\n| Turn On The Lights\n|--------------------------------------------------------------------------\n|\n| We need to illuminate PHP development, so let us turn on the lights.\n| This bootstraps the framework and gets it ready for use, then it\n| will load up this application so that we can run it and send\n| the responses back to the browser and delight our users.\n|\n*/\n\n$app = require_once __DIR__.'/../bootstrap/app.php';\n\n/*\n|--------------------------------------------------------------------------\n| Run The Application\n|--------------------------------------------------------------------------\n|\n| Once we have the application, we can handle the incoming request\n| through the kernel, and send the associated response back to\n| the client's browser allowing them to enjoy the creative\n| and wonderful application we have prepared for them.\n|\n*/\n\n$kernel = $app->make(Illuminate\\Contracts\\Http\\Kernel::class);\n\n$response = $kernel->handle(\n    $request = Illuminate\\Http\\Request::capture()\n);\n\n$response->send();\n\n$kernel->terminate($request, $response);\n\n\n\n/* home blade za worshops da se prikazuju na home stranici */\n\n<div class=\"w3-card-2 w3-margin\">\n    <div class=\"w3-container w3-padding\" >\n      <h4>Radionice</h4>\n    </div>\n    <ul class=\"w3-ul w3-hoverable w3-white\">\n\n      @if(count($workshops) === 0)\n      <li class=\"w3-padding-16\">\n        <img src=\"/images/sad.png\" alt=\"Image\" class=\"w3-left w3-margin-right\" style=\"width:50px\">\n        <span class=\"w3-large\">Trenutno nemamo nijednu radionicu organizovanu!</span><br>\n        \n      </li>\n\n      @else\n\n\n      \n      @foreach ($workshops as $workshop)\n      \n      <li class=\"w3-padding-16\">\n        <img src=\"{{$workshop->image}}\" alt=\"Image\" class=\"w3-left w3-margin-right\" style=\"width:75px;height: 50px;\">\n        <a href=\"/workshops/{{$workshop->id}}\"><span class=\"w3-large\">{{$workshop->title}}</span></a><br>\n        <p>{{$workshop->description}}</p>\n      </li>\n\n      \n\n     \n      @endforeach\n\n\n      @endif\n\n\n      /* HomeController za workshops */\n\n      \n      use App\\Workshop;\n      $workshops = Workshop::latest('updated_at')->get();\n      return view('home', compact('articles', 'courses', 'workshops', 'tags'));\n\n\n\n      'mysql' => [\n            'driver' => 'mysql',\n            'host' => env('DB_HOST', 'us-cdbr-iron-east-05.cleardb.net'),\n            'port' => env('DB_PORT', '3306'),\n            'database' => env('DB_DATABASE', 'heroku_5dc5d91cf3e6fa6'),\n            'username' => env('DB_USERNAME', 'bbff912134ab25'),\n            'password' => env('DB_PASSWORD', '163c5f1c'),\n            'charset' => 'utf8',\n            'collation' => 'utf8_unicode_ci',\n            'prefix' => '',\n            'strict' => false,\n            'engine' => null,\n        ],\n\n\n\n\n\n    Access Key ID:\n    AKIAJ2ODNT2HW4OIM26Q\n    Secret Access Key:\n    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\n\n\n    ZkbZXx1kGuGXP9n8Vb6GVGDZ3Kcz/DAvOfJ5jZmf\n\n    AKIAJYCHPACXGCZMQJTQ \n\n\n\n    <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n    <link href=\"http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"http://www.w3schools.com/lib/w3.css\">\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Raleway\">\n    <link href=\"//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css\" rel=\"stylesheet\">\n    <link href=\"https://fonts.googleapis.com/css?family=Gloria+Hallelujah\" rel=\"stylesheet\">\n\n    <!-- CSRF Token -->\n    <meta name=\"csrf-token\" content=\"{{ csrf_token() }}\">\n\n    <title>{{ config('app.name', 'CENTAR ZA POZITIVNU PSIHOLOGIJU') }}</title>\n\n    <!-- Styles -->\n    <link href=\"/css/app.css\" rel=\"stylesheet\">\n    <link href=\"/css/bootstrap-social.css\" rel=\"stylesheet\">\n\n    <link href=\"http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css\" rel=\"stylesheet\">\n\n    <!-- Scripts -->\n    <script>\n        window.Laravel = <?php echo json_encode([\n            'csrfToken' => csrf_token(),\n        ]); ?>\n    </script>\n</head>\n<body>\n    <div id=\"bapp\">\n        <nav class=\"navbar navbar-default navbar-static-top\" style=\"margin-bottom: 0px;\">\n            <div class=\"container\">\n                <div class=\"navbar-header\">\n\n                    <!-- Collapsed Hamburger -->\n                    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#app-navbar-collapse\">\n                        <span class=\"sr-only\">Toggle Navigation</span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                    </button>\n\n                    <!-- Branding Image -->\n                    <a class=\"navbar-brand\" style=\"{{ Request::is('/') ? 'background-color: #eeeeee;' : '' }}\" href=\"{{ url('/') }}\">\n                        Home\n                    </a>\n\n                    <!--<a class=\"navbar-brand\" href=\"{{ url('/articles') }}\">\n                        articles\n                    </a>\n\n                    <a class=\"navbar-brand\" href=\"{{ url('/courses') }}\">\n                        courses\n                    </a>-->\n                </div>\n\n                <div class=\"collapse navbar-collapse\" id=\"app-navbar-collapse\">\n                    <!-- Left Side Of Navbar -->\n                    <ul class=\"nav navbar-nav\">\n                        <li class=\"{{ Request::is('articles') ? 'active' : '' }}\"><a class=\"djek\" href=\"{{ url('/articles') }}\">@lang('various.articles')</a></li>\n                        <li class=\"{{ Request::is('courses') ? 'active' : '' }}\"><a href=\"{{ url('/courses') }}\">@lang('various.courses')</a></li>\n                        <li class=\"{{ Request::is('workshops') ? 'active' : '' }}\"><a href=\"{{ url('/workshops') }}\">@lang('various.workshops')</a></li>\n                      <!--  <li class=\"{{ Request::is('events') ? 'active' : '' }}\"><a href=\"{{ url('/events') }}\">@lang('various.events')</a></li> -->\n                    </ul>\n\n                    <!-- Right Side Of Navbar -->\n\n                    <ul class=\"nav navbar-nav navbar-right\">\n                        <li class=\"dropdown\">\n                            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><div style=\"border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_{{Cookie::get('lang')}}.png'); background-size:cover;\"\"></div>\n                            </a>\n\n                            <ul class=\"dropdown-menu\" role=\"menu\">\n\n                                <a href=\"{{ url('/language/en') }}\" onclick=\"event.preventDefault(); window.location.href = '/language/en';\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                                <div style=\"clear:both\">\n                                    <div style=\"float:left; margin:4px; border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_en.png'); background-size:cover;\"\"></div> \n                                    <div style=\"margin:4px; padding-top: 4px;\">English</div>\n                                </div>\n                                </a>\n\n                                <a href=\"{{ url('/language/sr') }}\" onclick=\"event.preventDefault(); window.location.href = '/language/sr';\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                                <div style=\"clear:both\">\n                                    <div style=\"float:left; margin:4px; border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_sr.png'); background-size:cover;\"\"></div> \n                                    <div style=\"margin:4px; padding-top: 4px;\">Srpski</div>\n                                </div>\n                                </a>\n\n                                <a href=\"{{ url('/language/de') }}\" onclick=\"event.preventDefault(); window.location.href = '/language/de';\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                                <div style=\"clear:both\">\n                                    <div style=\"float:left; margin:4px; border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_de.png'); background-size:cover;\"\"></div> \n                                    <div style=\"margin:4px; padding-top: 4px;\">Deutch</div>\n                                </div>\n                                </a>\n                            </ul>\n                        </li>\n                    </ul>\n\n                    <ul class=\"nav navbar-nav navbar-right\">\n                        <!-- Authentication Links -->\n                        @if (Auth::guest())\n                            <li><a href=\"{{ url('/login') }}\">Login</a></li>\n                            <li><a href=\"{{ url('/register') }}\">Register</a></li>\n                        @else\n                            <li class=\"dropdown\">\n                                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                                    {{ Auth::user()->name }} <span class=\"caret\"></span>\n                                </a>\n\n                                <ul class=\"dropdown-menu\" role=\"menu\">\n                                    <li>\n                                        <a href=\"{{ url('/logout') }}\"\n                                            onclick=\"event.preventDefault();\n                                                     document.getElementById('logout-form').submit();\">\n                                            Logout\n                                        </a>\n\n                                        <form id=\"logout-form\" action=\"{{ url('/logout') }}\" method=\"POST\" style=\"display: none;\">\n                                            {{ csrf_field() }}\n                                        </form>\n                                    </li>\n                                </ul>\n                            </li>\n                        @endif\n                    </ul>\n                </div>\n            </div>\n        </nav>\n\n        @yield('content')\n    </div>\n\n    \n\n    <!-- Scripts -->\n    <script src=\"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js\"></script> \n    <script src=\"http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js\"></script>\n    <script src=\"/js/presentation.js\"></script>\n    <script src=\"http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js\"></script>\n\n    <script type=\"text/javascript\">\n        $(document).ready(function() {\n\n            $.ajaxSetup({\n                headers: {\n                    'X-CSRF-TOKEN': $('meta[name=\"csrf-token\"]').attr('content')\n                }\n            });\n\n\n            $('#technig').summernote({\n                height:300,\n                callbacks: {\n                    onImageUpload: function(files, editor, $editable) {\n                        sendFile(files[0],editor,$editable);\n                    }\n                }\n            });\n\n            function sendFile(file,editor,welEditable) {\n                data = new FormData();\n                data.append(\"file\", file);\n                jQuery.ajax({\n                    url: \"{{ url('/upload/image') }}\",\n                    data: data,\n                    cache: false,\n                    contentType: false,\n                    processData: false,\n                    type: 'POST',\n                    success: function(s){\n                        console.log(\"good summernote upload\");\n                        jQuery('#technig').summernote(\"insertImage\", s);\n                    },\n                    error: function(jqXHR, textStatus, errorThrown) {\n                        alert(\"error with picture upload!\");\n                        console.log(textStatus+\" gi \"+errorThrown);\n                    }\n                });\n            }\n        });\n    </script>\n\n</body>\n</html>\n\n\n\nif ($request->file('image')->isValid()) {\n\n                $file = $request->file('image');\n                \n                //set upload path\n               // $destinationPath = 'uploads';\n                //get filename\n                $filename = $request->file('image')->getClientOriginalName();\n                $uniqFilename = md5($filename . time());\n                $extension = File::extension($filename);\n                $newName = $uniqFilename . '.' . $extension;\n                //uploading file to given path\n               //Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');\n               // $destinationPath = Storage::disk('s3')->url($filename)\n                // set up s3\n                $bucket = getenv('S3_BUCKET');\n                $keyname = 'uploads/'.$newName;\n                $s3 = S3Client::factory([\n                    'version' => '2006-03-01',\n                    'region' => 'us-east-2'\n                ]);\n    \n                // try\n                \n                    // Upload data.\n                    $s3->putObject(array(\n                        'Bucket' => $bucket,\n                        'Key'    => $keyname,\n                        'Body'   => fopen($_FILES['image']['tmp_name'], 'rb'),\n                        'ACL'    => 'public-read'\n                    ));\n    \n                \n               \n\n              //  $request->file('image')->move($destinationPath, $filename);\n                //dd($filename);\n\n                //set item image\n                $article->image = 'https://s3.us-east-2.amazonaws.com/' . $bucket . '/' . $keyname;\n                //save\n                $article->save();\n\n            }\n\n\n",
-			"settings":
-			{
-				"buffer_size": 17451,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/resources/views/layouts/app.blade.php",
-			"settings":
-			{
-				"buffer_size": 9150,
+				"buffer_size": 711,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -339,39 +306,6 @@
 			}
 		},
 		{
-			"file": "/home/overloth/projects/gpositive/.env",
-			"settings":
-			{
-				"buffer_size": 711,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/composer.json",
-			"settings":
-			{
-				"buffer_size": 1782,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/vendor/autoload.php",
-			"settings":
-			{
-				"buffer_size": 183,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/overloth/projects/gpositive/app/Http/Kernel.php",
-			"settings":
-			{
-				"buffer_size": 1760,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/home/overloth/projects/gpositive/config/services.php",
 			"settings":
 			{
@@ -381,18 +315,64 @@
 			}
 		},
 		{
-			"file": "/home/overloth/projects/gpositive/config/filesystems.php",
+			"file": "/home/overloth/projects/gpositive/resources/lang/sr/various.php",
 			"settings":
 			{
-				"buffer_size": 1970,
+				"buffer_size": 844,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"file": "various.php",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 864,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/CourseController.php",
+			"settings":
+			{
+				"buffer_size": 6778,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/resources/views/courses/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 3801,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/resources/views/workshops/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 3626,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/overloth/projects/gpositive/app/Http/Controllers/WorkshopController.php",
+			"settings":
+			{
+				"buffer_size": 8373,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<div class=\"w3-content\" style=\"max-width:1400px;background:url('/images/zuticvet.jpg') no-repeat;display:block;background-attachment: fixed;background-size:cover; width:100%;background-position:fixed;\">\n   \n  <div class=\"w3-row\">\n    @if (auth()->check())\n      @if (auth()->user()->id == 1  || auth()->user()->author)\n        <p style=\"text-align: center;\"><b><a href=\"/workshops/create\" style=\"color:white;\"> [Add New Workshop] </a></b></p>\n      @endif\n    @endif\n\n    <br>\n    <div class=\"w3-col l4 w3-hide-medium w3-hide-small\" style=\"float:left;\">\n      <div class=\"w3-card-2 w3-margin w3-margin-top\">\n      <img src=\"/images/lale2.jpg\" style=\"width:100%;\">\n        <div class=\"w3-container w3-white\">\n          <h4><b>mesto za text :)</b></h4>\n          <p></p>\n        </div>\n      </div><hr>\n      <div class=\"w3-card-2 w3-margin w3-margin-top\">\n      <img src=\"/images/lotus.jpg\" style=\"width:100%\">\n        <div class=\"w3-container w3-white\">\n          <h4><b>mesto za text 2 :)</b></h4>\n          <p></p>\n        </div>\n      </div><hr>\n    </div>\n  @foreach ($workshops as $workshop)\n    <a style=\"color:black;\" href=\"/workshops/{{$workshop->id}}\">\n      <div class=\"w3-col l4 m6 s12 \">\n        <div class=\"w3-card-4 w3-margin w3-white \">\n          <div class=\"article_image\" style=\"background:url('/{{$workshop->image}}') no-repeat;display:block;margin-left:auto;margin-right:auto;background-size:cover; width:100%; background-position: 0px -50px; height:170px;\"> </div>\n          <div class=\"w3-container w3-padding-8\">\n            <h3 class=\"article_heading\"><b><a href=\"/workshops/{{$workshop->id}}\">{{$workshop->title}}</a></b></h3>\n            <p><a href=\"/authors/{{$workshop->author->id}}\">{{$workshop->author->name}}</a><span class=\"w3-opacity\" style=\"float:right;padding-right:25px;\">{{ date('d M Y ', $workshop->created_at->timestamp) }}</span></p>\n            <h5 style=\"font-style: italic;\">{{$workshop->description}}</h5>\n          </div>\n            @if (auth()->check())\n              @if (auth()->user()->id == 1  || (auth()->user()->author && auth()->user()->author->id == $workshop->author->id))\n                <div style=\"text-align: center;\"> \n                  {{ Form::open(array('url' => URL::to('/workshops/' . $workshop->id . '/edit'), 'method' => 'GET', 'style'=>'display:inline-block')) }}\n                  <button type=\"submit\" class=\"btn btn-primary \" style=\"margin-bottom: 10px;\"  >Edit</button>\n                  {{ Form::close() }}\n\n                  {{ Form::open(array('url' => URL::to('/workshops/' . $workshop->id), 'method' => 'DELETE', 'style'=>'display:inline-block')) }}\n                  <button type=\"submit\" class=\"btn btn-primary \" style=\"margin-bottom: 10px;\" >Delete</button>\n                  {{ Form::close() }}\n                </div>\n              @endif\n            @endif\n          </div>\n        </div>\n      </a>\n  @endforeach  \n  </div>  \n</div>\n\n/* index.php */\n\n<?php\n\n/**\n * Laravel - A PHP Framework For Web Artisans\n *\n * @package  Laravel\n * @author   Taylor Otwell <taylor@laravel.com>\n */\n\n/*\n|--------------------------------------------------------------------------\n| Register The Auto Loader\n|--------------------------------------------------------------------------\n|\n| Composer provides a convenient, automatically generated class loader for\n| our application. We just need to utilize it! We'll simply require it\n| into the script here so that we don't have to worry about manual\n| loading any of our classes later on. It feels nice to relax.\n|\n*/\n\nrequire __DIR__.'/../bootstrap/autoload.php';\n\n/*\n|--------------------------------------------------------------------------\n| Turn On The Lights\n|--------------------------------------------------------------------------\n|\n| We need to illuminate PHP development, so let us turn on the lights.\n| This bootstraps the framework and gets it ready for use, then it\n| will load up this application so that we can run it and send\n| the responses back to the browser and delight our users.\n|\n*/\n\n$app = require_once __DIR__.'/../bootstrap/app.php';\n\n/*\n|--------------------------------------------------------------------------\n| Run The Application\n|--------------------------------------------------------------------------\n|\n| Once we have the application, we can handle the incoming request\n| through the kernel, and send the associated response back to\n| the client's browser allowing them to enjoy the creative\n| and wonderful application we have prepared for them.\n|\n*/\n\n$kernel = $app->make(Illuminate\\Contracts\\Http\\Kernel::class);\n\n$response = $kernel->handle(\n    $request = Illuminate\\Http\\Request::capture()\n);\n\n$response->send();\n\n$kernel->terminate($request, $response);\n\n\n\n/* home blade za worshops da se prikazuju na home stranici */\n\n<div class=\"w3-card-2 w3-margin\">\n    <div class=\"w3-container w3-padding\" >\n      <h4>Radionice</h4>\n    </div>\n    <ul class=\"w3-ul w3-hoverable w3-white\">\n\n      @if(count($workshops) === 0)\n      <li class=\"w3-padding-16\">\n        <img src=\"/images/sad.png\" alt=\"Image\" class=\"w3-left w3-margin-right\" style=\"width:50px\">\n        <span class=\"w3-large\">Trenutno nemamo nijednu radionicu organizovanu!</span><br>\n        \n      </li>\n\n      @else\n\n\n      \n      @foreach ($workshops as $workshop)\n      \n      <li class=\"w3-padding-16\">\n        <img src=\"{{$workshop->image}}\" alt=\"Image\" class=\"w3-left w3-margin-right\" style=\"width:75px;height: 50px;\">\n        <a href=\"/workshops/{{$workshop->id}}\"><span class=\"w3-large\">{{$workshop->title}}</span></a><br>\n        <p>{{$workshop->description}}</p>\n      </li>\n\n      \n\n     \n      @endforeach\n\n\n      @endif\n\n\n      /* HomeController za workshops */\n\n      \n      use App\\Workshop;\n      $workshops = Workshop::latest('updated_at')->get();\n      return view('home', compact('articles', 'courses', 'workshops', 'tags'));\n\n\n\n      'mysql' => [\n            'driver' => 'mysql',\n            'host' => env('DB_HOST', 'us-cdbr-iron-east-05.cleardb.net'),\n            'port' => env('DB_PORT', '3306'),\n            'database' => env('DB_DATABASE', 'heroku_5dc5d91cf3e6fa6'),\n            'username' => env('DB_USERNAME', 'bbff912134ab25'),\n            'password' => env('DB_PASSWORD', '163c5f1c'),\n            'charset' => 'utf8',\n            'collation' => 'utf8_unicode_ci',\n            'prefix' => '',\n            'strict' => false,\n            'engine' => null,\n        ],\n\n\n\n\n\n    Access Key ID:\n    AKIAJ2ODNT2HW4OIM26Q\n    Secret Access Key:\n    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\n\n\n    ZkbZXx1kGuGXP9n8Vb6GVGDZ3Kcz/DAvOfJ5jZmf\n\n    AKIAJYCHPACXGCZMQJTQ \n\n\n\n    <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n    <link href=\"http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"http://www.w3schools.com/lib/w3.css\">\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Raleway\">\n    <link href=\"//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css\" rel=\"stylesheet\">\n    <link href=\"https://fonts.googleapis.com/css?family=Gloria+Hallelujah\" rel=\"stylesheet\">\n\n    <!-- CSRF Token -->\n    <meta name=\"csrf-token\" content=\"{{ csrf_token() }}\">\n\n    <title>{{ config('app.name', 'CENTAR ZA POZITIVNU PSIHOLOGIJU') }}</title>\n\n    <!-- Styles -->\n    <link href=\"/css/app.css\" rel=\"stylesheet\">\n    <link href=\"/css/bootstrap-social.css\" rel=\"stylesheet\">\n\n    <link href=\"http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css\" rel=\"stylesheet\">\n\n    <!-- Scripts -->\n    <script>\n        window.Laravel = <?php echo json_encode([\n            'csrfToken' => csrf_token(),\n        ]); ?>\n    </script>\n</head>\n<body>\n    <div id=\"bapp\">\n        <nav class=\"navbar navbar-default navbar-static-top\" style=\"margin-bottom: 0px;\">\n            <div class=\"container\">\n                <div class=\"navbar-header\">\n\n                    <!-- Collapsed Hamburger -->\n                    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#app-navbar-collapse\">\n                        <span class=\"sr-only\">Toggle Navigation</span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                        <span class=\"icon-bar\"></span>\n                    </button>\n\n                    <!-- Branding Image -->\n                    <a class=\"navbar-brand\" style=\"{{ Request::is('/') ? 'background-color: #eeeeee;' : '' }}\" href=\"{{ url('/') }}\">\n                        Home\n                    </a>\n\n                    <!--<a class=\"navbar-brand\" href=\"{{ url('/articles') }}\">\n                        articles\n                    </a>\n\n                    <a class=\"navbar-brand\" href=\"{{ url('/courses') }}\">\n                        courses\n                    </a>-->\n                </div>\n\n                <div class=\"collapse navbar-collapse\" id=\"app-navbar-collapse\">\n                    <!-- Left Side Of Navbar -->\n                    <ul class=\"nav navbar-nav\">\n                        <li class=\"{{ Request::is('articles') ? 'active' : '' }}\"><a class=\"djek\" href=\"{{ url('/articles') }}\">@lang('various.articles')</a></li>\n                        <li class=\"{{ Request::is('courses') ? 'active' : '' }}\"><a href=\"{{ url('/courses') }}\">@lang('various.courses')</a></li>\n                        <li class=\"{{ Request::is('workshops') ? 'active' : '' }}\"><a href=\"{{ url('/workshops') }}\">@lang('various.workshops')</a></li>\n                      <!--  <li class=\"{{ Request::is('events') ? 'active' : '' }}\"><a href=\"{{ url('/events') }}\">@lang('various.events')</a></li> -->\n                    </ul>\n\n                    <!-- Right Side Of Navbar -->\n\n                    <ul class=\"nav navbar-nav navbar-right\">\n                        <li class=\"dropdown\">\n                            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><div style=\"border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_{{Cookie::get('lang')}}.png'); background-size:cover;\"\"></div>\n                            </a>\n\n                            <ul class=\"dropdown-menu\" role=\"menu\">\n\n                                <a href=\"{{ url('/language/en') }}\" onclick=\"event.preventDefault(); window.location.href = '/language/en';\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                                <div style=\"clear:both\">\n                                    <div style=\"float:left; margin:4px; border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_en.png'); background-size:cover;\"\"></div> \n                                    <div style=\"margin:4px; padding-top: 4px;\">English</div>\n                                </div>\n                                </a>\n\n                                <a href=\"{{ url('/language/sr') }}\" onclick=\"event.preventDefault(); window.location.href = '/language/sr';\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                                <div style=\"clear:both\">\n                                    <div style=\"float:left; margin:4px; border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_sr.png'); background-size:cover;\"\"></div> \n                                    <div style=\"margin:4px; padding-top: 4px;\">Srpski</div>\n                                </div>\n                                </a>\n\n                                <a href=\"{{ url('/language/de') }}\" onclick=\"event.preventDefault(); window.location.href = '/language/de';\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                                <div style=\"clear:both\">\n                                    <div style=\"float:left; margin:4px; border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_de.png'); background-size:cover;\"\"></div> \n                                    <div style=\"margin:4px; padding-top: 4px;\">Deutch</div>\n                                </div>\n                                </a>\n                            </ul>\n                        </li>\n                    </ul>\n\n                    <ul class=\"nav navbar-nav navbar-right\">\n                        <!-- Authentication Links -->\n                        @if (Auth::guest())\n                            <li><a href=\"{{ url('/login') }}\">Login</a></li>\n                            <li><a href=\"{{ url('/register') }}\">Register</a></li>\n                        @else\n                            <li class=\"dropdown\">\n                                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                                    {{ Auth::user()->name }} <span class=\"caret\"></span>\n                                </a>\n\n                                <ul class=\"dropdown-menu\" role=\"menu\">\n                                    <li>\n                                        <a href=\"{{ url('/logout') }}\"\n                                            onclick=\"event.preventDefault();\n                                                     document.getElementById('logout-form').submit();\">\n                                            Logout\n                                        </a>\n\n                                        <form id=\"logout-form\" action=\"{{ url('/logout') }}\" method=\"POST\" style=\"display: none;\">\n                                            {{ csrf_field() }}\n                                        </form>\n                                    </li>\n                                </ul>\n                            </li>\n                        @endif\n                    </ul>\n                </div>\n            </div>\n        </nav>\n\n        @yield('content')\n    </div>\n\n    \n\n    <!-- Scripts -->\n    <script src=\"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js\"></script> \n    <script src=\"http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js\"></script>\n    <script src=\"/js/presentation.js\"></script>\n    <script src=\"http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js\"></script>\n\n    <script type=\"text/javascript\">\n        $(document).ready(function() {\n\n            $.ajaxSetup({\n                headers: {\n                    'X-CSRF-TOKEN': $('meta[name=\"csrf-token\"]').attr('content')\n                }\n            });\n\n\n            $('#technig').summernote({\n                height:300,\n                callbacks: {\n                    onImageUpload: function(files, editor, $editable) {\n                        sendFile(files[0],editor,$editable);\n                    }\n                }\n            });\n\n            function sendFile(file,editor,welEditable) {\n                data = new FormData();\n                data.append(\"file\", file);\n                jQuery.ajax({\n                    url: \"{{ url('/upload/image') }}\",\n                    data: data,\n                    cache: false,\n                    contentType: false,\n                    processData: false,\n                    type: 'POST',\n                    success: function(s){\n                        console.log(\"good summernote upload\");\n                        jQuery('#technig').summernote(\"insertImage\", s);\n                    },\n                    error: function(jqXHR, textStatus, errorThrown) {\n                        alert(\"error with picture upload!\");\n                        console.log(textStatus+\" gi \"+errorThrown);\n                    }\n                });\n            }\n        });\n    </script>\n\n</body>\n</html>\n\n\n\nif ($request->file('image')->isValid()) {\n\n                $file = $request->file('image');\n                \n                //set upload path\n               // $destinationPath = 'uploads';\n                //get filename\n                $filename = $request->file('image')->getClientOriginalName();\n                $uniqFilename = md5($filename . time());\n                $extension = File::extension($filename);\n                $newName = $uniqFilename . '.' . $extension;\n                //uploading file to given path\n               //Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');\n               // $destinationPath = Storage::disk('s3')->url($filename)\n                // set up s3\n                $bucket = getenv('S3_BUCKET');\n                $keyname = 'uploads/'.$newName;\n                $s3 = S3Client::factory([\n                    'version' => '2006-03-01',\n                    'region' => 'us-east-2'\n                ]);\n    \n                // try\n                \n                    // Upload data.\n                    $s3->putObject(array(\n                        'Bucket' => $bucket,\n                        'Key'    => $keyname,\n                        'Body'   => fopen($_FILES['image']['tmp_name'], 'rb'),\n                        'ACL'    => 'public-read'\n                    ));\n    \n                \n               \n\n              //  $request->file('image')->move($destinationPath, $filename);\n                //dd($filename);\n\n                //set item image\n                $article->image = 'https://s3.us-east-2.amazonaws.com/' . $bucket . '/' . $keyname;\n                //save\n                $article->save();\n\n            }\n\nbuttons\n{{ Form::open(array('url' => URL::to('/comments/{article_id}' ), 'method' => 'DELETE', 'style'=>'display:inline-block')) }}\n                  <button type=\"submit\" class=\"btn btn-primary \" style=\"margin-bottom: 10px;\" ><i class=\"fa fa-btn fa-trash-o\" px;\"></i></button>\n                 {{ Form::close() }}\n\n",
+			"settings":
+			{
+				"buffer_size": 17766,
 				"line_ending": "Unix"
 			}
 		}
@@ -442,43 +422,55 @@
 		"/home/overloth/projects/gpositive/app/Http",
 		"/home/overloth/projects/gpositive/app/Http/Controllers",
 		"/home/overloth/projects/gpositive/app/Http/Controllers/Auth",
-		"/home/overloth/projects/gpositive/config",
 		"/home/overloth/projects/gpositive/resources",
 		"/home/overloth/projects/gpositive/resources/views",
-		"/home/overloth/projects/gpositive/resources/views/auth",
+		"/home/overloth/projects/gpositive/resources/views/articles",
+		"/home/overloth/projects/gpositive/resources/views/courses",
 		"/home/overloth/projects/gpositive/resources/views/workshops",
 		"/home/overloth/projects/gpositive/routes",
 		"/home/overloth/Downloads/public_html"
 	],
 	"file_history":
 	[
-		"/home/overloth/projects/gpositive/init.config",
+		"/home/overloth/projects/gpositive/config/filesystems.php",
+		"/home/overloth/projects/gpositive/config/services.php",
+		"/home/overloth/projects/gpositive/app/Http/Kernel.php",
+		"/home/overloth/projects/gpositive/vendor/autoload.php",
+		"/home/overloth/projects/gpositive/composer.json",
+		"/home/overloth/projects/gpositive/.env",
+		"/home/overloth/projects/gpositive/config/database.php",
+		"/home/overloth/projects/gpositive/resources/views/layouts/app.blade.php",
 		"/home/overloth/projects/gpositive/resources/views/home.blade.php",
+		"/home/overloth/projects/gpositive/resources/views/articles/index.blade.php",
+		"/home/overloth/projects/gpositive/app/Http/Controllers/CommentController.php",
+		"/home/overloth/projects/gpositive/resources/views/Comments/show.blade.php",
+		"/home/overloth/projects/gpositive/resources/views/articles/show.blade.php",
+		"/home/overloth/projects/gpositive/resources/views/courses/index.blade.php",
+		"/home/overloth/projects/gpositive/resources/views/courses/show.blade.php",
+		"/home/overloth/projects/gpositive/resources/views/workshops/index.blade.php",
+		"/home/overloth/projects/gpositive/resources/views/workshops/show.blade.php",
+		"/home/overloth/projects/gpositive/app/Http/Controllers/WorkshopController.php",
+		"/home/overloth/projects/gpositive/app/Http/Controllers/CourseController.php",
+		"/home/overloth/projects/gpositive/gSanta.txt",
+		"/home/overloth/projects/gpositive/resources/views/auth/login.blade.php",
+		"/home/overloth/projects/gpositive/resources/views/auth/register.blade.php",
+		"/home/overloth/projects/gpositive/init.config",
 		"/home/overloth/Homestead/Homestead.yaml",
 		"/home/overloth/projects/gpositive/resources/assets/sass/app.scss",
 		"/home/overloth/projects/gpositive/storage/logs/laravel.log",
-		"/home/overloth/projects/gpositive/composer.json",
 		"/home/overloth/projects/gpositive/config/app.php",
-		"/home/overloth/projects/gpositive/.env",
-		"/home/overloth/projects/gpositive/config/database.php",
 		"/home/overloth/projects/gpositive/app/Providers/AppServiceProvider.php",
 		"/home/overloth/projects/gpositive/.gitignore",
-		"/home/overloth/projects/gpositive/app/Http/Controllers/WorkshopController.php",
 		"/home/overloth/projects/gpositive/app/Providers/RouteServiceProvider.php",
 		"/home/overloth/projects/gpositive/app/Workshop.php",
 		"/home/overloth/projects/gpositive/app/Http/Controllers/HomeController.php",
 		"/home/overloth/projects/gpositive/public/index.php",
 		"/home/overloth/projects/gpositive/public/config/cms.php",
-		"/home/overloth/projects/gpositive/resources/views/articles/index.blade.php",
 		"/home/overloth/projects/gpositive/resources/lang/en/various.php",
-		"/home/overloth/projects/gpositive/resources/views/workshops/index.blade.php",
 		"/home/overloth/projects/gpositive/app/Http/Controllers/ArticleController.php",
-		"/home/overloth/projects/gpositive/resources/views/auth/login.blade.php",
-		"/home/overloth/projects/gpositive/gSanta.txt",
 		"/home/overloth/projects/gpositive/app/Http/Controllers/SocialAuthController.php",
 		"/home/overloth/projects/gpositive/app/SocialAccountService.php",
 		"/home/overloth/projects/gpositive/app/SocialAccount.php",
-		"/home/overloth/projects/gpositive/config/services.php",
 		"/home/overloth/projects/gpositive/app/Http/Controllers/Auth/RegisterController.php",
 		"/home/overloth/fatlama.txt",
 		"/home/overloth/projects/gpositive/vendor/laravel/socialite/src/Two/AbstractProvider.php",
@@ -495,7 +487,6 @@
 		"/home/overloth/projects/gpositive/database/migrations/2016_12_10_230423_create_tags_table.php",
 		"/home/overloth/projects/gpositive/gulpfile.js",
 		"/home/overloth/projects/gpositive/routes/web.php",
-		"/home/overloth/projects/gpositive/resources/views/layouts/app.blade.php",
 		"/home/overloth/projects/gpositive/package.json",
 		"/home/overloth/projects/gpositive/node_modules/webpack/package.json",
 		"/home/overloth/projects/gpositive/.npmignore",
@@ -551,9 +542,7 @@
 		"/home/overloth/projects/gpositive/Procfile",
 		"/home/overloth/projects/favorit/app/User.php",
 		"/home/overloth/projects/gpositive/app/Course.php",
-		"/home/overloth/projects/gpositive/resources/views/courses/index.blade.php",
 		"/home/overloth/projects/gpositive/app/Article.php",
-		"/home/overloth/projects/gpositive/resources/views/articles/show.blade.php",
 		"/home/overloth/projects/favorit/.env",
 		"/home/overloth/Documents/paralax/index.html",
 		"/home/overloth/Documents/paralax/parallax.css",
@@ -570,16 +559,7 @@
 		"/home/overloth/projects/favorit/routes/web.php",
 		"/home/overloth/projects/example/routes/web.php",
 		"/home/overloth/projects/favorit/resources/views/articles/index.blade.php",
-		"/home/overloth/projects/favorit/database/migrations/2017_07_24_135741_create_articles_table.php",
-		"/home/overloth/projects/favorit/resources/views/articles/form.blade.php",
-		"/home/overloth/projects/favorit/resources/views/auth/login.blade.php",
-		"/home/overloth/projects/favorit/app/Article.php",
-		"/home/overloth/projects/favorit/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
-		"/home/overloth/projects/favorit/app/Http/Controllers/LoginController.php",
-		"/home/overloth/projects/favorit/resources/views/articles/create.blade.php",
-		"/home/overloth/projects/favorit/app/Http/Requests/ArticleRequest.php",
-		"/home/overloth/projects/favorit/resources/views/articles/edit.blade.php",
-		"/home/overloth/projects/favorit/resources/views/errors/list.blade.php"
+		"/home/overloth/projects/favorit/database/migrations/2017_07_24_135741_create_articles_table.php"
 	],
 	"find":
 	{
@@ -604,6 +584,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"name",
+			"comments",
+			"comment",
 			"tag",
 			"S3_BUCKET_NAME",
 			"S3_",
@@ -650,7 +633,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 17,
 			"sheets":
 			[
 				{
@@ -659,43 +642,45 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2272,
+						"buffer_size": 2340,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1976,
-								1976
+								1473,
+								1496
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 630.0,
+						"translation.y": 495.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/home/overloth/projects/gpositive/resources/views/auth/login.blade.php",
+					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/ArticleController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4556,
+						"buffer_size": 10358,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1019,
-								1036
+								9836,
+								9836
 							]
 						],
 						"settings":
@@ -708,54 +693,142 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/home/overloth/projects/gpositive/resources/views/auth/register.blade.php",
+					"file": "/home/overloth/projects/gpositive/resources/views/articles/index.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5093,
+						"buffer_size": 3921,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1048,
-								1048
+								3063,
+								3063
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 630.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/ArticleController.php",
+					"file": "/home/overloth/projects/gpositive/resources/views/home.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8932,
+						"buffer_size": 9783,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3313,
-								3345
+								3965,
+								3965
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 855.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/overloth/projects/gpositive/resources/views/articles/show.blade.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/overloth/projects/gpositive/app/Tag.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 294,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								121
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/TagController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								819,
+								819
 							]
 						],
 						"settings":
@@ -765,14 +838,43 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2925.0,
+						"translation.y": 435.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
+					"file": "/home/overloth/projects/gpositive/resources/views/articles/partials/form.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2024,
+								2024
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "/home/overloth/projects/gpositive/gSanta.txt",
 					"semi_transient": false,
 					"settings":
@@ -784,8 +886,8 @@
 						"selection":
 						[
 							[
-								6243,
-								6243
+								1385,
+								1401
 							]
 						],
 						"settings":
@@ -795,373 +897,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2745.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/home/overloth/projects/gpositive/resources/views/articles/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3523,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1355,
-								1355
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/home/overloth/projects/gpositive/resources/views/home.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9299,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2717,
-								2717
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 480.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/CourseController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6685,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3349,
-								3349
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 855.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/WorkshopController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8291,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3728,
-								3728
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1305.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
 					"buffer": 9,
-					"file": "/home/overloth/projects/gpositive/resources/views/workshops/show.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 979,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								196,
-								196
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/home/overloth/projects/gpositive/resources/views/workshops/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3624,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2006,
-								2006
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/home/overloth/projects/gpositive/resources/views/courses/show.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2802,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								517,
-								517
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "/home/overloth/projects/gpositive/resources/views/courses/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3633,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1210,
-								1210
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "/home/overloth/projects/gpositive/resources/views/articles/show.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3019,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								196,
-								196
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 17451,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								17448,
-								17448
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5637.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "/home/overloth/projects/gpositive/resources/views/layouts/app.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9150,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1177,
-								1177
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "/home/overloth/projects/gpositive/config/database.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4028,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7,
-								7
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
 					"file": "/home/overloth/projects/gpositive/.env",
 					"semi_transient": false,
 					"settings":
@@ -1173,8 +916,8 @@
 						"selection":
 						[
 							[
-								709,
-								709
+								171,
+								171
 							]
 						],
 						"settings":
@@ -1189,78 +932,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
-					"file": "/home/overloth/projects/gpositive/composer.json",
+					"buffer": 10,
+					"file": "/home/overloth/projects/gpositive/config/database.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1782,
+						"buffer_size": 4028,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "/home/overloth/projects/gpositive/vendor/autoload.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 183,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 21,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "/home/overloth/projects/gpositive/app/Http/Kernel.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1760,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1760,
-								1760
+								2380,
+								2380
 							]
 						],
 						"settings":
@@ -1270,14 +955,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 450.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 11,
 					"file": "/home/overloth/projects/gpositive/config/services.php",
 					"semi_transient": false,
 					"settings":
@@ -1289,8 +974,8 @@
 						"selection":
 						[
 							[
-								1248,
-								1248
+								1391,
+								1391
 							]
 						],
 						"settings":
@@ -1303,24 +988,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
-					"file": "/home/overloth/projects/gpositive/config/filesystems.php",
+					"buffer": 12,
+					"file": "/home/overloth/projects/gpositive/resources/lang/sr/various.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1970,
+						"buffer_size": 844,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1970,
-								1970
+								839,
+								839
 							]
 						],
 						"settings":
@@ -1330,37 +1015,189 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 90.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "various.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								864,
+								864
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/CourseController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1021,
+								1021
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1710.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/home/overloth/projects/gpositive/resources/views/courses/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3801,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3166,
+								3166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 855.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/home/overloth/projects/gpositive/resources/views/workshops/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3626,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2768,
+								2768
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/home/overloth/projects/gpositive/app/Http/Controllers/WorkshopController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8373,
+								8373
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3960.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5869,
+								6407
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2160.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 23,
 					"type": "text"
 				}
 			]
