@@ -63,7 +63,7 @@
 
         </div>
         @if (auth()->check())
-        @if (auth()->user()->id == 1  || (auth()->user()->author && auth()->user()->author->id == $article->author->id))
+        @if (auth()->user()->id == 31  || (auth()->user()->author && auth()->user()->author->id == $article->author->id))
         <div class="w3-container">
 
           <p><a href="/comments/{{$article->id}}"><b>Comments  </b> <span class="w3-tag">{{App\Comment::where('article_id', $article->id)->count()}}</span></span></a></p>
