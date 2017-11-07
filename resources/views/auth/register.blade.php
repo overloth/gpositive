@@ -32,7 +32,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <a href="auth/twitter" class="btn btn-block btn-social btn-twitter">
+                                <a href="redirect/twitter" class="btn btn-block btn-social btn-twitter">
                                     <span class="fa fa-twitter"></span> Register with Twitter
                                 </a>
                             </div>
