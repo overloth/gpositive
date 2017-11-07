@@ -189,17 +189,17 @@ igor:
 
  +online kachenje za laravel, free ili trial bar mesec dana
 
- -dodati tag workshop
+ -dodati tag workshop???
 
  -namestiti workshop, da prikazuje isto kao i article ali samo ako su tagovani kao workshop,
-  a u artiklima da prikazuje one koje nisu tagovani kao workshop
+  a u artiklima da prikazuje one koje nisu tagovani kao workshop???
 
-  -goga da moze da izlista sve komentare i da moze da brise komentare
+  +goga da moze da izlista sve komentare i da moze da brise komentare
 
   - autor da moze u toku kreiranja articla i da kreira tag
-     - tag moze da bude i vise reci
-     - razdvajaju se na mestu razmaka
-     - proveriti da li tag postoji, ako ne postoji onda ga dodati u tabelu sa tagovima
+     +tag moze da bude i vise reci
+     + razdvajaju se na mestu razmaka
+     + proveriti da li tag postoji, ako ne postoji onda ga dodati u tabelu sa tagovima
 
   +proveriti register
 
