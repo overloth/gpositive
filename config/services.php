@@ -48,5 +48,12 @@ return [
     
     ],
 
+    'twitter' => [
+    'client_id' => 'xXy8z4ZueK0TF2eEjCJItwKzd',
+    'client_secret' => '9QhdPBJ1ZkKUoWVlgtX8SlVnZaxmLuykV5z6Dn4jI09qFMM4Fu',
+    'redirect' => 'http://gpositive.herokuapp.com/callback/twiter',
+    
+    ],
+
     
 ];
