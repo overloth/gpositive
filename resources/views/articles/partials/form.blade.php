@@ -117,9 +117,13 @@
 	<div class="col-md-6">
 
 		{{--<div style="border: solid #cccccc 1px; width: 100%; height: 200px; background:url('/@if(! empty($item)) {{$item->image}} @endif'); background-size:cover;"></div>--}}
-		
-	    {!! Form::file('image') !!}
+		@if($article['image'])
+		{!! Form::file('image',['value'=>'image']) !!}
 
+		else
+
+	    {!! Form::file('image') !!}
+	    @endif
 <!--
 	    @if ($errors->has('image'))
 	        <span class="help-block">
