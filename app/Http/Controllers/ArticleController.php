@@ -350,7 +350,11 @@ class ArticleController extends Controller
                     else 
                     {
             //image file not uploaded
-                        dd('image file not uploaded');
+                       // dd('image file not uploaded');
+                        $article->image = $imageLink;
+                //save
+
+                            $article->save();
                     }
 
 
