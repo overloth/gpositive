@@ -11,7 +11,7 @@ class SocialAccountService
         $account = SocialAccount::whereProvider($service2)
             ->whereProviderUserId($providerUser->getId())
             ->first();
-
+//dd( $account );
         if ($account) {
             return $account->user;
         } else {
@@ -20,6 +20,7 @@ class SocialAccountService
                 'provider_user_id' => $providerUser->getId(),
                 'provider' => $service2
             ]);
+
 
             $user = User::whereEmail($providerUser->getEmail())->first();
 
@@ -31,6 +32,8 @@ class SocialAccountService
                     'password' => 'nigfig',
                     'picture' => $providerUser->getAvatar()
                 ]);
+
+
             }
 
             $account->user()->associate($user);

@@ -70,6 +70,8 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'picture' => '',
         ]);
+
+        
     }
 
     /**
@@ -77,9 +79,9 @@ class RegisterController extends Controller
      *
      * @return Response
      */
-    public function redirectToProvider()
+    public function redirectToProvider($service2)
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver($service2)->redirect();
     }
 
     /**
@@ -87,9 +89,9 @@ class RegisterController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback($service2)
     {
-        $providerUser = Socialite::driver('google')->user();
+        $providerUser = Socialite::driver($service2)->user();
 
         $user = User::whereEmail($providerUser->getEmail())->first();
 

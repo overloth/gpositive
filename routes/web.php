@@ -54,8 +54,8 @@ Route::resource('tags','TagController');
 Route::get('/events','EventController@events');
 Route::resource('workshops','WorkshopController');
 
-Route::get('/comments/{{$article->id}}','CommentController@show');
-
+//Route::get('/comments/{{$article->id}}','CommentController@show');
+Route::get('/comments/{article_id}' ,'CommentController@show');
 
 /*
 Route::post('upload/image', function(Request $request) {
@@ -81,10 +81,10 @@ Route::get('test', function(){
 
 
 
-
+/*
 
 Route::get('auth/google', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\loginController@handleProviderCallback');
-
+*/
 Route::get('/redirect/{service2}', 'SocialAuthController@redirect');
 Route::get('/callback/{service2}', 'SocialAuthController@callback');
