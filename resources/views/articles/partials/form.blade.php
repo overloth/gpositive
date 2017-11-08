@@ -118,7 +118,7 @@
 
 		{{--<div style="border: solid #cccccc 1px; width: 100%; height: 200px; background:url('/@if(! empty($item)) {{$item->image}} @endif'); background-size:cover;"></div>--}}
 		
-		{!! Form::file('image','image') !!}
+		{!! Form::file('image') !!}
 
 		
 
