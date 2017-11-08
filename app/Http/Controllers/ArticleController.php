@@ -261,9 +261,9 @@ class ArticleController extends Controller
 
         //find specified article
                 $article = Article::findOrFail($id);
-                
+                $imageLink = $article['image'];
 
-                dd($imageLink);
+                
         //check if author is editing his article
                 if(Auth::user()->author->id != $article->author_id && !Auth::user('id'=='11'))
                     {
