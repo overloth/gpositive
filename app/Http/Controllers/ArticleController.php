@@ -261,7 +261,9 @@ class ArticleController extends Controller
 
         //find specified article
                 $article = Article::findOrFail($id);
+                $imageLink = $article['image'];
 
+                dd($imageLink);
         //check if author is editing his article
                 if(Auth::user()->author->id != $article->author_id && !Auth::user('id'=='11'))
                     {
@@ -276,7 +278,7 @@ class ArticleController extends Controller
 
                     $article->tags()->sync($request->input('tag_list'));
 
-                    dd($request);
+
                     if ($request->hasFile('image')) {
 
                         if ($request->file('image')->isValid()) {
@@ -328,7 +330,12 @@ class ArticleController extends Controller
                         else
                         {
                 //there was problem uploading image
-                            dd('there was problem uploading image');
+                          //  dd('there was problem uploading image');
+
+                            $article->image = $address . $bucket . '/' . $keyname;
+                //save
+
+                            $article->save();
                         }
 
 
