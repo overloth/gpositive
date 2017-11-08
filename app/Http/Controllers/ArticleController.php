@@ -275,7 +275,7 @@ class ArticleController extends Controller
                     $article->update($request->all());
 
                     $article->tags()->sync($request->input('tag_list'));
-                    dd($article);
+
 
                     if ($request->hasFile('image')) {
 
@@ -321,6 +321,7 @@ class ArticleController extends Controller
                 //set item image
                             $article->image = $address . $bucket . '/' . $keyname;
                 //save
+                            dd($article);
                             $article->save();
 
                         }
