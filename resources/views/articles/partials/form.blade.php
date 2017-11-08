@@ -120,12 +120,12 @@
 		
 	    {!! Form::file('image') !!}
 
-
+<!--
 	    @if ($errors->has('image'))
 	        <span class="help-block">
 	            <strong>{{ $errors->first('image') }}</strong>
 	        </span>
-	    @endif
+	    @endif  -->
 	</div>
 </div>
 
