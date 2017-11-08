@@ -221,7 +221,7 @@ class ArticleController extends Controller
                 }
 
                 $article = Article::findOrFail($id);
-                
+
 
         //check if author is editing his article
                 if(Auth::user()->author->id != $article->author_id && !Auth::user('id'=='11'))
@@ -275,6 +275,7 @@ class ArticleController extends Controller
                     $article->update($request->all());
 
                     $article->tags()->sync($request->input('tag_list'));
+                    dd($article);
 
                     if ($request->hasFile('image')) {
 

@@ -11,7 +11,7 @@
                 </div>
                 <div class="panel-body">
 
-            {!! Form::model($article, array('url' => URL::to('/articles/' . $article->id), 'class'=>'form-horizontal', 'method' => 'PATCH', 'files' => true)) !!}
+            {!! Form::model($article, array('url' => URL::to('/articles/' . $article->id), 'class'=>'form-horizontal', 'method' => 'PUT', 'files' => true)) !!}
 
             @include('articles.partials.form')
 
