@@ -221,6 +221,7 @@ class ArticleController extends Controller
                 }
 
                 $article = Article::findOrFail($id);
+                dd($article);
 
         //check if author is editing his article
                 if(Auth::user()->author->id != $article->author_id && !Auth::user('id'=='11'))
