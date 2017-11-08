@@ -261,7 +261,7 @@ class ArticleController extends Controller
 
         //find specified article
                 $article = Article::findOrFail($id);
-                $imageLink = $article['image'];
+                
 
                 dd($imageLink);
         //check if author is editing his article
@@ -332,7 +332,7 @@ class ArticleController extends Controller
                 //there was problem uploading image
                           //  dd('there was problem uploading image');
 
-                            $article->image = $address . $bucket . '/' . $keyname;
+                            $article->image = $imageLink;
                 //save
 
                             $article->save();
