@@ -12,7 +12,7 @@
       <h5 style="font-style: italic;">{{$workshop->description}}</h5>
     </div>
     <div class="w3-container">
-      <div style="height:100px; width:100%; overflow:hidden;">
+      <div style="height:100%; width:100%; overflow:hidden;">
         {!! $workshop->body !!}
       </div>
       <hr>
