@@ -66,14 +66,16 @@
           
         </div>
 
-        @if (auth()->check())
+       
 
-          @if (auth()->user()->id == 11  || (auth()->user()->author && auth()->user()->author->id == $article->author->id))
+          
             <div class="w3-row">
               <div class="w3-col  w3-hide-small">
                 <p><span class="w3-padding-large w3-right"><b>Comments </b> <span class="w3-tag w3-right">{{App\Comment::where('article_id', $article->id)->count()}}</span></span></p>
               </div> 
             </div>
+             
+            @if (auth()->check() && (auth()->user()->id == 11   || (auth()->user()->author && auth()->user()->author->id == $article->author->id)))
             <div style="text-align: center;"> 
              {{ Form::open(array('url' => URL::to('/articles/' . $article->id . '/edit'), 'method' => 'GET', 'style'=>'display:inline-block')) }}
              <button type="submit" class="btn btn-primary " style="margin-bottom: 10px;"  >Edit</button>
@@ -83,17 +85,10 @@
              <button type="submit" class="btn btn-primary " style="margin-bottom: 10px;" >Delete</button>
              {{ Form::close() }}
            </div>
-         
-         @endif
-
-         @else
-           <div class="w3-row">
-              <div class="w3-col  w3-hide-small">
-                <p><span class="w3-padding-large w3-right"><b>Comments</b> <span class="w3-tag w3-right">{{App\Comment::where('article_id', $article->id)->count()}}</span></span></p>
-              </div> 
-            </div>
+            
 
        @endif
+       
 
      </div>
    </div>
