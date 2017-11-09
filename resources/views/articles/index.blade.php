@@ -63,7 +63,7 @@
             </div>
               
             @if (auth()->check())
-              @if (auth()->user()->id == 1  || (auth()->user()->author && auth()->user()->author->id == $article->author->id))
+              @if (auth()->user()->id == 11  || (auth()->user()->author && auth()->user()->author->id == $article->author->id))
                 <div style="text-align: center;"> 
                  {{ Form::open(array('url' => URL::to('/articles/' . $article->id . '/edit'), 'method' => 'GET', 'style'=>'display:inline-block')) }}
                   <button type="submit" class="btn btn-primary " style="margin-bottom: 10px;"  >Edit</button>
