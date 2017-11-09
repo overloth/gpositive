@@ -185,7 +185,7 @@ class ArticleController extends Controller
             dd('image file not uploaded');
         }
 
-        \Log::info('Kreiran clanak: ' . $id . 'Ko: ' . $article['author_id'] . 'Sa slikom: '.$article->image);
+        \Log::info('Kreiran clanak: ' . $article->id . 'Ko: ' . $article['author_id'] . 'Sa slikom: '.$article->image);
 
         return redirect('articles');
     }
