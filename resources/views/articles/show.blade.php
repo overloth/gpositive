@@ -31,25 +31,28 @@
           <p>Comments:</p>
           
             @foreach ($article->comments as $comment)
-             
-
-              {{ Form::open(array('url' => URL::to('/comments/' . $comment->id), 'method' => 'DELETE', 'style'=>'display:inline-block')) }}
-
-              
-           <div class="form-group">
-          
-           
-              
-                 <p>{{$comment->user->name}}: {{$comment->text}} <strong>{{$comment->created_at->diffForHumans()}}</strong>
-            <button type="submit" class="btn btn-default pull-right">
-              <i class="fa fa-btn fa-trash-o" px;"></i>
-            </button></p>
-          
-        </div>
-           {{ Form::close() }}
 
 
 
+             <div class="form-group">
+              @if (auth()->check())
+
+                @if (auth()->user()->id == 11  || (auth()->user()->author && auth()->user()->author->id == $article->author->id))
+
+                {{ Form::open(array('url' => URL::to('/comments/' . $comment->id), 'method' => 'DELETE', 'style'=>'display:inline-block')) }}
+   
+                  <p>{{$comment->user->name}}: {{$comment->text}} <strong>{{$comment->created_at->diffForHumans()}}</strong>
+                    <button type="submit" class="btn btn-default pull-right">
+                      <i class="fa fa-btn fa-trash-o" px;"></i>
+                    </button>
+                  </p>
+                {{ Form::close() }}
+                @endif
+                @else
+                  <p>{{$comment->user->name}}: {{$comment->text}} <strong>{{$comment->created_at->diffForHumans()}}</strong></p>
+              @endif
+
+              </div>
             @endforeach
           
           <!-- <div class="w3-col m4 w3-hide-small">

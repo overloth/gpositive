@@ -15,8 +15,9 @@ and is wrapped around the whole page content, except for the footer in this exam
 <div class="w3-hide-large w3-hide-small w3-margin-top w3-margin-bottom">
     <div class="w3-container w3-white w3-padding-32">
     <img src="/images/avatar_g.jpg" alt="Me" style="width:150px" class="w3-left w3-round-large w3-margin-right">
-    <h4><b>Gorana Rakic Bajic</b></h4>
-    <span>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</span>
+    <h4><b>Pozitivna psihologija</b></h4>
+    <span>Pozitivna psihologija je naučna disciplina nastala u drugoj polovini 20. veka kao izraz potrebe psihologa da se fokus sa proučavanja patoloških mentalnih stanja i faktora rizika mentalnog zdravlja preorijentiše na proučavanje mogućnosti unapređenja mentalnog zdravlja i faktore koji utiču na podsticanje psihološkog blagostanja.
+Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanja o kojima detaljnije možete pročitati  OVDE (tu će biti link do članka Teorijski modeli psihološkog blagostanja koji ću jednog dana, a nadamo se to pre napisati) izrasli su različiti programi/seminari/treninzi/radionice usmereni na unapređivanje psihološkog blagostanja.</span>
     <p><a href="/authors/1">Pogledaj textove</a>
   </div>
 </div>
@@ -25,8 +26,9 @@ and is wrapped around the whole page content, except for the footer in this exam
 <div class="w3-hide-large w3-hide-medium w3-margin-top w3-margin-bottom">
   <img src="/images/avatar2.jpg" style="width:100%" alt="Me">
   <div class="w3-container w3-white">
-    <h4><b>Gorana Rakic Bajic</b></h4>
-    <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+    <h4><b>Pozitivna psihologija</b></h4>
+    <p>Pozitivna psihologija je naučna disciplina nastala u drugoj polovini 20. veka kao izraz potrebe psihologa da se fokus sa proučavanja patoloških mentalnih stanja i faktora rizika mentalnog zdravlja preorijentiše na proučavanje mogućnosti unapređenja mentalnog zdravlja i faktore koji utiču na podsticanje psihološkog blagostanja.
+Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanja o kojima detaljnije možete pročitati  OVDE (tu će biti link do članka Teorijski modeli psihološkog blagostanja koji ću jednog dana, a nadamo se to pre napisati) izrasli su različiti programi/seminari/treninzi/radionice usmereni na unapređivanje psihološkog blagostanja.</p>
     <p><a href="/authors/1">Pogledaj textove</a>
   </div>
 </div>
@@ -85,7 +87,7 @@ and is wrapped around the whole page content, except for the footer in this exam
           <p><a href="/articles/{{$article->id}}"><button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black"><b>READ MORE »</b></button></a></p>
         </div>
         <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b><a href="/comments/{{$article->id}}">Comments </a> </b> <span class="w3-tag">{{App\Comment::where('article_id', $article->id)->count()}}</span></span></p>
+          <p><span class="w3-padding-large w3-right"><b>Comments</b> <span class="w3-tag">{{App\Comment::where('article_id', $article->id)->count()}}</span></span></p>
         </div> 
       </div>
     </div>
@@ -128,10 +130,11 @@ and is wrapped around the whole page content, except for the footer in this exam
   <img src="/images/avatar2.jpg" style="width:100%">
     <div class="w3-container w3-white">
       <div class="w3-container w3-white">
-      <h4><b>Gorana Rakic Bajic</b></h4>
-      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+      <h4><b>Pozitivna psihologija</b></h4>
+      <p>Pozitivna psihologija je naučna disciplina nastala u drugoj polovini 20. veka kao izraz potrebe psihologa da se fokus sa proučavanja patoloških mentalnih stanja i faktora rizika mentalnog zdravlja preorijentiše na proučavanje mogućnosti unapređenja mentalnog zdravlja i faktore koji utiču na podsticanje psihološkog blagostanja.
+Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanja o kojima detaljnije možete pročitati  OVDE (tu će biti link do članka Teorijski modeli psihološkog blagostanja koji ću jednog dana, a nadamo se to pre napisati) izrasli su različiti programi/seminari/treninzi/radionice usmereni na unapređivanje psihološkog blagostanja.</p>
     </div>
-      <p><a href="/authors/1">Pogledaj textove</a></p>
+   <!--   <p><a href="/authors/1">Pogledaj textove</a></p> -->
     </div>
   </div><hr>
   
