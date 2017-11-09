@@ -14,7 +14,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- About Card on medium screens -->
 <div class="w3-hide-large w3-hide-small w3-margin-top w3-margin-bottom">
     <div class="w3-container w3-white w3-padding-32">
-    <img src="/images/avatar_g.jpg" alt="Me" style="width:150px" class="w3-left w3-round-large w3-margin-right">
+    <img src="https://s3.us-east-2.amazonaws.com/gpositive/uploads/Positive.jpg" alt="Me" style="width:150px" class="w3-left w3-round-large w3-margin-right">
     <h4><b>Pozitivna psihologija</b></h4>
     <span>Pozitivna psihologija je naučna disciplina nastala u drugoj polovini 20. veka kao izraz potrebe psihologa da se fokus sa proučavanja patoloških mentalnih stanja i faktora rizika mentalnog zdravlja preorijentiše na proučavanje mogućnosti unapređenja mentalnog zdravlja i faktore koji utiču na podsticanje psihološkog blagostanja.
 Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanja o kojima detaljnije možete pročitati  OVDE (tu će biti link do članka Teorijski modeli psihološkog blagostanja koji ću jednog dana, a nadamo se to pre napisati) izrasli su različiti programi/seminari/treninzi/radionice usmereni na unapređivanje psihološkog blagostanja.</span>
@@ -24,7 +24,7 @@ Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanj
 
 <!-- About Card on small screens -->
 <div class="w3-hide-large w3-hide-medium w3-margin-top w3-margin-bottom">
-  <img src="/images/avatar2.jpg" style="width:100%" alt="Me">
+  <img src="https://s3.us-east-2.amazonaws.com/gpositive/uploads/Positive.jpg" style="width:100%" alt="Me">
   <div class="w3-container w3-white">
     <h4><b>Pozitivna psihologija</b></h4>
     <p>Pozitivna psihologija je naučna disciplina nastala u drugoj polovini 20. veka kao izraz potrebe psihologa da se fokus sa proučavanja patoloških mentalnih stanja i faktora rizika mentalnog zdravlja preorijentiše na proučavanje mogućnosti unapređenja mentalnog zdravlja i faktore koji utiču na podsticanje psihološkog blagostanja.
@@ -127,7 +127,7 @@ Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanj
 <div class="w3-col l4 w3-hide-medium w3-hide-small">
   <!-- About Card -->
   <div class="w3-card-2 w3-margin w3-margin-top">
-  <img src="/images/avatar2.jpg" style="width:100%">
+  <img src="https://s3.us-east-2.amazonaws.com/gpositive/uploads/Positive.jpg" style="width:100%">
     <div class="w3-container w3-white">
       <div class="w3-container w3-white">
       <h4><b>Pozitivna psihologija</b></h4>
