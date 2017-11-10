@@ -182,7 +182,7 @@ class ArticleController extends Controller
                 
         {
             //image file not uploaded
-            dd('image file not uploaded');
+            //dd('image file not uploaded');
         }
 
         \Log::info('Kreiran clanak: ' . $article->id . 'Ko: ' . $article['author_id'] . 'Sa slikom: '.$article->image);
