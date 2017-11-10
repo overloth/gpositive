@@ -18,7 +18,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     <h4><b>Pozitivna psihologija</b></h4>
     <span>Pozitivna psihologija je naučna disciplina nastala u drugoj polovini 20. veka kao izraz potrebe psihologa da se fokus sa proučavanja patoloških mentalnih stanja i faktora rizika mentalnog zdravlja preorijentiše na proučavanje mogućnosti unapređenja mentalnog zdravlja i faktore koji utiču na podsticanje psihološkog blagostanja.
 Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanja o kojima detaljnije možete pročitati  OVDE (tu će biti link do članka Teorijski modeli psihološkog blagostanja koji ću jednog dana, a nadamo se to pre napisati) izrasli su različiti programi/seminari/treninzi/radionice usmereni na unapređivanje <a href="/articles/331">psihološkog blagostanja</a>.</span>
-    <p><a href="/authors/1">Pogledaj textove</a>
+    
   </div>
 </div>
 
@@ -29,7 +29,7 @@ Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanj
     <h4><b>Pozitivna psihologija</b></h4>
     <p>Pozitivna psihologija je naučna disciplina nastala u drugoj polovini 20. veka kao izraz potrebe psihologa da se fokus sa proučavanja patoloških mentalnih stanja i faktora rizika mentalnog zdravlja preorijentiše na proučavanje mogućnosti unapređenja mentalnog zdravlja i faktore koji utiču na podsticanje psihološkog blagostanja.
 Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanja o kojima detaljnije možete pročitati  OVDE (tu će biti link do članka Teorijski modeli psihološkog blagostanja koji ću jednog dana, a nadamo se to pre napisati) izrasli su različiti programi/seminari/treninzi/radionice usmereni na unapređivanje <a href="/articles/331">psihološkog blagostanja</a>.</p>
-    <p><a href="/authors/1">Pogledaj textove</a>
+    
   </div>
 </div>
 
