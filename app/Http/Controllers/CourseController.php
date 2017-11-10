@@ -129,7 +129,7 @@ class CourseController extends Controller
         else
         {
             //image file not uploaded
-            dd('image file not uploaded');
+           // dd('image file not uploaded');
         }
 
 
@@ -190,31 +190,67 @@ class CourseController extends Controller
         $course = Course::findOrFail($id);
         $course->update($request->all());
 
-        if ($request->hasFile('image'))
-         {  
-            $destinationPath = 'uploads';
-            $image = $request->file('image');
-            $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString()); 
-            $filename = $timestamp. '-' .$image->getClientOriginalName();
-            $course->image = $filename;
-            //uploading file to given path
-            $request->file('image')->move($destinationPath, $filename);
-            //set item image
-            $course->image = $destinationPath . '/' . $filename; 
-             //save
-            $course->save();
-            //$article->update($request->all());
- 
-            //$article->tags()->sync($request->input('tag_list'));
+        if ($request->hasFile('image')) {
 
-            //return redirect('articles');
+            if ($request->file('image')->isValid()) {
+
+                $file = $request->file('image');
+                
+                //set upload path
+               // $destinationPath = 'uploads';
+                //get filename
+                $filename = $request->file('image')->getClientOriginalName();
+                $uniqFilename = md5($filename . time());
+                $extension = \File::extension($filename);
+                $newName = $uniqFilename . '.' . $extension;
+                //uploading file to given path
+               //Storage::disk('s3')->put('uploads/' . $filename, file_get_contents($file), 'public');
+               // $destinationPath = Storage::disk('s3')->url($filename)
+                // set up s3
+                $bucket = getenv('S3_BUCKET');
+                $address = getenv('S3_ADDRESS');
+                $keyname = 'uploads/'.$newName;
+                $s3 = S3Client::factory([
+                    'version' => '2006-03-01',
+                    'region' => 'us-east-2'
+                ]);
+    
+                // try
+                
+                    // Upload data.
+                    $s3->putObject(array(
+                        'Bucket' => $bucket,
+                        'Key'    => $keyname,
+                        'Body'   => fopen($_FILES['image']['tmp_name'], 'rb'),
+                        'ACL'    => 'public-read'
+                    ));
+    
+                
+               
+
+              //  $request->file('image')->move($destinationPath, $filename);
+               
+
+                //set item image
+                $course->image = $address . $bucket . '/' . $keyname;
+                //save
+                $course->save();
+
+            }
+            else
+            {
+                //there was problem uploading image
+                dd('there was problem uploading image');
+            }
+
             
-            //dd ('slika uspesno upload-ovana');
-            //return;
-            //return '/uploads/' . $filename;
-            //return redirect('articles');                  
-        }   
 
+        }
+        else
+        {
+            //image file not uploaded
+            //dd('image file not uploaded');
+        }
 
         
         return redirect('courses');

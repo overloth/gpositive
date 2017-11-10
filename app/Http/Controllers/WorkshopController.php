@@ -150,7 +150,7 @@ class WorkshopController extends Controller
         else
         {
             //image file not uploaded
-            dd('image file not uploaded');
+           // dd('image file not uploaded');
         }
 
 
@@ -303,7 +303,7 @@ class WorkshopController extends Controller
         else
         {
             //image file not uploaded
-            dd('image file not uploaded');
+            //dd('image file not uploaded');
         }
 
 
