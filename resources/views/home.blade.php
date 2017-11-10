@@ -132,7 +132,7 @@ Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanj
       <div class="w3-container w3-white">
       <h4><b>Pozitivna psihologija</b></h4>
       <p>Pozitivna psihologija je naučna disciplina nastala u drugoj polovini 20. veka kao izraz potrebe psihologa da se fokus sa proučavanja patoloških mentalnih stanja i faktora rizika mentalnog zdravlja preorijentiše na proučavanje mogućnosti unapređenja mentalnog zdravlja i faktore koji utiču na podsticanje psihološkog blagostanja.
-Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanja o kojima detaljnije možete pročitati  OVDE (tu će biti link do članka Teorijski modeli psihološkog blagostanja koji ću jednog dana, a nadamo se to pre napisati) izrasli su različiti programi/seminari/treninzi/radionice usmereni na unapređivanje psihološkog blagostanja.</p>
+Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanja o kojima detaljnije možete pročitati  OVDE (tu će biti link do članka Teorijski modeli psihološkog blagostanja koji ću jednog dana, a nadamo se to pre napisati) izrasli su različiti programi/seminari/treninzi/radionice usmereni na unapređivanje <a href="/articles/331">psihološkog blagostanja</a>.</p>
     </div>
    <!--   <p><a href="/authors/1">Pogledaj textove</a></p> -->
     </div>
