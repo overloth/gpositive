@@ -9,12 +9,17 @@ class SocialAccountService
     public function createOrGetUser(ProviderUser $providerUser, $service2)
     {
         $account = SocialAccount::whereProvider($service2)
-            ->whereProviderUserId($providerUser->getId())
-            ->first();
+                    ->whereProviderUserId($providerUser->getId())
+                    ->first();
 //dd( $account );
         if ($account) {
+
             return $account->user;
-        } else {
+        }
+
+        else
+
+        {
 
             $account = new SocialAccount([
                 'provider_user_id' => $providerUser->getId(),

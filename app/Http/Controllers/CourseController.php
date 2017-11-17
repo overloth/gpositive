@@ -44,8 +44,10 @@ class CourseController extends Controller
         if(Auth::user()->id != 11 || Auth::user()->id != 1 || Auth::user()->id != 41 || Auth::user()->id != 11)
         {
             dd('there was problem saying you are not admin');
+
             return;
         }
+
         return view('courses.create');
     }
 
@@ -61,6 +63,7 @@ class CourseController extends Controller
         if(Auth::user()->id != 11 || Auth::user()->id != 1 || Auth::user()->id != 41 || Auth::user()->id != 11)
         {
             dd('there was problem saying you are not admin');
+
             return;
         }
 
@@ -111,19 +114,19 @@ class CourseController extends Controller
               //  $request->file('image')->move($destinationPath, $filename);
                
 
-                //set item image
+                //set item image path 
                 $course->image = $address . $bucket . '/' . $keyname;
                 //save
                 $course->save();
 
             }
+
             else
+
             {
                 //there was problem uploading image
                 dd('there was problem uploading image');
-            }
-
-            
+            }            
 
         }
         else
@@ -131,11 +134,9 @@ class CourseController extends Controller
             //image file not uploaded
            // dd('image file not uploaded');
         }
-
-
-
     
         return redirect('courses');
+
     }
 
     /**
@@ -146,8 +147,9 @@ class CourseController extends Controller
      */
     public function show($id)
     {
-        //
+        
         $course = Course::findOrFail($id);
+
         return view('courses.show', compact('course'));
     }
 
@@ -167,6 +169,7 @@ class CourseController extends Controller
         }
 
         $course = Course::findOrFail($id);
+
         return view('courses.edit', compact('course'));
     }
 
@@ -183,6 +186,7 @@ class CourseController extends Controller
         if(Auth::user()->id != 11 )
         {
             dd('there was problem saying you are not admin');
+
             return;
         }
 
@@ -231,13 +235,15 @@ class CourseController extends Controller
               //  $request->file('image')->move($destinationPath, $filename);
                
 
-                //set item image
+                //set item image path
                 $course->image = $address . $bucket . '/' . $keyname;
                 //save
                 $course->save();
 
             }
+
             else
+
             {
                 //there was problem uploading image
                 dd('there was problem uploading image');
@@ -246,13 +252,14 @@ class CourseController extends Controller
             
 
         }
+
         else
+
         {
             //image file not uploaded
             //dd('image file not uploaded');
         }
 
-        
         return redirect('courses');
     }
 
@@ -268,11 +275,11 @@ class CourseController extends Controller
         if(Auth::user()->id != 11 || Auth::user()->id != 1 || Auth::user()->id != 41 || Auth::user()->id != 11)
         {
             dd('there was problem saying you are not admin');
+
             return;
         }
 
         $course = Course::findOrFail($id);
-
         $course->delete();
         
         return redirect('courses');

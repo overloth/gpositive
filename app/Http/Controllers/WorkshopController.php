@@ -44,6 +44,7 @@ class WorkshopController extends Controller
         if(!Auth::user())
         {
             dd('there was problem saying you are not logged in');
+
             return;
         }
 
@@ -51,6 +52,7 @@ class WorkshopController extends Controller
         if(!Auth::user()->author)
         {
             dd('there was problem saying you are not author');
+
             return;
         }
         
@@ -71,12 +73,14 @@ class WorkshopController extends Controller
         if(!Auth::user())
         {
             dd('there was problem saying you are not logged in');
+
             return;
         }
 
         if(!Auth::user()->author)
         {
             dd('there was problem saying you are not author');
+
             return;
         }
 
@@ -85,9 +89,7 @@ class WorkshopController extends Controller
         //$user = Auth::user()->author->id;
         $inss['author_id'] = Auth::user()->author->id;
         //$inss['course_id'] = 0;
-        $workshop = Workshop::create($inss);
-
-        
+        $workshop = Workshop::create($inss);        
     
         //$article->author = 'Gorana Rakic-Bajic';
 
@@ -125,20 +127,18 @@ class WorkshopController extends Controller
                         'Body'   => fopen($_FILES['image']['tmp_name'], 'rb'),
                         'ACL'    => 'public-read'
                     ));
-    
-                
-               
 
-              //  $request->file('image')->move($destinationPath, $filename);
-               
+              //  $request->file('image')->move($destinationPath, $filename);               
 
-                //set item image
+                //set item image path
                 $workshop->image = $address . $bucket . '/' . $keyname;
                 //save
                 $workshop->save();
 
             }
+
             else
+
             {
                 //there was problem uploading image
                 dd('there was problem uploading image');
@@ -147,14 +147,16 @@ class WorkshopController extends Controller
             
 
         }
+
         else
+
         {
             //image file not uploaded
            // dd('image file not uploaded');
         }
 
-
         return redirect('workshops');
+
     }
 
     /**
@@ -182,6 +184,7 @@ class WorkshopController extends Controller
         if(!Auth::user())
         {
             dd('there was problem saying you are not logged in');
+
             return;
         }
 
@@ -189,6 +192,7 @@ class WorkshopController extends Controller
         if(!Auth::user()->author)
         {
             dd('there was problem saying you are not author');
+
             return;
         }
 
@@ -198,6 +202,7 @@ class WorkshopController extends Controller
         if(Auth::user()->author->id != $workshop->author_id && !Auth::user('id'=='11'))
         {
             dd('there was problem saying you are not author of this article');
+
             return;
         }
 
@@ -218,6 +223,7 @@ class WorkshopController extends Controller
         if(!Auth::user())
         {
             dd('there was problem saying you are not logged in');
+
             return;
         }
 
@@ -225,6 +231,7 @@ class WorkshopController extends Controller
         if(!Auth::user()->author)
         {
             dd('there was problem saying you are not author');
+
             return;
         }
 
@@ -235,6 +242,7 @@ class WorkshopController extends Controller
         if(Auth::user()->author->id != $workshop->author_id && !Auth::user('id'=='11'))
         {
             dd('there was problem saying you are not author of this article');
+
             return;
         }
         
@@ -269,38 +277,36 @@ class WorkshopController extends Controller
                     'region' => 'us-east-2'
                 ]);
     
-                // try
                 
-                    // Upload data.
-                    $s3->putObject(array(
-                        'Bucket' => $bucket,
-                        'Key'    => $keyname,
-                        'Body'   => fopen($_FILES['image']['tmp_name'], 'rb'),
-                        'ACL'    => 'public-read'
-                    ));
-    
                 
-               
+                // Upload data.
+                $s3->putObject(array(
+                    'Bucket' => $bucket,
+                    'Key'    => $keyname,
+                    'Body'   => fopen($_FILES['image']['tmp_name'], 'rb'),
+                    'ACL'    => 'public-read'
+                ));
 
-              //  $request->file('image')->move($destinationPath, $filename);
-               
+              //  $request->file('image')->move($destinationPath, $filename);               
 
-                //set item image
+                //set item image path
                 $workshop->image = $address . $bucket . '/' . $keyname;
                 //save
                 $workshop->save();
 
             }
+
             else
+
             {
                 //there was problem uploading image
                 dd('there was problem uploading image');
-            }
-
-            
+            }            
 
         }
+
         else
+            
         {
             //image file not uploaded
             //dd('image file not uploaded');

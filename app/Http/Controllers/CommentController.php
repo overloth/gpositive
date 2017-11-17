@@ -60,8 +60,6 @@ class CommentController extends Controller
         {
             
             return  redirect()->guest('login');
-            
-
 
         }
 

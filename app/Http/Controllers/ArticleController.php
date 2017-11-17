@@ -104,13 +104,11 @@ class ArticleController extends Controller
         //dd($tag, $countTags);
 
         for ($i=0; $i < $countTags; $i++) { 
-     # code...
+         # code...
 
         $tagdone = Tag::create(['name'=>$tag[$i]]);
         $tagid = $tagdone->id;
-        //dd($inss,$tag, $tagdone, $tagid);
-
-            $article->tags()->attach($tagid);
+        $article->tags()->attach($tagid);
         }
 
         $article->tags()->attach($request->input('tag_list'));
@@ -158,13 +156,13 @@ class ArticleController extends Controller
                 //  $request->file('image')->move($destinationPath, $filename);
 
 
-                //set item image
+                //set item image address
 
-                        $article->image = $address . $bucket . '/' . $keyname;
+                $article->image = $address . $bucket . '/' . $keyname;
                
                 //save
 
-                        $article->save();
+                $article->save();
 
             }
             
@@ -185,6 +183,7 @@ class ArticleController extends Controller
             //dd('image file not uploaded');
         }
 
+        //log write about created article
         \Log::info('Kreiran clanak: ' . $article->id . 'Ko: ' . $article['author_id'] . 'Sa slikom: '.$article->image);
 
         return redirect('articles');
@@ -355,6 +354,7 @@ class ArticleController extends Controller
             $article->save();
         }
 
+         //log write about updated article
         \Log::info('Updateovan clanak: ' . $id . 'Ko: ' . $article['author_id'] . 'Sa slikom: '.$article->image);
 
 
@@ -395,6 +395,7 @@ class ArticleController extends Controller
 
         $article->delete();
 
+         //log write about deleted article
         \Log::info('Izbrisan clanak: ' . $id . 'Ko: ' . $article['author_id']);
 
         return redirect('articles');
