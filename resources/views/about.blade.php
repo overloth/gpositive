@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    @if (auth()->check() && (auth()->user()->id == 11   || (auth()->user()->author && auth()->user()->author->id == $about->author->id)))
+    @if (auth()->check() && (auth()->user()->id == 81   || (auth()->user()->author && auth()->user()->author->id == $about->author->id)))
         <div style="text-align: center;"> 
          {{ Form::open(array('url' => URL::to('/articles/' . $about->id . '/edit'), 'method' => 'GET', 'style'=>'display:inline-block')) }}
          <button type="submit" class="btn btn-primary " style="margin-bottom: 10px;"  >Edit</button>

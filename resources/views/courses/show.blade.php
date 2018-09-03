@@ -5,7 +5,7 @@
   
   
     
-<div class="w3-content" style="max-width:1400px;background:url('/images/zuticvet.jpg') no-repeat;display:block;margin-left:auto;margin-right:auto;background-size:cover; width:100%; background-position: fixed;">
+<div class="w3-content" style="max-width:1400px;">
      
   <p style="text-align: center;"> <a href="/courses">All Courses</a></p>
   
