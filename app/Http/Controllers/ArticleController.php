@@ -32,7 +32,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::latest('updated_at')->get();
+        $articles = Article::latest('updated_at')->where('id', '!=', 531)->get();
 
         return view('articles.index', compact('articles'));
     }

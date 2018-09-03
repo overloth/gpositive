@@ -34,7 +34,7 @@ class HomeController extends Controller
         
         Log::info('Showing indexx: ' . session('lang'));
 
-        $articles = Article::latest('updated_at')->get();
+        $articles = Article::latest('updated_at')->where('id', '!=', 531)->get();
         $courses = Course::latest('updated_at')->get();
         $workshops = Workshop::latest('updated_at')->get();
         $tags = Tag::all();
