@@ -166,7 +166,6 @@ Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanj
     @endforeach
     
      
-  @endif
 
 
 <!--
@@ -193,6 +192,8 @@ Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanj
     </ul>
   </div>
   <hr>
+
+  @endif
 
   @if(count($workshops) != 0)
 
