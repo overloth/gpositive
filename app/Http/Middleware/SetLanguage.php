@@ -25,6 +25,12 @@ class SetLanguage
 
         if($request->cookie('lang')) 
             App::setLocale($request->cookie('lang'));
+        else {
+            // default
+            App::setLocale('sr');
+            //session()->put('lang', 'sr');
+            //$_COOKIE['lang'] = 'sr';
+        }
         
         return $next($request);
     }

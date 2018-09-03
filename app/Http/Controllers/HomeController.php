@@ -38,11 +38,24 @@ class HomeController extends Controller
         $courses = Course::latest('updated_at')->get();
         $workshops = Workshop::latest('updated_at')->get();
         $tags = Tag::all();
-        
-
-        //if($request->cookie('lang')) App::setLocale($request->cookie('lang'));
 
         return view('home', compact('articles', 'courses', 'workshops', 'tags'));
+    }
+
+    /**
+     * Show the about screen.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function about(Request $request)
+    {
+        //dd($request);
+        
+        Log::info('Showing about');
+
+        $about = Article::findOrFail(1); // 1 is about article
+
+        return view('about', compact('about'));
     }
 
     public function setLanguage(Request $request, $locale = '')

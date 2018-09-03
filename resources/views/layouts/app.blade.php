@@ -44,7 +44,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" style="{{ Request::is('/') ? 'background-color: #eeeeee;' : '' }}" href="{{ url('/') }}">
-                        Home
+                        @lang('various.home')
                     </a>
 
                     <!--<a class="navbar-brand" href="{{ url('/articles') }}">
@@ -62,6 +62,7 @@
                         <li class="{{ Request::is('articles') ? 'active' : '' }}"><a class="djek" href="{{ url('/articles') }}">@lang('various.articles')</a></li>
                         <li class="{{ Request::is('courses') ? 'active' : '' }}"><a href="{{ url('/courses') }}">@lang('various.courses')</a></li>
                         <li class="{{ Request::is('workshops') ? 'active' : '' }}"><a href="{{ url('/workshops') }}">@lang('various.workshops')</a></li>
+                        <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ url('/about') }}">@lang('various.about')</a></li>
                       <!--  <li class="{{ Request::is('events') ? 'active' : '' }}"><a href="{{ url('/events') }}">@lang('various.events')</a></li> -->
                     </ul>
 
@@ -69,8 +70,13 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
+                            @if(Cookie::get('lang'))
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><div style="border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_{{Cookie::get('lang')}}.png'); background-size:cover;""></div>
                             </a>
+                            @else
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><div style="border: solid #cccccc 1px; width: 40px; height: 22px; background:url('/images/flag_sr.png'); background-size:cover;""></div>
+                            </a>
+                            @endif
 
                             <ul class="dropdown-menu" role="menu">
 
@@ -101,8 +107,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
+                            <li><a href="{{ url('/login') }}">@lang('various.login')</a></li>
+                            <li><a href="{{ url('/register') }}">@lang('various.register')</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

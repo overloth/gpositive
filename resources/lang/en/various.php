@@ -13,6 +13,9 @@ return [
     |
     */
 
+    'home' => 'Home',
+    'login' => 'Login',
+    'register' => 'Register',
     'menu' => 'Menu',
     'author' => 'Author',
     'authors' => 'Authors',
@@ -23,6 +26,7 @@ return [
     'event' => 'COUNSELING CENTER GARDEN',
     'events' => 'Psychology Counseling Center Garden',
     'workshops' => 'Workshops',
+    'about' => 'About',
     'positive' =>'Institute of Positive Psychology',
     'name'=>'gPositive',
     'back'=>'Back'

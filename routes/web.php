@@ -28,6 +28,7 @@ use Illuminate\Support\Facades\Storage;
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/language/{locale}', 'HomeController@setLanguage');
+Route::get('/about', 'HomeController@about');
 
 Auth::routes();
 

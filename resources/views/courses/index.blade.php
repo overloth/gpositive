@@ -21,12 +21,11 @@
     <div class="w3-card-4 w3-margin w3-white">
   <img src="/images/sad2.jpg" alt="Norway" style="width:100%">
     <div class="w3-container w3-padding-8">
-      <h3><b>KURSEVi</b></h3>
-      <h5>Malo objasnjenje, <span class="w3-opacity">Avgust 18 2017</span></h5>
+      <h3><b>Trenutno nema organizovanih Kurseva</b></h3>
     </div>
 
     <div class="w3-container">
-      <p>Treneri su uzeli pauzu kako bi pronashli savrshen kapucino. Ne brinite chim ga pronadju, vratice se i organizovati veoma zanimljive kurseve!  </p>
+      <p> Molimo navratite kasnije.. </p>
       <div class="w3-row">
         
         
