@@ -53,7 +53,7 @@ class HomeController extends Controller
         
         Log::info('Showing about');
 
-        $about = Article::findOrFail(1); // 1 is about article
+        $about = Article::findOrFail(531); // 531 is about article
 
         return view('about', compact('about'));
     }

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Vasi kredencijali nese poklapadu sa podacima iz nase baze.',
-    'throttle' => 'Previse si navro. Mozes da pokusas ponovo za :seconds sekundi.',
+    'failed' => 'Vasi kredencijali se ne poklapaju sa podacima iz nase baze.',
+    'throttle' => 'Previse pokusaja. Mozes da pokusas ponovo za :seconds sekundi.',
 
 ];
