@@ -138,26 +138,16 @@ Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanj
     </div>
   </div><hr>
   
-  <!-- Posts -->
+  @if(count($courses) != 0)
+  <!-- Courses -->
   <div class="w3-card-2 w3-margin">
     <div class="w3-container w3-padding" >
       <h4>Kursevi</h4>
     </div>
     <ul class="w3-ul w3-hoverable w3-white">
-
-    @if(count($courses) === 0)
-    <li class="w3-padding-16">
-        <img src="/images/sad.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Trenutno nemamo nijedan kurs organizovan!</span><br>
-        
-      </li>
-
-  @else
-
-    
       
     @foreach ($courses as $course)
-    @if(count($course->articles) != 0)
+      @if(count($course->articles) != 0)
     
       <li class="w3-padding-16">
         <img src="{{$course->image}}" alt="Image" class="w3-left w3-margin-right" style="width:75px;height: 50px;">
@@ -176,7 +166,7 @@ Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanj
     @endforeach
     
      
-    @endif
+  @endif
 
 
 <!--
@@ -204,24 +194,15 @@ Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanj
   </div>
   <hr>
 
+  @if(count($workshops) != 0)
+
   <div class="w3-card-2 w3-margin">
     <div class="w3-container w3-padding" >
       <h4>Radionice</h4>
     </div>
     <ul class="w3-ul w3-hoverable w3-white">
-
-      @if(count($workshops) === 0)
-      <li class="w3-padding-16">
-        <img src="/images/sad.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Trenutno nemamo nijednu radionicu organizovanu!</span><br>
-        
-      </li>
-
-      @else
-
-
       
-      @foreach ($workshops as $workshop)
+    @foreach ($workshops as $workshop)
       
       <li class="w3-padding-16">
         <img src="{{$workshop->image}}" alt="Image" class="w3-left w3-margin-right" style="width:75px;height: 50px;">
@@ -229,18 +210,17 @@ Tokom godina istraživanja, iz brojnih teorijskih modela psihološkog blagostanj
         <p>{{$workshop->description}}</p>
       </li>
 
-      
-
-     
-      @endforeach
-
-
-      @endif
-
-      </ul>
+    @endforeach
+    
+    </ul>
   </div>
   <hr>
+
+  @endif
+
  
+
+
   <!-- Labels / tags -->
   <div class="w3-card-2 w3-margin">
     <div class="w3-container w3-padding"  ">
